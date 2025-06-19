@@ -1,0 +1,323 @@
+﻿
+using System.Collections.Generic;
+using UnityEngine;
+using static Training.FreeflowComponent;
+
+namespace Training
+{
+
+    [System.Serializable]
+    public enum EShakeDirection
+    {
+        None = 0,
+        Left = 1,
+        Right = 2,
+        Up = 3,
+        Down = 4,
+        Front = 5,
+        Back  = 6
+    }
+    [System.Serializable]
+    public enum ETraceType
+    {
+        None = 0,
+        MainWeapon = 1,
+        Sphere = 2,
+        Box
+    }
+    [System.Serializable]
+    public enum EKeystroke
+    {
+        None = 0,
+        LightAttack = 1,
+        StrongAttack = 2,
+        HoldAttack = 3,
+        SpecialAttackPressed = 4,
+        SpecialAttackReleased = 5,
+        FinisherAttack = 6
+
+    }
+    [System.Serializable]
+    public enum EAirborneDirection
+    {
+        None = 0,
+        Up,
+        Down
+    }
+    [System.Serializable]
+    public enum ECollideType
+    {
+        None = 0,
+        AirToFloor,
+        FloorToAir,
+        OnFloor
+    }
+    #region Knockback
+    [System.Serializable]
+    public struct KnockbackData
+    {
+        public bool isKnockback;
+        public float knockbackTime;
+        public float knockbackDistance;
+        public float intensity;
+        public AnimationClip hitKnockBackClip;
+        public KnockbackFX knockbackFX;
+        public KnockbackSFX knockbackSFX;
+    }
+    [System.Serializable]
+    public struct KnockbackFX
+    {
+        public ParticleSystem KnockbackParticleSystem;
+        public Vector3 KnockbackFXPositionOffset;
+        public Vector3 KnockbackFXRotationOffset;
+        public Vector3 KnockbackFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct KnockbackSFX
+    {
+        public AudioClip knockbackAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+    #region Airborne
+    [System.Serializable]
+    public struct AirborneData
+    {
+        public bool isAirborne;
+        public EAirborneDirection airborneDirection;
+        public float height;
+        public float airborneDuration;
+        public float airborneTime;
+        public AnimationClip hitAirborneClip;
+        public AirborneFX airborneFX;
+        public AirborneSFX airborneSFX;
+    }
+    [System.Serializable]
+    public struct AirborneFX
+    {
+        public ParticleSystem AirborneParticleSystem;
+        public Vector3 AirborneFXPositionOffset;
+        public Vector3 AirborneFXRotationOffset;
+        public Vector3 AirborneFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct AirborneSFX
+    {
+        public AudioClip knockbackAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+    #region CollideHit
+    [System.Serializable]
+    public struct CollideHitData
+    {
+        public bool isCollide;
+        public ECollideType collideType;
+        public AnimationClip collideClip;
+        public ColliderHitFX colliderHitFX;
+        public ColliderHitSFX colliderHitSFX;
+    }
+    [System.Serializable]
+    public struct ColliderHitFX
+    {
+        public GameObject CollideParticleSystem;
+        public Vector3 CollideFXPositionOffset;
+        public Vector3 CollideFXRotationOffset;
+        public Vector3 CollideFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct ColliderHitSFX
+    {
+        public AudioClip collideHitAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+    #region Slash
+    [System.Serializable]
+    public struct SlashData
+    {
+        public SlashFX slashFX;
+        public SlashSFX slashSFX;
+    }
+    [System.Serializable]
+    public struct SlashFX
+    {
+        public ParticleSystem slashParticleSystem;
+        public Vector3 slashFXPositionOffset;
+        public Vector3 slashFXRotationOffset;
+        public Vector3 slashFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct SlashSFX
+    {
+        public AudioClip slashAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+    #region Hit
+    [System.Serializable]
+    public struct HitData
+    {
+        public HitFX hitFX;
+        public HitSFX hitSFX;
+    }
+    [System.Serializable]
+    public struct HitFX
+    {
+        public ParticleSystem hitParticleSystem;
+        public Vector3 hitFXPositionOffset;
+        public Vector3 hitFXRotationOffset;
+        public Vector3 hitFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct HitSFX
+    {
+        public AudioClip hitAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+    #region Block
+    [System.Serializable]
+    public struct BlockData
+    {
+        public bool isBlockable;
+        public AnimationClip parryAnimation;
+        public AnimationClip breakParryAnimation;
+
+        public BlockFX blockFX;
+        public BlockSFX blockSFX;
+    }
+    [System.Serializable]
+    public struct BlockFX
+    {
+        [Tooltip("Parrying FX")]
+        public ParticleSystem hitParryParticleSystem;
+        public Vector3 hitParryFXPositionOffset;
+        public Vector3 hitParryFXRotationOffset;
+        public Vector3 hitParryFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct BlockSFX
+    {
+        [Header("Parrying SoundFX")]
+        public AudioClip hitParryAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+    #region AttackExtend
+    [System.Serializable]
+    public struct AttackExtendData
+    {
+        public bool isApplyHeightWithOwner;
+        public float height;
+
+        public AttackExtendFX attackExtendFX;
+        public AttackExtendSFX attackExtendSFX;
+    }
+    [System.Serializable]
+    public struct AttackExtendFX
+    {
+        public GameObject attackFXExtendGO;
+        public Vector3 attackFXPositionOffset;
+        public Vector3 attackFXRotationOffset;
+        public Vector3 attackFXScaleOffset;
+    }
+    [System.Serializable]
+    public struct AttackExtendSFX
+    {
+        public AudioClip attackExtendAudioClip;
+        public float volume;
+        public float pitch;
+    }
+    #endregion
+
+    [System.Serializable]
+    public struct HitImpact
+    {
+        public KnockbackData KnockbackData;
+        public AirborneData AirborneData;
+        public CollideHitData CollideHitData;
+        public HitData HitData;
+        public BlockData BlockData;
+    }
+    [System.Serializable]
+    public struct HitTrace
+    {
+        public ETraceType traceType;
+        public float traceAngle;
+        [Tooltip("TraceType is Sphere")]
+        public float traceRadius;
+        [Tooltip("TraceType is Box")]
+        public Vector3 boxOffset;
+        public Vector3 boxSize;
+    }
+    [System.Serializable]
+    public struct HitFeedbackData
+    {
+        public bool isApplyWithoutHit;
+        [Header("1. Camera Shake")]
+        public bool isShake;
+        public EShakeDirection shakeDirection;
+        public float shakeTime;
+        public float intensity;
+
+        [Header("2. Stop Time")]
+        public bool isStop;
+        public float stopTime;
+
+        [Header("3. Slow Motion")]
+        public bool isSlowMotion;
+        public float slowMotionFactor;
+        public float slowMotionTime;
+
+        [Header("4. Move To Hit Point")]
+        public bool isSightToHitPoint;
+        public float stayTime;
+        public float duration;
+    }
+
+    [System.Serializable]
+    public struct HitReactionData
+    {
+        public string Name;
+        public HitTrace hitTrace;
+
+        public SlashData slashData;
+        public AttackExtendData attackExtendData;
+        public HitImpact hitImpact;
+        public HitFeedbackData hitFeedbackData;
+    }
+    [System.Serializable]
+    public struct ListHitReactionData
+    {
+        public string Name;
+        public List<HitReactionData> hitReactionDatas;
+    }
+    [System.Serializable]
+    public struct ComboData
+    {
+        public List<EKeystroke> comboInputs;
+        public List<AnimationClip> comboClips;
+        public EStateType requiredState;
+
+        public FinisherData finisherData;
+        public List<ListHitReactionData> listHitReactionDatas;
+    }
+    [System.Serializable]
+    public struct FinisherData
+    {
+        public bool isFinisher;
+        public float distanceOffset;
+    }
+    [CreateAssetMenu(menuName = "Combat System/Combat/Combo Data", fileName = "Combo Data")]
+    public class SO_Combo : ScriptableObject
+    {
+        public ComboData comboData;
+    }
+}

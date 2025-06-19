@@ -1,0 +1,53 @@
+# Thư mục hệ thống Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Tệp tự động sinh ra bởi Unity
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Tệp hệ điều hành và IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.lock
+*.idea/
+*.vs/
+.vscode/
+
+# Tệp không cần thiết khác
+*.bak
+*.orig
+*.gz
+
+# Tệp cấu hình cá nhân
+UserSettings/
+
+# Lưu trữ meta
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Thư mục quản lý nội dung Asset Store
+/[Aa]ssets/[Aa]sset[Ss]tore/
+
+# Các tệp tùy chọn khác (tuỳ vào dự án)
+*.log
+*.apk
+*.unitypackage
+*.exe
