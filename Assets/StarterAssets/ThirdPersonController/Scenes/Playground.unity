@@ -975,11 +975,11 @@ MonoBehaviour:
   FootstepAudioVolume: 0.5
   JumpHeight: 3.5
   Gravity: -35
-  JumpTimeout: 0.3
-  FallTimeout: 0.15
+  JumpTimeout: 0.5
+  FallTimeout: 0.05
   Grounded: 1
-  GroundedOffset: -0.14
-  GroundedRadius: 0.25
+  GroundedOffset: -0.1
+  GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
     m_Bits: 1

@@ -17,6 +17,8 @@ public static class AnimationParams
     public static readonly int FreeFall_Param = Animator.StringToHash("FreeFall");
     public static readonly int Motion_Speed_Param = Animator.StringToHash("MotionSpeed");
     public static readonly int HasInputMove_Param = Animator.StringToHash("HasInputMove");
+    public static readonly int Input_Horizontal_Param = Animator.StringToHash("Horizontal Input Factor"); 
+    public static readonly int Input_Vertical_Param = Animator.StringToHash("Vertical Input Factor");
 
 
 
@@ -41,8 +43,7 @@ public static class AnimationParams
     public static readonly int Recover_Stagger_State = Animator.StringToHash("Stagger_Recovery");
 
 
-    public static readonly int Input_Horizontal_Param = Animator.StringToHash("Horizontal");
-    public static readonly int Input_Vertical_Param = Animator.StringToHash("Vertical");
+
 
     public static readonly int Input_Horizontal_Dodge_Param = Animator.StringToHash("Dodge Horizontal");
     public static readonly int Input_Vertical_Dodge_Param = Animator.StringToHash("Dodge Vertical");

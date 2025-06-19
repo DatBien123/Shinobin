@@ -93,7 +93,7 @@ public class InputManager : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && player.comboComponent.currentComboState != EComboState.Playing)
         {
             jump = true;
         }

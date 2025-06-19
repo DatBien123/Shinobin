@@ -89,9 +89,6 @@ public class CharacterPlayer : Character
 
 
 
-//#if ENABLE_INPUT_SYSTEM
-//    private PlayerInput _playerInput;
-//#endif
     private Animator _animator;
     private CharacterController _controller;
     private InputManager _input;
@@ -101,17 +98,6 @@ public class CharacterPlayer : Character
 
     private bool _hasAnimator;
 
-//    private bool IsCurrentDeviceMouse
-//    {
-//        get
-//        {
-//#if ENABLE_INPUT_SYSTEM
-//            return _playerInput.currentControlScheme == "KeyboardMouse";
-//#else
-//				return false;
-//#endif
-//        }
-//    }
 
 
     protected override void Awake()
@@ -132,12 +118,7 @@ public class CharacterPlayer : Character
         _hasAnimator = TryGetComponent(out _animator);
         _controller = GetComponent<CharacterController>();
         _input = GetComponent<InputManager>();
-//#if ENABLE_INPUT_SYSTEM
-//        _playerInput = GetComponent<PlayerInput>();
-//#else
-//			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
-//#endif
-        // reset our timeouts on start
+
         _jumpTimeoutDelta = JumpTimeout;
         _fallTimeoutDelta = FallTimeout;
     }
@@ -159,10 +140,6 @@ public class CharacterPlayer : Character
     {
         base.FixedUpdate();
     }
-    //protected override void OnAnimatorMove()
-    //{
-    //    base.OnAnimatorMove();
-    //}
     private void GroundedCheck()
     {
         // set sphere position, with offset
@@ -261,7 +238,9 @@ public class CharacterPlayer : Character
 
         // update animator if using character
         if (_hasAnimator)
-        {
+        { 
+            _animator.SetFloat(AnimationParams.Input_Horizontal_Param, 0);
+            _animator.SetFloat(AnimationParams.Input_Vertical_Param, _input.move.magnitude);
             _animator.SetFloat(AnimationParams.Speed_Param, _animationBlend);
             _animator.SetFloat(AnimationParams.Motion_Speed_Param, inputMagnitude);
         }
