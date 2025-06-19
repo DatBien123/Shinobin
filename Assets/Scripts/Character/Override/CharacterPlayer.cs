@@ -71,6 +71,9 @@ public class CharacterPlayer : Character
     [Tooltip("For locking the camera position on all axis")]
     public bool LockCameraPosition = false;
 
+    [Tooltip("Player blocking proprs")]
+    public float BlockSprintSpeed = 3.0f;
+    public bool isBlock = false;
     // cinemachine
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
@@ -86,6 +89,10 @@ public class CharacterPlayer : Character
     // timeout deltatime
     private float _jumpTimeoutDelta;
     private float _fallTimeoutDelta;
+
+    //animation
+    private float _inputHorizontalParam = 0.0f;
+    private float _inputVerticalParam = 0.0f;
 
 
 
@@ -178,7 +185,8 @@ public class CharacterPlayer : Character
     private void Move()
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
-        float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+        float targetSpeed = _input.sprint ?
+            (isBlock ? BlockSprintSpeed :  SprintSpeed) : MoveSpeed;
 
         // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -238,9 +246,11 @@ public class CharacterPlayer : Character
 
         // update animator if using character
         if (_hasAnimator)
-        { 
-            _animator.SetFloat(AnimationParams.Input_Horizontal_Param, 0);
-            _animator.SetFloat(AnimationParams.Input_Vertical_Param, _input.move.magnitude);
+        {
+            _inputVerticalParam = Mathf.Lerp(_inputVerticalParam, _input.move.magnitude, SpeedChangeRate * Time.deltaTime);
+
+            _animator.SetFloat(AnimationParams.Input_Horizontal_Param, _inputHorizontalParam);
+            _animator.SetFloat(AnimationParams.Input_Vertical_Param, _inputVerticalParam);
             _animator.SetFloat(AnimationParams.Speed_Param, _animationBlend);
             _animator.SetFloat(AnimationParams.Motion_Speed_Param, inputMagnitude);
         }

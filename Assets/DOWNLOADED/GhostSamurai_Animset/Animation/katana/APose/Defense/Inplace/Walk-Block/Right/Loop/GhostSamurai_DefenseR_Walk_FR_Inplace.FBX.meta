@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0ce05c9cb2d90b49ab50c948851e42d
+guid: 4ce94ab2b2aa1fb4498fd5ed50720ad4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -485,10 +485,10 @@ ModelImporter:
     second: root
   - first:
       74: 7400000
-    second: GhostSamurai_APose_Strafe_Run_F_Loop_Inplace_2
+    second: GhostSamurai_DefenseR_Walk_FR
   - first:
       74: 7400002
-    second: GhostSamurai_APose_Strafe_Run_F_Loop_Root
+    second: GhostSamurai_DefenseR_Walk_FR_Inplace
   - first:
       95: 9500000
     second: //RootNode
@@ -509,21 +509,18 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'GhostSamurai_APose_Strafe_Run_F_Loop_Inplace_2'
-      has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'spine_01'
-      has translation animation that will be discarded.\n\t'clavicle_l' has translation
-      animation that will be discarded.\n\t'upperarm_l' has translation animation
-      that will be discarded.\n\t'lowerarm_l' has translation animation that will
-      be discarded.\n\t'hand_l' has translation animation that will be discarded.\n\t'clavicle_r'
-      has translation animation that will be discarded.\n\t'upperarm_r' has translation
-      animation that will be discarded.\n\t'lowerarm_r' has translation animation
-      that will be discarded.\n\t'hand_r' has translation animation that will be
-      discarded.\n\t'calf_l' has translation animation that will be discarded.\n\t'foot_l'
-      has translation animation that will be discarded.\n\t'ball_l' has translation
-      animation that will be discarded.\n\t'calf_r' has translation animation that
-      will be discarded.\n\t'foot_r' has translation animation that will be discarded.\n\t'ball_r'
-      has translation animation that will be discarded.\n"
+    animationImportWarnings: "\nClip 'GhostSamurai_DefenseR_Walk_FR' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'clavicle_l' has translation
+      animation that will be discarded.\n\t'lowerarm_l' has translation animation
+      that will be discarded.\n\t'hand_l' has translation animation that will be
+      discarded.\n\t'lowerarm_r' has translation animation that will be discarded.\n\t'hand_r'
+      has translation animation that will be discarded.\n\t'calf_l' has translation
+      animation that will be discarded.\n\t'foot_l' has translation animation that
+      will be discarded.\n\t'ball_l' has translation animation that will be discarded.\n\t'calf_r'
+      has translation animation that will be discarded.\n\t'foot_r' has translation
+      animation that will be discarded.\n\t'ball_r' has translation animation that
+      will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -537,10 +534,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: GhostSamurai_APose_Strafe_Run_F_Loop_Root
-      takeName: GhostSamurai_APose_Strafe_Run_F_Loop_Root
+      name: GhostSamurai_DefenseR_Walk_FR_Inplace
+      takeName: GhostSamurai_DefenseR_Walk_FR_Inplace
       internalID: 0
-      firstFrame: 44
+      firstFrame: 34
       lastFrame: 68
       wrapMode: 0
       orientationOffsetY: 0
@@ -548,11 +545,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1

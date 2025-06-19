@@ -46,7 +46,12 @@ public class InputManager : MonoBehaviour
         playerControls.Camera.Look.performed += Look;
         playerControls.Camera.Look.canceled += Look;
 
+        playerControls.Combat.Block.performed += Block;
+        playerControls.Combat.Block.canceled += Block;
+
         playerControls.Combat.LightAttack.performed += LightAttack;
+
+
     }
     #region InputBinding
 
@@ -104,6 +109,7 @@ public class InputManager : MonoBehaviour
     #endregion
 
     #region Combat
+
     public void LightAttack(InputAction.CallbackContext context)
     {
         if (context.performed /*&& player.dodgeComponent.currentDodgeState == EDodgeState.OffDodge*/)
@@ -112,6 +118,22 @@ public class InputManager : MonoBehaviour
             player.comboComponent.SetCurrentInput(EKeystroke.LightAttack);
         }
     }
+    public void Block(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            player.isBlock = true;
+            player.animator.SetBool(AnimationParams.Block_Param, true);
+        }
+        else if (context.canceled)
+        {
+            player.isBlock = false;
+            player.animator.SetBool(AnimationParams.Block_Param, false);
+        }
+    }
+
+
+
     public void StrongAttack(InputAction.CallbackContext context)
     {
         if (context.performed && player.dodgeComponent.currentDodgeState == EDodgeState.OffDodge)

@@ -19,6 +19,7 @@ public static class AnimationParams
     public static readonly int HasInputMove_Param = Animator.StringToHash("HasInputMove");
     public static readonly int Input_Horizontal_Param = Animator.StringToHash("Horizontal Input Factor"); 
     public static readonly int Input_Vertical_Param = Animator.StringToHash("Vertical Input Factor");
+    public static readonly int Block_Param = Animator.StringToHash("Blocking");
 
 
 
@@ -74,8 +75,6 @@ public static class AnimationParams
     public static readonly int Turn_Trigger = Animator.StringToHash("Turn Trigger");
     public static readonly int Dodge_Trigger = Animator.StringToHash("Dodge Trigger");
 
-    //+ Bool
-    public static readonly int Block_Param = Animator.StringToHash("isBlocking");
 
     ////////////////////////////////2. CAMERA STATES //////////////////////////////////////  
 
