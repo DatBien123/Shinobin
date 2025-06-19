@@ -127,7 +127,7 @@ public class AITatical : MonoBehaviour
             || ownerAI.hitReactionComponent.currentRecoverState == ERecoverState.OnRecover
             || behaviorDecesion.currentComboPriorityState == EComboPriorityState.Executing
             || ownerAI.isDoingCombo
-            || ownerAI.hitReactionComponent.isOnStagger
+            //|| ownerAI.hitReactionComponent.isOnStagger
             || ownerAI.atributeComponent.currentHP <= 0) return;
 
         List<ActionData> suffleActions = new List<ActionData>();
@@ -271,7 +271,7 @@ public class AITatical : MonoBehaviour
             || ownerAI.hitReactionComponent.currentRecoverState == ERecoverState.OnRecover
             || behaviorDecesion.currentComboPriorityState == EComboPriorityState.Executing
             || ownerAI.isDoingCombo
-            || ownerAI.hitReactionComponent.isOnStagger
+            //|| ownerAI.hitReactionComponent.isOnStagger
             || ownerAI.atributeComponent.currentHP <= 0) return;
 
         //Multiple Action
@@ -432,7 +432,7 @@ public class AITatical : MonoBehaviour
     }
     public void EvaluateAndExecuteIntroBehavior()
     {
-        if (ownerAI.hitReactionComponent.isOnStagger) return;
+        //if (ownerAI.hitReactionComponent.isOnStagger) return;
         List<ActionData> suffleActions = new List<ActionData>();
 
         //Check and Get All Actions - Skill Actions - Skirmush Actions has valid conditions and 0s Cooldown

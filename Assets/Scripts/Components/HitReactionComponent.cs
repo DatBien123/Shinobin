@@ -53,7 +53,6 @@ namespace Training
         public EReactionType currentReactionType;
         public EHitReactionState currentHitReactionState;
         public ERecoverState currentRecoverState;
-        public bool isOnStagger;
 
         [Header("Camera Reference")]
         public CameraManager cameraManager;
@@ -83,66 +82,66 @@ namespace Training
             cameraManager = FindObjectOfType<CameraManager>();
         }
         #region Stagger
-        public void StartStagger()
-        {
-            if (C_Stagger != null) StopCoroutine(C_Stagger);
-            C_Stagger = StartCoroutine(Stagger());
-        }
-        IEnumerator Stagger()
-        {
+        //public void StartStagger()
+        //{
+        //    if (C_Stagger != null) StopCoroutine(C_Stagger);
+        //    C_Stagger = StartCoroutine(Stagger());
+        //}
+        //IEnumerator Stagger()
+        //{
 
-            isOnStagger = true;
+        //    isOnStagger = true;
 
-            owner.comboComponent.ResetCombo();
+        //    owner.comboComponent.ResetCombo();
 
-            owner.atributeComponent.hyperArmor = 300;
+        //    owner.atributeComponent.hyperArmor = 300;
 
-            //owner.lookAtComponent.LookAtEnemy(owner.targetingComponent.target.transform.position, .1f);
+        //    //owner.lookAtComponent.LookAtEnemy(owner.targetingComponent.target.transform.position, .1f);
 
-            owner.animator.CrossFadeInFixedTime(AnimationParams.Stagger_State, .1f);
+        //    owner.animator.CrossFadeInFixedTime(AnimationParams.Stagger_State, .1f);
 
-            float elapsedTime = 0.0f;
+        //    float elapsedTime = 0.0f;
 
-            bool isFinisherTrigger = false;
+        //    bool isFinisherTrigger = false;
 
-            while(elapsedTime <= 100f)
-            {
-                if (owner.hitReactionComponent.currentComboDataTake.finisherData.isFinisher) isFinisherTrigger = true;
-                elapsedTime += Time.deltaTime;
+        //    while(elapsedTime <= 100f)
+        //    {
+        //        if (owner.hitReactionComponent.currentComboDataTake.finisherData.isFinisher) isFinisherTrigger = true;
+        //        elapsedTime += Time.deltaTime;
 
-                yield return null;
-            }
+        //        yield return null;
+        //    }
 
-            if (!isFinisherTrigger)
-            {
-                isOnStagger = false;
-                owner.animator.CrossFadeInFixedTime(AnimationParams.Recover_Stagger_State, .1f, 0, 0);
-            }
+        //    if (!isFinisherTrigger)
+        //    {
+        //        isOnStagger = false;
+        //        owner.animator.CrossFadeInFixedTime(AnimationParams.Recover_Stagger_State, .1f, 0, 0);
+        //    }
 
 
-            owner.hitReactionComponent.ResetHitReaction();
-            if (owner as CharacterAI)
-            {
-                (owner as CharacterAI).ResetBehaviorState();
-            }
+        //    owner.hitReactionComponent.ResetHitReaction();
+        //    if (owner as CharacterAI)
+        //    {
+        //        (owner as CharacterAI).ResetBehaviorState();
+        //    }
 
-        }
-        public void SetStaggetState(int isOn)
-        {
-            if (isOn == 0) isOnStagger = true;
-            else isOnStagger = false;
-        }
+        //}
+        //public void SetStaggetState(int isOn)
+        //{
+        //    if (isOn == 0) isOnStagger = true;
+        //    else isOnStagger = false;
+        //}
         #endregion
 
         //Funcs public
         public void PlayHitReactions(Vector3 knockBackDirection, Vector3 hitPoint, EReactionType reactionType)
         {
             currentReactionType = reactionType;
-            if(owner.atributeComponent.currentHP <= 0)
-            {
-                owner.animator.CrossFadeInFixedTime(AnimationParams.Death_State, .1f);
-                return;
-            }
+            //if(owner.atributeComponent.currentHP <= 0)
+            //{
+            //    owner.animator.CrossFadeInFixedTime(AnimationParams.Death_State, .1f);
+            //    return;
+            //}
             switch (reactionType)
             {
                 case EReactionType.Combo:
@@ -225,6 +224,8 @@ namespace Training
             {
                 (owner as CharacterAI).navMeshAgent.enabled = false;
             }
+
+            owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
 
             //if (hitImpact.KnockbackData.hitKnockBackClip != null)
             //{

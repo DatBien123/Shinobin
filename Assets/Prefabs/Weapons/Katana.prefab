@@ -158,7 +158,7 @@ MonoBehaviour:
   capsuleRadius: 0.5
   damageLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   isAttacking: 0
   weaponLocomotionData: {fileID: 11400000, guid: 57258b8d642e3b54f8b5756cef2fbe8c, type: 2}
 --- !u!1 &7505302928620666459

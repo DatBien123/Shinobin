@@ -154,11 +154,11 @@ public class InputManager : MonoBehaviour
     {
         if (context.performed)
         {
-            if (player.targetingComponent.target.hitReactionComponent.isOnStagger)
-            {
-                player.comboComponent.ResetCombo();
-                player.comboComponent.SetCurrentInput(EKeystroke.FinisherAttack);
-            }
+            //if (player.targetingComponent.target.hitReactionComponent.isOnStagger)
+            //{
+            //    player.comboComponent.ResetCombo();
+            //    player.comboComponent.SetCurrentInput(EKeystroke.FinisherAttack);
+            //}
         }
     }
     #endregion

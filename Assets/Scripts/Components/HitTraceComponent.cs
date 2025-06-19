@@ -82,7 +82,7 @@ namespace Training
                         Vector3 collisionPoint = collider.ClosestPoint(owner.transform.position);
                         if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
                         {
-                            if (opponent.atributeComponent.currentHP <= 0) return;
+                            //if (opponent.atributeComponent.currentHP <= 0) return;
                             HandleAttackHit(owner, opponent, collisionPoint);
                         }
                     }
@@ -101,7 +101,7 @@ namespace Training
                         Vector3 collisionPoint = collider.ClosestPoint(owner.transform.position);
                         if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
                         {
-                            if (opponent.atributeComponent.currentHP <= 0) return;
+                            //if (opponent.atributeComponent.currentHP <= 0) return;
                             HandleAttackHit(owner, opponent, collisionPoint);
                         }
                     }
@@ -133,7 +133,7 @@ namespace Training
                             Vector3 collisionPoint = GetComponent<Collider>().ClosestPoint(owner.transform.position);
                             if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
                             {
-                                if (opponent.atributeComponent.currentHP <= 0) return;
+                                //if (opponent.atributeComponent.currentHP <= 0) return;
                                 HandleAttackHit(owner, opponent, collisionPoint);
 
                             }
@@ -161,7 +161,7 @@ namespace Training
                             Vector3 collisionPoint = GetComponent<Collider>().ClosestPoint(owner.transform.position);
                             if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
                             {
-                                if (opponent.atributeComponent.currentHP <= 0) return;
+                                //if (opponent.atributeComponent.currentHP <= 0) return;
                                 HandleAttackHit(owner, opponent, collisionPoint);
                             }
                         }
@@ -208,7 +208,7 @@ namespace Training
         public void HandleAttackHit(Character causer, Character taker, Vector3 hitPoint)
         {
             //Damage
-            taker.atributeComponent.UpdateHealth(-300.0f);
+            //taker.atributeComponent.UpdateHealth(-300.0f);
 
             //
             //Assign HitReactionData
