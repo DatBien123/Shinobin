@@ -21,6 +21,14 @@ public class AnimationEvents : MonoBehaviour
     }
     #endregion
     #region HitReaction
+    public void Anim_OnBlock(float blockSide)
+    {
+        owner.animator.SetFloat(AnimationParams.BlockSide_Param, blockSide);
+    }
+    public void Anim_OffBlock()
+    {
+
+    }
     public void Anim_OnHit()
     {
         //owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OnHit;

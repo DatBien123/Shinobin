@@ -20,8 +20,9 @@ public static class AnimationParams
     public static readonly int Input_Horizontal_Param = Animator.StringToHash("Horizontal Input Factor"); 
     public static readonly int Input_Vertical_Param = Animator.StringToHash("Vertical Input Factor");
     public static readonly int Block_Param = Animator.StringToHash("Blocking");
+    public static readonly int BlockSide_Param = Animator.StringToHash("BlockSide");
 
-
+    
 
 
 

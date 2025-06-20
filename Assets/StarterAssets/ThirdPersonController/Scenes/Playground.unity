@@ -838,7 +838,34 @@ MonoBehaviour:
   currentCombatState: 0
   motionFactor: 5
   currentState: 0
+  MoveSpeed: 2
+  SprintSpeed: 5.335
+  RotationSmoothTime: 0.12
+  SpeedChangeRate: 10
+  LandingAudioClip: {fileID: 0}
+  FootstepAudioClips: []
+  FootstepAudioVolume: 0.5
+  JumpHeight: 3.5
+  Gravity: -35
+  JumpTimeout: 0.3
+  FallTimeout: 0.05
+  Grounded: 1
+  GroundedOffset: -0.1
+  GroundedRadius: 0.28
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  BlockSprintSpeed: 3
+  _speed: 0
+  _animationBlend: 0
+  _targetRotation: 0
+  _rotationVelocity: 0
   _verticalVelocity: 0
+  _terminalVelocity: 53
+  _jumpTimeoutDelta: 0
+  _fallTimeoutDelta: 0
+  _inputHorizontalParam: 0
+  _inputVerticalParam: 0
   navMeshAgent: {fileID: 0}
   behavDecesion: {fileID: 0}
   isDoingCombo: 0
@@ -849,6 +876,7 @@ MonoBehaviour:
   stoppingStrafeWalkLayer:
     serializedVersion: 2
     m_Bits: 0
+  aIDecision: {fileID: 0}
   TYPE: 
 --- !u!114 &1463842122
 MonoBehaviour:
@@ -1238,7 +1266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075c4d5ef80e1264fa1ba0c50d89c5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
+  ownerAI: {fileID: 0}
+  move: {x: 0, y: 0}
+  jump: 0
+  sprint: 0
 --- !u!114 &1463842138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,7 +1339,6 @@ MonoBehaviour:
   currentCombatState: 0
   motionFactor: 5
   currentState: 0
-  _verticalVelocity: 0
   MoveSpeed: 2
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
@@ -1326,12 +1356,22 @@ MonoBehaviour:
   GroundLayers:
     serializedVersion: 2
     m_Bits: 1
+  BlockSprintSpeed: 3
+  _speed: 0
+  _animationBlend: 0
+  _targetRotation: 0
+  _rotationVelocity: 0
+  _verticalVelocity: 0
+  _terminalVelocity: 53
+  _jumpTimeoutDelta: 0
+  _fallTimeoutDelta: 0
+  _inputHorizontalParam: 0
+  _inputVerticalParam: 0
   CinemachineCameraTarget: {fileID: 8338988565591873048}
   TopClamp: 70
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  BlockSprintSpeed: 3
   _mainCamera: {fileID: 0}
 --- !u!114 &1762682268
 MonoBehaviour:
@@ -3833,7 +3873,7 @@ Transform:
   m_GameObject: {fileID: 4416926082444160328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 4.2, z: 9.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

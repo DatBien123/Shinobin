@@ -5,13 +5,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Windows;
 using static UnityEngine.UI.GridLayoutGroup;
 
 public class CharacterAI : Character
 {
-
-
-
     #region Old
     [Header("Component")]
     public NavMeshAgent navMeshAgent;
@@ -32,33 +30,6 @@ public class CharacterAI : Character
     Coroutine C_MoveToTarget;
     Coroutine C_MoveStrafeToTarget;
     Coroutine C_Turn;
-
-    protected override void Awake()
-    {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        behavDecesion = GetComponent<BehaviorDecesion>();
-        base.Awake();
-    }
-    protected override void Start()
-    {
-        base.Start();
-    }
-    protected override void Update()
-    {
-        base.Update();
-
-        //Debug Distacne
-        //if (targetingComponent.target != null)
-        //{
-        //    Debug.Log("Distance To Target is: " + Utilities.Instance.DistanceCalculate(targetingComponent.target.transform.position, gameObject.transform.position, true));
-        //}
-    }
-
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-    }
-
     #region Move
     public void StartMoveRandom()
     {
@@ -110,7 +81,7 @@ public class CharacterAI : Character
         if (navMeshAgent.enabled)
             //navMeshAgent.speed = speed;
 
-        if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
+            if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
 
         float distanceToTarget = Vector3.Distance(navMeshAgent.transform.position, targetingComponent.target.transform.position);
 
@@ -123,7 +94,7 @@ public class CharacterAI : Character
             if (Vector3.Distance(targetingComponent.target.transform.position, lastTargetPosition) > 0.1f)
             {
                 lastTargetPosition = targetingComponent.target.transform.position;
-                if(navMeshAgent.enabled)navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
+                if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
             }
 
             //Update Position
@@ -132,7 +103,7 @@ public class CharacterAI : Character
             elapsedTime += Time.deltaTime;
 
             //Break Lines
-            if (elapsedTime > duration 
+            if (elapsedTime > duration
                 || hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
                 || distanceToTarget <= moveToTargetStoppingDistance) break;
             yield return null;
@@ -251,9 +222,9 @@ public class CharacterAI : Character
         //// Đặt trạng thái hành vi hiện tại
         //currentBehaviorState = EBehaviorState.Finished;
 
-        yield return null;  
+        yield return null;
     }
-    public  float StrafeSide()
+    public float StrafeSide()
     {
         // Hướng từ nhân vật đến đối tượng
         Vector3 directionToTarget = (targetingComponent.target.transform.position - transform.position).normalized;
@@ -280,7 +251,7 @@ public class CharacterAI : Character
     #region Intro
     public void StartExecuteIntro()
     {
-        if(C_Intro != null)StopCoroutine(C_Intro);
+        if (C_Intro != null) StopCoroutine(C_Intro);
         C_Intro = StartCoroutine(PlayIntro());
     }
     IEnumerator PlayIntro()
@@ -289,7 +260,7 @@ public class CharacterAI : Character
         float elapsedTime = 0.0f;
 
         animator.CrossFadeInFixedTime(AnimationParams.Sitting_State, .1f);
-        while(targetingComponent.target == null)
+        while (targetingComponent.target == null)
         {
             Debug.Log("Playing Intro");
             elapsedTime += Time.deltaTime;
@@ -352,19 +323,19 @@ public class CharacterAI : Character
         animator.SetFloat(AnimationParams.Input_Vertical_Turn_Param, result.y);
 
         //Speed 
-        if(navMeshAgent.speed == 0.0f)
+        if (navMeshAgent.speed == 0.0f)
         {
             animator.SetFloat(AnimationParams.Speed_Param, 0.0f);
         }
-        else if(navMeshAgent.speed == 1.0f)
+        else if (navMeshAgent.speed == 1.0f)
         {
             animator.SetFloat(AnimationParams.Speed_Param, 1.0f);
         }
-        else if(navMeshAgent.speed == 2.0f)
+        else if (navMeshAgent.speed == 2.0f)
         {
             animator.SetFloat(AnimationParams.Speed_Param, 2.0f);
         }
-        else if(navMeshAgent.speed == 3.0f)
+        else if (navMeshAgent.speed == 3.0f)
         {
             animator.SetFloat(AnimationParams.Speed_Param, 3.0f);
         }
@@ -379,4 +350,171 @@ public class CharacterAI : Character
     }
 
     #endregion
+    public AIDecision aIDecision;
+
+    protected override void Awake()
+    {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        behavDecesion = GetComponent<BehaviorDecesion>();
+        aIDecision = GetComponent<AIDecision>();
+        base.Awake();
+    }
+    protected override void Start()
+    {
+        base.Start();
+        aIDecision = GetComponent<AIDecision>();
+
+        _jumpTimeoutDelta = JumpTimeout;
+        _fallTimeoutDelta = FallTimeout;
+    }
+    protected override void Update()
+    {
+        base.Update();
+        JumpAndGravity();
+        GroundedCheck();
+        Move();
+    }
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+    }
+    protected override void OnAnimatorMove()
+    {
+        base.OnAnimatorMove();
+    }
+
+    private void Move()
+    {
+        // set target speed based on move speed, sprint speed and if sprint is pressed
+        float targetSpeed = aIDecision.sprint ?
+            (isBlock ? BlockSprintSpeed : SprintSpeed) : MoveSpeed;
+
+        // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+
+        // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
+        // if there is no input, set the target speed to 0
+        if (aIDecision.move == Vector2.zero) targetSpeed = 0.0f;
+
+        // a reference to the players current horizontal velocity
+        float currentHorizontalSpeed = new Vector3(characterController.velocity.x, 0.0f, characterController.velocity.z).magnitude;
+
+        float speedOffset = 0.1f;
+        float inputMagnitude = 1f;
+
+        // accelerate or decelerate to target speed
+        if (currentHorizontalSpeed < targetSpeed - speedOffset ||
+            currentHorizontalSpeed > targetSpeed + speedOffset)
+        {
+            // creates curved result rather than a linear one giving a more organic speed change
+            // note T in Lerp is clamped, so we don't need to clamp our speed
+            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
+                Time.deltaTime * SpeedChangeRate);
+
+            // round speed to 3 decimal places
+            _speed = Mathf.Round(_speed * 1000f) / 1000f;
+        }
+        else
+        {
+            _speed = targetSpeed;
+        }
+
+        _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
+        if (_animationBlend < 0.01f) _animationBlend = 0f;
+
+        // normalise input direction
+        Vector3 inputDirection = new Vector3(aIDecision.move.x, 0.0f, aIDecision.move.y).normalized;
+
+        // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
+        // if there is a move input rotate player when the player is moving
+        if (aIDecision.move != Vector2.zero)
+        {
+            //_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
+            //                  _mainCamera.transform.eulerAngles.y;
+            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
+                RotationSmoothTime);
+
+            // rotate to face input direction relative to camera position
+            transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+        }
+
+
+        Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+
+        // move the player
+        if (comboComponent.currentComboState != EComboState.Playing)
+            characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
+                         new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+        // update animator if using character
+
+        _inputVerticalParam = Mathf.Lerp(_inputVerticalParam, aIDecision.move.magnitude, SpeedChangeRate * Time.deltaTime);
+
+        animator.SetFloat(AnimationParams.Input_Horizontal_Param, _inputHorizontalParam);
+        animator.SetFloat(AnimationParams.Input_Vertical_Param, _inputVerticalParam);
+        animator.SetFloat(AnimationParams.Speed_Param, _animationBlend);
+        animator.SetFloat(AnimationParams.Motion_Speed_Param, inputMagnitude);
+
+    }
+    private void JumpAndGravity()
+    {
+        if (Grounded)
+        {
+            currentState = EStateType.Grounded;
+            // reset the fall timeout timer
+            _fallTimeoutDelta = FallTimeout;
+
+            // update animator if using character
+            animator.SetBool(AnimationParams.Jump_Param, false);
+            animator.SetBool(AnimationParams.FreeFall_Param, false);
+
+
+            // stop our velocity dropping infinitely when grounded
+            if (_verticalVelocity < 0.0f)
+            {
+                _verticalVelocity = -2f;
+            }
+
+            // Jump////////////////////////////////
+            if (aIDecision.jump && _jumpTimeoutDelta <= 0.0f)
+            {
+                // the square root of H * -2 * G = how much velocity needed to reach desired height
+                _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+
+                // update animator if using character
+                animator.SetBool(AnimationParams.Jump_Param, true);
+            }
+            // jump timeout
+            if (_jumpTimeoutDelta >= 0.0f)
+            {
+                _jumpTimeoutDelta -= Time.deltaTime;
+            }
+        }
+        else
+        {
+            currentState = EStateType.InAir;
+            // reset the jump timeout timer
+            _jumpTimeoutDelta = JumpTimeout;
+
+            // fall timeout
+            if (_fallTimeoutDelta >= 0.0f)
+            {
+                _fallTimeoutDelta -= Time.deltaTime;
+            }
+            else
+            {
+                // update animator if using character
+                animator.SetBool(AnimationParams.FreeFall_Param, true);
+            }
+
+            // if we are not grounded, do not jump
+            aIDecision.jump = false;
+        }
+
+        // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
+        if (_verticalVelocity < _terminalVelocity)
+        {
+            _verticalVelocity += Gravity * Time.deltaTime;
+        }
+    }
+
 }
