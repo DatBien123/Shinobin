@@ -9,6 +9,10 @@ using static UnityEngine.UI.GridLayoutGroup;
 
 public class CharacterAI : Character
 {
+
+
+
+    #region Old
     [Header("Component")]
     public NavMeshAgent navMeshAgent;
     public BehaviorDecesion behavDecesion;
@@ -39,10 +43,6 @@ public class CharacterAI : Character
     {
         base.Start();
     }
-    //protected override void OnAnimatorMove()
-    //{
-    //    base.OnAnimatorMove();
-    //}
     protected override void Update()
     {
         base.Update();
@@ -377,4 +377,6 @@ public class CharacterAI : Character
     {
         currentBehaviorState = EBehaviorState.Finished;
     }
+
+    #endregion
 }

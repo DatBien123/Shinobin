@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Xml.Linq;
 using UnityEngine;
 
 
@@ -58,6 +59,7 @@ namespace Training
         public CameraManager cameraManager;
         //Hit impacts
         Coroutine C_Knockback;
+        Coroutine C_Block;
         Coroutine C_Airborne;
         Coroutine C_Stagger;
         Coroutine C_AirborneOwner;
@@ -137,24 +139,14 @@ namespace Training
         public void PlayHitReactions(Vector3 knockBackDirection, Vector3 hitPoint, EReactionType reactionType)
         {
             currentReactionType = reactionType;
-            //if(owner.atributeComponent.currentHP <= 0)
-            //{
-            //    owner.animator.CrossFadeInFixedTime(AnimationParams.Death_State, .1f);
-            //    return;
-            //}
-            switch (reactionType)
+            PlayHitFX(hitPoint, reactionType);
+            if (currentHitReactionDataTake.hitImpact.BlockData.isBlockable && owner.isBlock)
             {
-                case EReactionType.Combo:
-                    PlayHitFX(hitPoint, reactionType);
-                    if (currentHitReactionDataTake.hitImpact.KnockbackData.isKnockback) PlayHitKnockBack(knockBackDirection, hitPoint, reactionType);
-                    if (currentHitReactionDataTake.hitImpact.AirborneData.isAirborne) PlayHitAirborne(hitPoint, reactionType);
-                    break;
-                case EReactionType.Skill:
-                    PlayHitFX(hitPoint, reactionType);
-                    //if (currentSkillDataTake.hitImpact.KnockbackData.isKnockback) PlayHitKnockBack(knockBackDirection, hitPoint, reactionType);
-                    //if (currentSkillDataTake.hitImpact.AirborneData.isAirborne) PlayHitAirborne(hitPoint, reactionType);
-                    break;
+                PlayHitBlock(knockBackDirection, hitPoint, reactionType);
+                return;
             }
+            else if (currentHitReactionDataTake.hitImpact.KnockbackData.isKnockback) PlayHitKnockBack(knockBackDirection, hitPoint, reactionType);
+            else if (currentHitReactionDataTake.hitImpact.AirborneData.isAirborne) PlayHitAirborne(hitPoint, reactionType);
 
         }
         public void PlayHitFeedback(Vector3 hitPoint, EReactionType reactionType)
@@ -184,14 +176,6 @@ namespace Training
 
         }
         #region HitReaction
-        public void PlayHitKnockBack(Vector3 direction,Vector3 hitPoint, EReactionType reactionType)
-        {
-            if (C_Knockback != null)
-            {
-                StopCoroutine(C_Knockback);
-            }
-            C_Knockback = StartCoroutine(Knockback(direction,hitPoint, reactionType));
-        }
         public void PlayHitAirborne(Vector3 hitPoint, EReactionType reactionType)
         {
             if (C_Airborne != null)
@@ -200,64 +184,9 @@ namespace Training
             }
             //C_Airborne = StartCoroutine(Airborne(hitPoint, reactionType));
         }
-
         //Coroutines
         //Hint: These funcs make owner get knockback/Airborne/Stun after get hit
-        IEnumerator Knockback(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
-        {
-            HitImpact hitImpact = new HitImpact();
-            if (reactionType == EReactionType.Combo)
-            {
-                hitImpact = currentHitReactionDataTake.hitImpact;
-            }
-            else if (reactionType == EReactionType.Skill)
-            {
-                //hitImpact = currentSkillDataTake.hitImpact;
-            }
 
-            //Start Knockback
-            //owner.applyingKnockback = true;
-            Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.KnockbackData.knockbackDistance;
-            float elapsedTime = 0;
-
-            if (owner as CharacterAI)
-            {
-                (owner as CharacterAI).navMeshAgent.enabled = false;
-            }
-
-            owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
-
-            //if (hitImpact.KnockbackData.hitKnockBackClip != null)
-            //{
-            //    if(owner.TYPE != "Boss")owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
-            //    else
-            //    {
-            //        if (owner.targetingComponent.target.comboComponent.currentComboData.comboData.finisherData.isFinisher)
-            //        {
-            //            owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
-            //        }
-            //    }
-            //}
-
-            while (elapsedTime < hitImpact.KnockbackData.knockbackTime)
-            {
-                Debug.Log("Knockbadasdasdasads");
-                Vector3 movement = new Vector3(knockbackVelocity.x, 0, knockbackVelocity.z) * Time.fixedDeltaTime;
-                knockbackVelocity = Vector3.Lerp(knockbackVelocity, Vector3.zero, elapsedTime / hitImpact.KnockbackData.knockbackTime);
-
-                // Di chuyển nhân vật chỉ theo X và Z
-                owner.characterController.Move(new Vector3(movement.x, 0, movement.z));
-
-                elapsedTime += Time.fixedDeltaTime;
-                yield return null;
-            }
-
-            //owner.applyingKnockback = false;
-            //if (owner as CharacterAI)
-            //{
-            //    (owner as CharacterAI).navMeshAgent.enabled = true;
-            //}
-        }
         public void SetAirborneTime(float airborneTime)
         {
             if (C_AirborneTimeCoroutine != null)
@@ -586,6 +515,184 @@ namespace Training
         }
         #endregion
 
-        
+
+        public void PlayHitBlock(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
+        {
+            if (C_Block != null)
+            {
+                StopCoroutine(C_Block);
+            }
+            C_Block = StartCoroutine(Block(direction, hitPoint, reactionType));
+        }
+        IEnumerator Block(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
+        {
+            HitImpact hitImpact = new HitImpact();
+            if (reactionType == EReactionType.Combo)
+            {
+                hitImpact = currentHitReactionDataTake.hitImpact;
+            }
+            else if (reactionType == EReactionType.Skill)
+            {
+                //hitImpact = currentSkillDataTake.hitImpact;
+            }
+
+            //Start Knockback
+            //owner.applyingKnockback = true;
+            Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.BlockData.knockbackDistance;
+            float elapsedTime = 0;
+
+            if (owner as CharacterAI)
+            {
+                (owner as CharacterAI).navMeshAgent.enabled = false; 
+            }
+            transform.LookAt(transform.position + -direction);
+
+            if(hitImpact.BlockData.defenceReactClip != null)owner.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
+
+
+            //if (hitImpact.KnockbackData.hitKnockBackClip != null)
+            //{
+            //    if(owner.TYPE != "Boss")owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
+            //    else
+            //    {
+            //        if (owner.targetingComponent.target.comboComponent.currentComboData.comboData.finisherData.isFinisher)
+            //        {
+            //            owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
+            //        }
+            //    }
+            //}
+
+
+            while (elapsedTime < hitImpact.BlockData.knockbackTime)
+            {
+                //Debug.Log("Knockbadasdasdasads");
+                Vector3 movement = new Vector3(knockbackVelocity.x, 0, knockbackVelocity.z) * Time.fixedDeltaTime;
+                knockbackVelocity = Vector3.Lerp(knockbackVelocity, Vector3.zero, elapsedTime / hitImpact.BlockData.knockbackTime);
+
+                // Di chuyển nhân vật chỉ theo X và Z
+                owner.characterController.Move(new Vector3(movement.x, 0, movement.z));
+
+                elapsedTime += Time.fixedDeltaTime;
+                yield return null;
+            }
+
+            //owner.applyingKnockback = false;
+            //if (owner as CharacterAI)
+            //{
+            //    (owner as CharacterAI).navMeshAgent.enabled = true;
+            //}
+        }
+        public void PlayHitKnockBack(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
+        {
+            if (C_Knockback != null)
+            {
+                StopCoroutine(C_Knockback);
+            }
+            C_Knockback = StartCoroutine(Knockback(direction, hitPoint, reactionType));
+        }
+        IEnumerator Knockback(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
+        {
+            HitImpact hitImpact = new HitImpact();
+            if (reactionType == EReactionType.Combo)
+            {
+                hitImpact = currentHitReactionDataTake.hitImpact;
+            }
+            else if (reactionType == EReactionType.Skill)
+            {
+                //hitImpact = currentSkillDataTake.hitImpact;
+            }
+
+            //Start Knockback
+            //owner.applyingKnockback = true;
+            Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.KnockbackData.knockbackDistance;
+            float elapsedTime = 0;
+
+            if (owner as CharacterAI)
+            {
+                (owner as CharacterAI).navMeshAgent.enabled = false;
+            }
+            if (hitImpact.KnockbackData.reactData.isRotateToHitDirection)
+            {
+                transform.LookAt(transform.position + -direction);
+            }
+            AnimationClip clip = GetValidAnimationClip(GetValidHitReaction(direction));
+            if (clip != null) {
+                owner.animator.CrossFadeInFixedTime(clip.name, .1f);
+            }
+
+            //if (hitImpact.KnockbackData.hitKnockBackClip != null)
+            //{
+            //    if(owner.TYPE != "Boss")owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
+            //    else
+            //    {
+            //        if (owner.targetingComponent.target.comboComponent.currentComboData.comboData.finisherData.isFinisher)
+            //        {
+            //            owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
+            //        }
+            //    }
+            //}
+            
+
+            while (elapsedTime < hitImpact.KnockbackData.knockbackTime)
+            {
+                //Debug.Log("Knockbadasdasdasads");
+                Vector3 movement = new Vector3(knockbackVelocity.x, 0, knockbackVelocity.z) * Time.fixedDeltaTime;
+                knockbackVelocity = Vector3.Lerp(knockbackVelocity, Vector3.zero, elapsedTime / hitImpact.KnockbackData.knockbackTime);
+
+                // Di chuyển nhân vật chỉ theo X và Z
+                owner.characterController.Move(new Vector3(movement.x, 0, movement.z));
+
+                elapsedTime += Time.fixedDeltaTime;
+                yield return null;
+            }
+
+            //owner.applyingKnockback = false;
+            //if (owner as CharacterAI)
+            //{
+            //    (owner as CharacterAI).navMeshAgent.enabled = true;
+            //}
+        }
+
+        AnimationClip GetValidAnimationClip(EHitReactDirection hitReactDirection)
+        {
+            if(currentHitReactionDataTake.hitImpact.KnockbackData.reactData.animationReactDatas.Count > 0)
+            {
+                foreach(var animationReactData in currentHitReactionDataTake.hitImpact.KnockbackData.reactData.animationReactDatas)
+                {
+                    if(animationReactData.hitReactDirection == hitReactDirection && animationReactData.hitReactClip != null)
+                    {
+                        return animationReactData.hitReactClip;
+                    }
+                }
+            }
+            return null;
+        }
+        public EHitReactDirection GetValidHitReaction(Vector3 direction)
+        {
+            EHitReactDirection hitReactionDirectionResult = new EHitReactDirection();
+            Vector3 directionToCauser = -direction;
+            Vector3 localDir = gameObject.transform.InverseTransformDirection(directionToCauser);
+
+            hitReactionDirectionResult = GetDirection(localDir);
+            Debug.Log("Hit Reaction Direction is: " + hitReactionDirectionResult.ToString());
+            return hitReactionDirectionResult;
+        }
+        EHitReactDirection GetDirection(Vector3 localDir)
+        {
+            float angle = Mathf.Atan2(localDir.x, localDir.z) * Mathf.Rad2Deg;
+            angle = (angle + 360f) % 360f;
+
+            if (angle >= 337.5f || angle < 22.5f) return EHitReactDirection.F;
+            if (angle >= 22.5f && angle < 67.5f) return EHitReactDirection.FR;
+            if (angle >= 67.5f && angle < 112.5f) return EHitReactDirection.R;
+            if (angle >= 112.5f && angle < 157.5f) return EHitReactDirection.BR;
+            if (angle >= 157.5f && angle < 202.5f) return EHitReactDirection.B;
+            if (angle >= 202.5f && angle < 247.5f) return EHitReactDirection.BL;
+            if (angle >= 247.5f && angle < 292.5f) return EHitReactDirection.L;
+            if (angle >= 292.5f && angle < 337.5f) return EHitReactDirection.FL;
+
+            return EHitReactDirection.F;
+        }
+
     }
 }

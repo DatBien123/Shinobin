@@ -3,6 +3,14 @@ using UnityEngine;
 
 namespace Training
 {
+    [System.Serializable]
+    public enum ETraceType
+    {
+        None = 0,
+        MainWeapon = 1,
+        Sphere = 2,
+        Box
+    }
     public class HitTraceComponent : MonoBehaviour
     {
         [Header("Character Owner")]
@@ -240,19 +248,40 @@ namespace Training
             taker.hitReactionComponent.PlayHitFeedback(hitPoint, EReactionType.Combo);
 
         }
-        //private void OnDrawGizmos()
-        //{
-        //    if (owner.currentWeapon != null)
-        //    {
-        //        if (owner.currentWeapon.weaponStartPoint != null && owner.currentWeapon.weaponEndPoint != null)
-        //        {
-        //            Gizmos.color = Color.red;
-        //            Gizmos.DrawWireSphere(owner.currentWeapon.weaponStartPoint.position, owner.currentWeapon.capsuleRadius);
-        //            Gizmos.DrawWireSphere(owner.currentWeapon.weaponEndPoint.position, owner.currentWeapon.capsuleRadius);
-        //            Gizmos.DrawLine(owner.currentWeapon.weaponStartPoint.position, owner.currentWeapon.weaponEndPoint.position);
-        //        }
-        //    }
-        //}
+        private void OnDrawGizmos()
+        {
+            if (owner != null && owner.currentWeapon != null)
+            {
+                Transform start = owner.currentWeapon.weaponStartPoint;
+                Transform end = owner.currentWeapon.weaponEndPoint;
+                float radius = owner.currentWeapon.capsuleRadius;
+
+                if (start != null && end != null)
+                {
+                    Gizmos.color = Color.red;
+
+                    // Vẽ hai Sphere tại hai đầu của capsule
+                    Gizmos.DrawWireSphere(start.position, radius);
+                    Gizmos.DrawWireSphere(end.position, radius);
+
+                    // Vẽ line giữa 2 điểm (trục capsule)
+                    Gizmos.DrawLine(start.position, end.position);
+
+                    // ✅ Vẽ giả lập vỏ capsule (nâng cao - optional)
+                    Vector3 dir = (end.position - start.position).normalized;
+                    float distance = Vector3.Distance(start.position, end.position);
+
+                    Quaternion rotation = Quaternion.LookRotation(dir);
+                    Matrix4x4 oldMatrix = Gizmos.matrix;
+                    Gizmos.matrix = Matrix4x4.TRS(start.position + dir * distance * 0.5f, rotation, Vector3.one);
+
+                    // Mô phỏng thân hình trụ của capsule
+                    Gizmos.DrawWireCube(Vector3.zero, new Vector3(radius * 2f, radius * 2f, distance));
+
+                    Gizmos.matrix = oldMatrix;
+                }
+            }
+        }
 
     }
 }

@@ -608,7 +608,7 @@ namespace Training
                     }
                 case EBoolType.TargetGround:
                     {
-                        Character target = ownerAI.targetingComponent.target;
+                        //Character target = ownerAI.targetingComponent.target;
                         return false;
                             //(target != null
                             //&& target.isGround);
@@ -625,24 +625,26 @@ namespace Training
                     }
                 case EBoolType.Jumpable:
                     {
-                        Character target = ownerAI.targetingComponent.target;
+                        //Character target = ownerAI.targetingComponent.target;
                         return false;
                             //!target.isGround;
                     }
                 case EBoolType.Dodgeable:
                     {
-                        Character target = ownerAI.targetingComponent.target;
-                        return (target != null
-                            && (target.currentCombatState == ECombatState.Attacking || ownerAI.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit));
+                        return false;
+                        //Character target = ownerAI.targetingComponent.target;
+                        //return (target != null
+                        //    && (target.currentCombatState == ECombatState.Attacking || ownerAI.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit));
                             /*&& enemyOwner.currentCombatState != ECombatState.Attacking*/
                             //|| (ownerAI.currentCombatState == ECombatState.BeingBeaten 
                             //&& ownerAI.skillComponent.currentSkillState == ESkillState.Finished);
                     }
                 case EBoolType.Blockable:
                     {
-                        Character target = ownerAI.targetingComponent.target;
-                        return (target != null
-                            && target.currentCombatState == ECombatState.Attacking);
+                        return false;
+                        //Character target = ownerAI.targetingComponent.target;
+                        //return (target != null
+                        //    && target.currentCombatState == ECombatState.Attacking);
                     }
                 case EBoolType.Shootable:
                     {

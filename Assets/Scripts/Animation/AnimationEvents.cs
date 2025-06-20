@@ -46,7 +46,9 @@ public class AnimationEvents : MonoBehaviour
         owner.hitReactionComponent.currentListHitReactionData = owner.comboComponent.currentComboData.comboData.listHitReactionDatas[currentComboIndex];
         owner.comboComponent.currentComboState = EComboState.Playing;
         owner.currentCombatState = ECombatState.Attacking;
-        owner.animator.applyRootMotion = true;
+        //owner.animator.applyRootMotion = true;
+        owner.isApplyAnimationMove = true;
+        owner.freeflowComponent.StartLOL();
     }
     public void Anim_OnComboEnd(int end)
     {
@@ -61,7 +63,7 @@ public class AnimationEvents : MonoBehaviour
             owner.comboComponent.ResetCombo();
             owner.comboComponent.currentComboState = EComboState.Finish;
         }
-        owner.animator.applyRootMotion = false;
+        //owner.animator.applyRootMotion = false;
     }
     public void Anim_OnAttack(int hitReactionIndex) 
     {
@@ -85,7 +87,7 @@ public class AnimationEvents : MonoBehaviour
 
     public void Anim_OnFreeflow(int freeflowIndex)
     {
-        owner.freeflowComponent.StartFreeflow();
+        //owner.freeflowComponent.StartLOL();
     }
     #endregion
 

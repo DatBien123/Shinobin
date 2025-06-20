@@ -27,6 +27,7 @@ MonoBehaviour:
     - Name: LA1
       hitReactionDatas:
       - Name: LA1 - 1
+        attackDirection: 0
         hitTrace:
           traceType: 1
           traceAngle: 0
@@ -60,8 +61,28 @@ MonoBehaviour:
             isKnockback: 1
             knockbackTime: 1
             knockbackDistance: 5
-            intensity: 2
-            hitKnockBackClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+            reactData:
+              isRotateToHitDirection: 0
+              intensityData:
+                intensityType: 0
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: d9da4170bb481b444bdb6612b1d89353, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: a6e4ae7cc4410004b9b3bccb2a5df448, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 91639ebc49ac4ba42a7c21c34d410249, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
             knockbackFX:
               KnockbackParticleSystem: {fileID: 0}
               KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -111,9 +132,11 @@ MonoBehaviour:
               volume: 0
               pitch: 0
           BlockData:
-            isBlockable: 0
-            parryAnimation: {fileID: 0}
-            breakParryAnimation: {fileID: 0}
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: 104e14aa8b76f5840b2257ec4cd8b6a6, type: 3}
+            parryReactClip: {fileID: 0}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -139,7 +162,8 @@ MonoBehaviour:
           duration: 0
     - Name: LA2
       hitReactionDatas:
-      - Name: LA2 - 1
+      - Name: LA1 - 1
+        attackDirection: 0
         hitTrace:
           traceType: 1
           traceAngle: 0
@@ -170,11 +194,31 @@ MonoBehaviour:
             pitch: 0
         hitImpact:
           KnockbackData:
-            isKnockback: 0
-            knockbackTime: 0
-            knockbackDistance: 0
-            intensity: 0
-            hitKnockBackClip: {fileID: 0}
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 1
+              intensityData:
+                intensityType: 1
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
             knockbackFX:
               KnockbackParticleSystem: {fileID: 0}
               KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -224,9 +268,11 @@ MonoBehaviour:
               volume: 0
               pitch: 0
           BlockData:
-            isBlockable: 0
-            parryAnimation: {fileID: 0}
-            breakParryAnimation: {fileID: 0}
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
+            parryReactClip: {fileID: 0}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -252,7 +298,8 @@ MonoBehaviour:
           duration: 0
     - Name: LA3
       hitReactionDatas:
-      - Name: LA3 - 1
+      - Name: LA1 - 1
+        attackDirection: 0
         hitTrace:
           traceType: 1
           traceAngle: 0
@@ -283,11 +330,31 @@ MonoBehaviour:
             pitch: 0
         hitImpact:
           KnockbackData:
-            isKnockback: 0
-            knockbackTime: 0
-            knockbackDistance: 0
-            intensity: 0
-            hitKnockBackClip: {fileID: 0}
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 0
+              intensityData:
+                intensityType: 0
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: d9da4170bb481b444bdb6612b1d89353, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: a6e4ae7cc4410004b9b3bccb2a5df448, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 91639ebc49ac4ba42a7c21c34d410249, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
             knockbackFX:
               KnockbackParticleSystem: {fileID: 0}
               KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -337,9 +404,11 @@ MonoBehaviour:
               volume: 0
               pitch: 0
           BlockData:
-            isBlockable: 0
-            parryAnimation: {fileID: 0}
-            breakParryAnimation: {fileID: 0}
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: 104e14aa8b76f5840b2257ec4cd8b6a6, type: 3}
+            parryReactClip: {fileID: 0}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -363,7 +432,8 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
-      - Name: LA3 - 2
+      - Name: LA1 - 1
+        attackDirection: 0
         hitTrace:
           traceType: 1
           traceAngle: 0
@@ -394,11 +464,31 @@ MonoBehaviour:
             pitch: 0
         hitImpact:
           KnockbackData:
-            isKnockback: 0
-            knockbackTime: 0
-            knockbackDistance: 0
-            intensity: 0
-            hitKnockBackClip: {fileID: 0}
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 0
+              intensityData:
+                intensityType: 0
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: d9da4170bb481b444bdb6612b1d89353, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: a6e4ae7cc4410004b9b3bccb2a5df448, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 91639ebc49ac4ba42a7c21c34d410249, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
             knockbackFX:
               KnockbackParticleSystem: {fileID: 0}
               KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -448,9 +538,11 @@ MonoBehaviour:
               volume: 0
               pitch: 0
           BlockData:
-            isBlockable: 0
-            parryAnimation: {fileID: 0}
-            breakParryAnimation: {fileID: 0}
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
+            parryReactClip: {fileID: 0}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -476,7 +568,8 @@ MonoBehaviour:
           duration: 0
     - Name: LA4
       hitReactionDatas:
-      - Name: LA4 - 1
+      - Name: LA1 - 1
+        attackDirection: 0
         hitTrace:
           traceType: 1
           traceAngle: 0
@@ -507,11 +600,31 @@ MonoBehaviour:
             pitch: 0
         hitImpact:
           KnockbackData:
-            isKnockback: 0
-            knockbackTime: 0
-            knockbackDistance: 0
-            intensity: 0
-            hitKnockBackClip: {fileID: 0}
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 1
+              intensityData:
+                intensityType: 1
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
             knockbackFX:
               KnockbackParticleSystem: {fileID: 0}
               KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -561,9 +674,11 @@ MonoBehaviour:
               volume: 0
               pitch: 0
           BlockData:
-            isBlockable: 0
-            parryAnimation: {fileID: 0}
-            breakParryAnimation: {fileID: 0}
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
+            parryReactClip: {fileID: 0}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}

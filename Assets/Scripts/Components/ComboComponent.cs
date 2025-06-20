@@ -4,6 +4,18 @@ using UnityEngine;
 
 namespace Training
 {
+    [System.Serializable]
+    public enum EKeystroke
+    {
+        None = 0,
+        LightAttack = 1,
+        StrongAttack = 2,
+        HoldAttack = 3,
+        SpecialAttackPressed = 4,
+        SpecialAttackReleased = 5,
+        FinisherAttack = 6
+
+    }
     public enum EComboState
     {
         None = 0,
@@ -180,7 +192,7 @@ namespace Training
             LoadCombo();
             owner.currentCombatState = ECombatState.None;
             currentComboState = EComboState.Finish;
-
+            owner.isApplyAnimationMove = false;
             //Navmesh
             if (owner as CharacterAI)
             {

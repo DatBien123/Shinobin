@@ -6,43 +6,22 @@ using static Training.FreeflowComponent;
 namespace Training
 {
 
-    [System.Serializable]
-    public enum EShakeDirection
-    {
-        None = 0,
-        Left = 1,
-        Right = 2,
-        Up = 3,
-        Down = 4,
-        Front = 5,
-        Back  = 6
-    }
-    [System.Serializable]
-    public enum ETraceType
-    {
-        None = 0,
-        MainWeapon = 1,
-        Sphere = 2,
-        Box
-    }
-    [System.Serializable]
-    public enum EKeystroke
-    {
-        None = 0,
-        LightAttack = 1,
-        StrongAttack = 2,
-        HoldAttack = 3,
-        SpecialAttackPressed = 4,
-        SpecialAttackReleased = 5,
-        FinisherAttack = 6
 
-    }
+
+
     [System.Serializable]
     public enum EAirborneDirection
     {
         None = 0,
         Up,
         Down
+    }
+    [System.Serializable]
+    public enum EAttackDirection
+    {
+        None = 0,
+        Left,
+        Right
     }
     [System.Serializable]
     public enum ECollideType
@@ -52,15 +31,52 @@ namespace Training
         FloorToAir,
         OnFloor
     }
+
+    #region ReactData
+
+    [System.Serializable]
+    public enum EIntensityType
+    {
+        Normal,
+        Heavy,
+        Massive
+    }
+    [System.Serializable]
+    public enum EHitReactDirection
+    {
+        F,FL,FR,B,BL,BR,L,R
+    }
+    [System.Serializable]
+    public struct IntensityData
+    {
+        public EIntensityType intensityType;
+        public float intensity;
+    }
+    [System.Serializable]
+    public struct AnimationReactData
+    {
+        public EHitReactDirection hitReactDirection;
+        public AnimationClip hitReactClip;
+
+    }
+    [System.Serializable]
+    public struct ReactData
+    {
+        public bool isRotateToHitDirection;
+        public IntensityData intensityData;
+        public List<AnimationReactData> animationReactDatas;
+    }
+    #endregion
+
     #region Knockback
+
     [System.Serializable]
     public struct KnockbackData
     {
         public bool isKnockback;
         public float knockbackTime;
         public float knockbackDistance;
-        public float intensity;
-        public AnimationClip hitKnockBackClip;
+        public ReactData reactData;
         public KnockbackFX knockbackFX;
         public KnockbackSFX knockbackSFX;
     }
@@ -186,8 +202,11 @@ namespace Training
     public struct BlockData
     {
         public bool isBlockable;
-        public AnimationClip parryAnimation;
-        public AnimationClip breakParryAnimation;
+        public float knockbackTime;
+        public float knockbackDistance;  
+        public AnimationClip defenceReactClip;
+        public AnimationClip parryReactClip;
+
 
         public BlockFX blockFX;
         public BlockSFX blockSFX;
@@ -286,6 +305,7 @@ namespace Training
     public struct HitReactionData
     {
         public string Name;
+        public EAttackDirection attackDirection;
         public HitTrace hitTrace;
 
         public SlashData slashData;

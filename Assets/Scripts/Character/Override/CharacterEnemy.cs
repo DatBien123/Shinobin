@@ -20,8 +20,8 @@ public class CharacterEnemy : CharacterAI
     {
         base.FixedUpdate();
     }
-    //protected override void OnAnimatorMove()
-    //{
-    //    base.OnAnimatorMove();
-    //}
+    protected override void OnAnimatorMove()
+    {
+        base.OnAnimatorMove();
+    }
 }

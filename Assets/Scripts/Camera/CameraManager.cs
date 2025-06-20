@@ -3,6 +3,18 @@ using Unity.Cinemachine;
 using UnityEngine;
 
 [System.Serializable]
+public enum EShakeDirection
+{
+    None = 0,
+    Left = 1,
+    Right = 2,
+    Up = 3,
+    Down = 4,
+    Front = 5,
+    Back = 6
+}
+
+[System.Serializable]
 public enum ECameraType
 {
     FollowCamera,
@@ -66,12 +78,12 @@ public class CameraManager : MonoBehaviour
     }
     public void LockOnTargetStuffs()
     {
-        CharacterEnemy target = player.targetingComponent.DetectHitEnemy();
+        //CharacterEnemy target = player.targetingComponent.DetectHitEnemy();
         Transform lookAtTarget = null;
-        if(target != null)
-        {
-            lookAtTarget = target.characterRigComponent.cameraLookAtSocket.transform;
-        }
+        //if(target != null)
+        //{
+        //    lookAtTarget = target.characterRigComponent.cameraLookAtSocket.transform;
+        //}
 
         if (lookAtTarget != null && currentCameraType != ECameraType.LockOnCamera) {
             currentCamera = lockOnCamera;
@@ -80,7 +92,7 @@ public class CameraManager : MonoBehaviour
             cameraAnimator.CrossFadeInFixedTime(AnimationParams.Camera_LockOn_State, .1f);
             currentCameraType = ECameraType.LockOnCamera;
 
-            player.targetingComponent.StartValidatedLockOnTarget();
+            //player.targetingComponent.StartValidatedLockOnTarget();
         }
         else 
         {
@@ -92,7 +104,7 @@ public class CameraManager : MonoBehaviour
         currentCamera = finisherCamera;
 
         currentCamera.Follow = player.characterRigComponent.cameraFollowSocket;
-        currentCamera.LookAt = player.targetingComponent.target.characterRigComponent.cameraFinisherSocket;
+        //currentCamera.LookAt = player.targetingComponent.target.characterRigComponent.cameraFinisherSocket;
         
         cameraAnimator.CrossFadeInFixedTime(AnimationParams.Camera_Finisher_State, .1f);
         currentCameraType = ECameraType.FinisherCamera;

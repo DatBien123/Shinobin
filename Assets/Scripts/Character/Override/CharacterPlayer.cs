@@ -73,7 +73,6 @@ public class CharacterPlayer : Character
 
     [Tooltip("Player blocking proprs")]
     public float BlockSprintSpeed = 3.0f;
-    public bool isBlock = false;
     // cinemachine
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
@@ -83,7 +82,7 @@ public class CharacterPlayer : Character
     private float _animationBlend;
     private float _targetRotation = 0.0f;
     private float _rotationVelocity;
-    private float _verticalVelocity;
+
     private float _terminalVelocity = 53.0f;
 
     // timeout deltatime
@@ -147,6 +146,11 @@ public class CharacterPlayer : Character
     {
         base.FixedUpdate();
     }
+    protected override void OnAnimatorMove()
+    {
+        base.OnAnimatorMove();
+    }
+
     private void GroundedCheck()
     {
         // set sphere position, with offset
@@ -233,7 +237,7 @@ public class CharacterPlayer : Character
                 RotationSmoothTime);
 
             // rotate to face input direction relative to camera position
-            transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
 
 

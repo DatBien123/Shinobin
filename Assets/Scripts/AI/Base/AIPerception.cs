@@ -38,7 +38,7 @@ public class AIPerception : MonoBehaviour
     private void Awake()
     {
         ownerAI = GetComponent<CharacterAI>();
-        currentTarget = ownerAI.targetingComponent.target;
+        //currentTarget = ownerAI.targetingComponent.target;
     }
 
     public void StartTaticalPrediction()
