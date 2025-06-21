@@ -7,7 +7,8 @@ namespace Training
     [System.Serializable]
     public enum EMoveType
     {
-        Walk = 0,
+        None = 0,
+        Walk,
         Sprint,
         Fast
     }

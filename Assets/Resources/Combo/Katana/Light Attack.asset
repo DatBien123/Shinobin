@@ -62,7 +62,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 5
             reactData:
-              isRotateToHitDirection: 0
+              isRotateToHitDirection: 1
               intensityData:
                 intensityType: 0
                 intensity: 0

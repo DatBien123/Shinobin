@@ -75,7 +75,7 @@ public class TeleportComponent : MonoBehaviour
     IEnumerator TeleportAI(Vector3 teleportPosition, float duration)
     {
         float elapsedTime = 0.0f;
-        (owner as CharacterAI).navMeshAgent.enabled = false;
+        //(owner as CharacterAI).navMeshAgent.enabled = false;
         (owner as CharacterAI).currentBehaviorState = Training.EBehaviorState.Executing;
         owner.currentCombatState = ECombatState.Untouchable;
 
@@ -102,7 +102,7 @@ public class TeleportComponent : MonoBehaviour
 
         owner.currentCombatState = ECombatState.None;
 
-        (owner as CharacterAI).navMeshAgent.enabled = true;
+        //(owner as CharacterAI).navMeshAgent.enabled = true;
         (owner as CharacterAI).currentBehaviorState = Training.EBehaviorState.Finished;
     }
 }

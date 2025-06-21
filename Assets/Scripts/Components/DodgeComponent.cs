@@ -122,7 +122,7 @@ public class DodgeComponent : MonoBehaviour
         CharacterAI ownerAI = owner as CharacterAI;
 
         ownerAI.currentBehaviorState = EBehaviorState.Executing;
-        ownerAI.navMeshAgent.enabled = false;
+        //ownerAI.navMeshAgent.enabled = false;
 
 
         // Disable physical collision
@@ -158,7 +158,7 @@ public class DodgeComponent : MonoBehaviour
         owner.characterController.detectCollisions = true;
 
         // End Dodge AI
-        ownerAI.navMeshAgent.enabled = false;
+        //ownerAI.navMeshAgent.enabled = false;
         ownerAI.currentBehaviorState = EBehaviorState.Finished;
         Debug.Log("End Dodge");
     }
@@ -175,7 +175,7 @@ public class DodgeComponent : MonoBehaviour
         CharacterAI ownerAI = owner as CharacterAI;
 
         ownerAI.currentBehaviorState = EBehaviorState.Executing;
-        ownerAI.navMeshAgent.enabled = false;
+        //ownerAI.navMeshAgent.enabled = false;
 
 
         // Disable physical collision
@@ -209,7 +209,7 @@ public class DodgeComponent : MonoBehaviour
         owner.characterController.detectCollisions = true;
 
         // End Dodge AI
-        ownerAI.navMeshAgent.enabled = false;
+        //ownerAI.navMeshAgent.enabled = false;
         ownerAI.currentBehaviorState = EBehaviorState.Finished;
         Debug.Log("End Dash");
     }

@@ -14,11 +14,11 @@ namespace Training
         [Header("Detected Target")]
         public Transform target;
 
-        private void Start()
+        private void Awake()
         {
             StartCoroutine(TargetScanRoutine());
-        }
 
+        }
         IEnumerator TargetScanRoutine()
         {
             while (true)

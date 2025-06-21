@@ -541,10 +541,10 @@ namespace Training
             Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.BlockData.knockbackDistance;
             float elapsedTime = 0;
 
-            if (owner as CharacterAI)
-            {
-                (owner as CharacterAI).navMeshAgent.enabled = false; 
-            }
+            //if (owner as CharacterAI)
+            //{
+            //    (owner as CharacterAI).navMeshAgent.enabled = false; 
+            //}
             transform.LookAt(transform.position + -direction);
 
             if(hitImpact.BlockData.defenceReactClip != null)owner.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
@@ -603,14 +603,10 @@ namespace Training
             }
 
             //Start Knockback
-            //owner.applyingKnockback = true;
+            owner.isApplyingKnockBack = true;
             Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.KnockbackData.knockbackDistance;
             float elapsedTime = 0;
 
-            if (owner as CharacterAI)
-            {
-                (owner as CharacterAI).navMeshAgent.enabled = false;
-            }
             if (hitImpact.KnockbackData.reactData.isRotateToHitDirection)
             {
                 transform.LookAt(transform.position + -direction);
@@ -645,6 +641,7 @@ namespace Training
                 elapsedTime += Time.fixedDeltaTime;
                 yield return null;
             }
+            owner.isApplyingKnockBack = false;
 
             //owner.applyingKnockback = false;
             //if (owner as CharacterAI)

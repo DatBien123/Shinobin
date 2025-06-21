@@ -194,10 +194,10 @@ namespace Training
             currentComboState = EComboState.Finish;
             owner.isApplyAnimationMove = false;
             //Navmesh
-            if (owner as CharacterAI)
-            {
-                (owner as CharacterAI).navMeshAgent.enabled = true;
-            }
+            //if (owner as CharacterAI)
+            //{
+            //    (owner as CharacterAI).navMeshAgent.enabled = true;
+            //}
 
         }
     }

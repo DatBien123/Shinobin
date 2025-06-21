@@ -1,6 +1,6 @@
+using System.Collections;
 using Training;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class AIDecision : MonoBehaviour
 {
@@ -11,12 +11,19 @@ public class AIDecision : MonoBehaviour
     public bool jump;
     public bool sprint;
 
+    [Header("Movement")]
+    public EMoveType currentMoveType;
+    public EMoveStrafeType currentMoveStrafeType;
+
+    public Vector3 desiredMoveDirection;
+    public float stoppingDistanceToTarget = 1.5f;
+
+
     private void Awake()
     {
         ownerAI = GetComponent<CharacterAI>();
-        ownerAI.animator.SetBool(AnimationParams.Block_Param, ownerAI.isBlock);
     }
-    #region Movement
+    #region SetParams
     public void Move(Vector2 moveAIValue)
     {
         if (moveAIValue.magnitude > 0)
@@ -52,9 +59,6 @@ public class AIDecision : MonoBehaviour
             jump = false;
         }
     }
-    #endregion
-
-    #region Combat
     public void Block(bool isAIBlock)
     {
         if (isAIBlock)
@@ -68,11 +72,92 @@ public class AIDecision : MonoBehaviour
             ownerAI.animator.SetBool(AnimationParams.Block_Param, false);
         }
     }
+    #endregion
+    private void Start()
+    {
+        //StartMoveToTarget(EMoveType.Sprint);
+        StartMoveStrafeToTarget(EMoveType.Walk, EMoveStrafeType.LeftStrafe);
+    }
+    private void Update()
+    {
+    }
 
 
+    #region MoveToTarget
+    Coroutine C_MoveToTarget;
+    public void StartMoveToTarget(EMoveType moveType)
+    {
+        if (C_MoveToTarget != null)StopCoroutine(C_MoveToTarget);
+        C_MoveToTarget = StartCoroutine(MoveToTarget(moveType));
+    }
+    IEnumerator MoveToTarget(EMoveType moveType)
+    {
+        if (ownerAI.targetingComponent.target == null) yield break;
 
+        currentMoveType = moveType;
+        if (currentMoveType == EMoveType.Sprint)
+        {
+            sprint = true;
+        }
+        Move(new Vector2(0, 1));
+        desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
+        desiredMoveDirection.Normalize();
 
+        while (Utilities.Instance.DistanceCalculate(ownerAI.targetingComponent.target.transform.position, 
+            ownerAI.transform.position) > stoppingDistanceToTarget)
+        {
+            if (ownerAI.targetingComponent.target == null) break;
 
+            desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
+            desiredMoveDirection.Normalize();
 
+            yield return null;
+        }
+
+        currentMoveType = EMoveType.None;
+        sprint = false;
+        Move(new Vector2(0, 0));
+        desiredMoveDirection = Vector3.zero;
+    }
+    #endregion
+
+    #region StrafeMoveToTarget
+    Coroutine C_MoveStrafeToTarget;
+    public void StartMoveStrafeToTarget(EMoveType moveType, EMoveStrafeType moveStrafeType)
+    {
+        if (C_MoveToTarget != null) StopCoroutine(C_MoveToTarget);
+        C_MoveToTarget = StartCoroutine(MoveStrafeToTarget(moveType, moveStrafeType));
+    }
+    IEnumerator MoveStrafeToTarget(EMoveType moveType, EMoveStrafeType moveStrafeType)
+    {
+        if (ownerAI.targetingComponent.target == null) yield break;
+
+        currentMoveType = moveType;
+        currentMoveStrafeType = moveStrafeType;
+        if (currentMoveType == EMoveType.Sprint)
+        {
+            sprint = true;
+        }
+        Move(new Vector2(((int)currentMoveStrafeType), 0));
+        desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
+        desiredMoveDirection.Normalize();
+
+        while (Utilities.Instance.DistanceCalculate(ownerAI.targetingComponent.target.transform.position,
+            ownerAI.transform.position) > stoppingDistanceToTarget)
+        {
+            if (ownerAI.targetingComponent.target == null) break;
+
+            desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
+            desiredMoveDirection.Normalize();
+
+            yield return null;
+        }
+
+        currentMoveType = EMoveType.None;
+        currentMoveStrafeType = EMoveStrafeType.None;
+        sprint = false;
+        Move(new Vector2(0, 0));
+        desiredMoveDirection = Vector3.zero;
+    }
     #endregion
 }

@@ -12,7 +12,6 @@ public class CharacterAI : Character
 {
     #region Old
     [Header("Component")]
-    public NavMeshAgent navMeshAgent;
     public BehaviorDecesion behavDecesion;
     public bool isDoingCombo = false;
     public EBehaviorState currentBehaviorState = EBehaviorState.None;
@@ -78,36 +77,36 @@ public class CharacterAI : Character
         animator.SetFloat(AnimationParams.Input_Vertical_Param, 1.0f);
         animator.CrossFadeInFixedTime(AnimationParams.Locomotion_State, .15f, 0, 0.1f);
 
-        if (navMeshAgent.enabled)
-            //navMeshAgent.speed = speed;
+        //if (navMeshAgent.enabled)
+        //    //navMeshAgent.speed = speed;
 
-            if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
+        //    if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
 
-        float distanceToTarget = Vector3.Distance(navMeshAgent.transform.position, targetingComponent.target.transform.position);
+        //float distanceToTarget = Vector3.Distance(navMeshAgent.transform.position, targetingComponent.target.transform.position);
 
-        float elapsedTime = 0.0f;
-        while (distanceToTarget >= navMeshAgent.stoppingDistance)
-        {
-            if (targetingComponent.target == null) yield break;
+        //float elapsedTime = 0.0f;
+        //while (distanceToTarget >= navMeshAgent.stoppingDistance)
+        //{
+        //    if (targetingComponent.target == null) yield break;
 
-            // Kiểm tra nếu mục tiêu đã di chuyển
-            if (Vector3.Distance(targetingComponent.target.transform.position, lastTargetPosition) > 0.1f)
-            {
-                lastTargetPosition = targetingComponent.target.transform.position;
-                if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
-            }
+        //    // Kiểm tra nếu mục tiêu đã di chuyển
+        //    if (Vector3.Distance(targetingComponent.target.transform.position, lastTargetPosition) > 0.1f)
+        //    {
+        //        lastTargetPosition = targetingComponent.target.transform.position;
+        //        if (navMeshAgent.enabled) navMeshAgent.SetDestination(targetingComponent.target.transform.position); // Cập nhật điểm đến mới
+        //    }
 
-            //Update Position
-            distanceToTarget = Utilities.Instance.DistanceCalculate(navMeshAgent.transform.position, targetingComponent.target.transform.position, true);
+        //    //Update Position
+        //    distanceToTarget = Utilities.Instance.DistanceCalculate(navMeshAgent.transform.position, targetingComponent.target.transform.position, true);
 
-            elapsedTime += Time.deltaTime;
+        //    elapsedTime += Time.deltaTime;
 
-            //Break Lines
-            if (elapsedTime > duration
-                || hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
-                || distanceToTarget <= moveToTargetStoppingDistance) break;
-            yield return null;
-        }
+        //    //Break Lines
+        //    if (elapsedTime > duration
+        //        || hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
+        //        || distanceToTarget <= moveToTargetStoppingDistance) break;
+        yield return null;
+        //}
 
         //End Move
         currentBehaviorState = EBehaviorState.Finished;
@@ -116,7 +115,7 @@ public class CharacterAI : Character
         animator.SetFloat(AnimationParams.Speed_Param, 0.0f);
         animator.SetFloat(AnimationParams.Input_Horizontal_Param, 0.0f);
         animator.SetFloat(AnimationParams.Input_Vertical_Param, 0.0f);
-        if (navMeshAgent.enabled) navMeshAgent.ResetPath();
+        //if (navMeshAgent.enabled) navMeshAgent.ResetPath();
 
 
     }
@@ -322,23 +321,23 @@ public class CharacterAI : Character
         animator.SetFloat(AnimationParams.Input_Horizontal_Turn_Param, result.x);
         animator.SetFloat(AnimationParams.Input_Vertical_Turn_Param, result.y);
 
-        //Speed 
-        if (navMeshAgent.speed == 0.0f)
-        {
-            animator.SetFloat(AnimationParams.Speed_Param, 0.0f);
-        }
-        else if (navMeshAgent.speed == 1.0f)
-        {
-            animator.SetFloat(AnimationParams.Speed_Param, 1.0f);
-        }
-        else if (navMeshAgent.speed == 2.0f)
-        {
-            animator.SetFloat(AnimationParams.Speed_Param, 2.0f);
-        }
-        else if (navMeshAgent.speed == 3.0f)
-        {
-            animator.SetFloat(AnimationParams.Speed_Param, 3.0f);
-        }
+        ////Speed 
+        //if (navMeshAgent.speed == 0.0f)
+        //{
+        //    animator.SetFloat(AnimationParams.Speed_Param, 0.0f);
+        //}
+        //else if (navMeshAgent.speed == 1.0f)
+        //{
+        //    animator.SetFloat(AnimationParams.Speed_Param, 1.0f);
+        //}
+        //else if (navMeshAgent.speed == 2.0f)
+        //{
+        //    animator.SetFloat(AnimationParams.Speed_Param, 2.0f);
+        //}
+        //else if (navMeshAgent.speed == 3.0f)
+        //{
+        //    animator.SetFloat(AnimationParams.Speed_Param, 3.0f);
+        //}
 
         animator.CrossFadeInFixedTime(AnimationParams.Turn_State, .1f);
         return result;
@@ -354,7 +353,6 @@ public class CharacterAI : Character
 
     protected override void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
         behavDecesion = GetComponent<BehaviorDecesion>();
         aIDecision = GetComponent<AIDecision>();
         base.Awake();
@@ -372,7 +370,9 @@ public class CharacterAI : Character
         base.Update();
         JumpAndGravity();
         GroundedCheck();
-        //Move();
+
+        //Chỉ di chuyển/xoay khi ko bị đánh !
+        if (!isApplyingKnockBack) Move();
     }
     protected override void FixedUpdate()
     {
@@ -393,7 +393,7 @@ public class CharacterAI : Character
 
         // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is no input, set the target speed to 0
-        if (aIDecision.move == Vector2.zero) targetSpeed = 0.0f;
+        if (aIDecision.desiredMoveDirection == Vector3.zero) targetSpeed = 0.0f;
 
         // a reference to the players current horizontal velocity
         float currentHorizontalSpeed = new Vector3(characterController.velocity.x, 0.0f, characterController.velocity.z).magnitude;
@@ -419,26 +419,37 @@ public class CharacterAI : Character
         }
 
         _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
-        if (_animationBlend < 0.01f) _animationBlend = 0f;
-
-        // normalise input direction
-        Vector3 inputDirection = new Vector3(aIDecision.move.x, 0.0f, aIDecision.move.y).normalized;
+        if (_animationBlend < 0.01f) _animationBlend = 0f; 
 
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
-        if (aIDecision.move != Vector2.zero)
+        if (aIDecision.desiredMoveDirection != Vector3.zero)
         {
-            //_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
-            //                  _mainCamera.transform.eulerAngles.y;
-            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
-                RotationSmoothTime);
-
+            _targetRotation = Mathf.Atan2(aIDecision.desiredMoveDirection.x, aIDecision.desiredMoveDirection.z) * Mathf.Rad2Deg;
+            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
             // rotate to face input direction relative to camera position
             transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
 
-
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+
+        if (aIDecision.currentMoveStrafeType == EMoveStrafeType.RightStrafe)
+        {
+            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.right;
+        }
+        else if(aIDecision.currentMoveStrafeType == EMoveStrafeType.LeftStrafe)
+        {
+            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.left;
+        }
+        else if (aIDecision.currentMoveStrafeType == EMoveStrafeType.BackStrafe)
+        {
+            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.back;
+        }
+        else
+        {
+            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+        }
+
 
         // move the player
             characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
@@ -446,7 +457,8 @@ public class CharacterAI : Character
 
         // update animator if using character
 
-        _inputVerticalParam = Mathf.Lerp(_inputVerticalParam, aIDecision.move.magnitude, SpeedChangeRate * Time.deltaTime);
+        _inputVerticalParam = Mathf.Lerp(_inputVerticalParam, aIDecision.move.y, SpeedChangeRate * Time.deltaTime);
+        _inputHorizontalParam = Mathf.Lerp(_inputHorizontalParam, aIDecision.move.x, SpeedChangeRate * Time.deltaTime);
 
         animator.SetFloat(AnimationParams.Input_Horizontal_Param, _inputHorizontalParam);
         animator.SetFloat(AnimationParams.Input_Vertical_Param, _inputVerticalParam);

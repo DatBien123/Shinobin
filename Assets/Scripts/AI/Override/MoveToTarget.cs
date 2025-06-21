@@ -15,13 +15,13 @@ namespace Training
 
         public override void Execute(CharacterAI agent)
         {
-            if (agent.navMeshAgent.enabled)
-            {
+            //if (agent.navMeshAgent.enabled)
+            //{
                 agent.currentBehaviorState = EBehaviorState.Executing;
                 //agent.navMeshAgent.SetDestination(agent.targetingComponent.target.transform.position);
                 agent.StartMoveToTarget(MoveType, Duration);
 
-            }
+            //}
         }
         public override void Finished(CharacterAI agent)
         {

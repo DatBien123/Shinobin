@@ -31,7 +31,7 @@ public class AnimationEvents : MonoBehaviour
     }
     public void Anim_OnHit()
     {
-        //owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OnHit;
+        owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OnHit;
         //owner.hitReactionComponent.currentRecoverState = ERecoverState.OffRecover;
         //if (owner as CharacterPlayer)
         //{
@@ -40,6 +40,7 @@ public class AnimationEvents : MonoBehaviour
     }
     public void Anim_OffHit()
     {
+        owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OffHit;
         //owner.hitReactionComponent.ResetHitReaction();
         //if (owner as CharacterAI)
         //{

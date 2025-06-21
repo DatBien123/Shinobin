@@ -44,6 +44,7 @@ public class Character : MonoBehaviour
     [Header("Combat State")]
     public bool isBlock = false;
     public bool isApplyAnimationMove = false;
+    public bool isApplyingKnockBack = false;
     public ECombatState currentCombatState;
 
     [Header("Movement State")]
