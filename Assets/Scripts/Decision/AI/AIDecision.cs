@@ -14,6 +14,7 @@ public class AIDecision : MonoBehaviour
     private void Awake()
     {
         ownerAI = GetComponent<CharacterAI>();
+        ownerAI.animator.SetBool(AnimationParams.Block_Param, ownerAI.isBlock);
     }
     #region Movement
     public void Move(Vector2 moveAIValue)

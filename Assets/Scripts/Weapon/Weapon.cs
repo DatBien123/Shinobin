@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEngine.UI.GridLayoutGroup;
 
 namespace Training
@@ -58,6 +59,9 @@ namespace Training
         public bool isAttacking = false; // Trạng thái tấn công
 
         public SO_LocomotionData weaponLocomotionData;
+
+        public UnityEvent onAttackEvent;
+        public UnityEvent offAttackEvent;
 
         public void SetWeaponOwner(Character owner)
         {

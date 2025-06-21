@@ -372,7 +372,7 @@ public class CharacterAI : Character
         base.Update();
         JumpAndGravity();
         GroundedCheck();
-        Move();
+        //Move();
     }
     protected override void FixedUpdate()
     {
@@ -441,7 +441,6 @@ public class CharacterAI : Character
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
         // move the player
-        if (comboComponent.currentComboState != EComboState.Playing)
             characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                          new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 

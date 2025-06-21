@@ -33,6 +33,7 @@ namespace Training
         public void BeginTrace()
         {
             owner.hitReactionComponent.PlaySlashFX(owner);
+            owner.currentWeapon.onAttackEvent?.Invoke();
             if (owner.hitReactionComponent.currentHitReactionData.hitFeedbackData.isApplyWithoutHit) owner.hitReactionComponent.PlayHitFeedback(owner.transform.position, EReactionType.Combo);
             onTrace = true;
         }
@@ -65,6 +66,7 @@ namespace Training
         {
             onTrace = false;
             hitObjects.Clear();
+            owner.currentWeapon.offAttackEvent?.Invoke();
 
         }
         public void MainWeaponCollide()
