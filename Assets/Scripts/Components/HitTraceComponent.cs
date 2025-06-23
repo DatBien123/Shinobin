@@ -245,7 +245,7 @@ namespace Training
 
 
 
-            taker.hitReactionComponent.PlayHitReactions(knockBackDirection, hitPoint, EReactionType.Combo);
+            taker.hitReactionComponent.PlayHitReactions(causer, taker, hitPoint, EReactionType.Combo);
             if(!taker.hitReactionComponent.currentHitReactionDataTake.hitFeedbackData.isApplyWithoutHit)
             taker.hitReactionComponent.PlayHitFeedback(hitPoint, EReactionType.Combo);
 

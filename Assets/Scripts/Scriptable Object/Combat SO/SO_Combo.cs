@@ -206,6 +206,8 @@ namespace Training
         public float knockbackDistance;  
         public AnimationClip defenceReactClip;
         public AnimationClip parryReactClip;
+        public AnimationClip brokenReactClip;
+        public AnimationClip reboundReactClip;
 
 
         public BlockFX blockFX;
