@@ -372,7 +372,9 @@ public class CharacterAI : Character
         GroundedCheck();
 
         //Chỉ di chuyển/xoay khi ko bị đánh !
-        if (!isApplyingKnockBack) Move();
+        if (!isApplyingKnockBack 
+            && comboComponent.currentComboState != EComboState.Playing
+            && hitReactionComponent.currentHitReactionState  != EHitReactionState.OnHit) Move();
     }
     protected override void FixedUpdate()
     {
@@ -382,7 +384,6 @@ public class CharacterAI : Character
     {
         base.OnAnimatorMove();
     }
-
     private void Move()
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
@@ -432,24 +433,6 @@ public class CharacterAI : Character
         }
 
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-
-        if (aIDecision.currentMoveStrafeType == EMoveStrafeType.RightStrafe)
-        {
-            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.right;
-        }
-        else if(aIDecision.currentMoveStrafeType == EMoveStrafeType.LeftStrafe)
-        {
-            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.left;
-        }
-        else if (aIDecision.currentMoveStrafeType == EMoveStrafeType.BackStrafe)
-        {
-            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.back;
-        }
-        else
-        {
-            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-        }
-
 
         // move the player
             characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
@@ -527,5 +510,6 @@ public class CharacterAI : Character
             _verticalVelocity += Gravity * Time.deltaTime;
         }
     }
+
 
 }

@@ -101,8 +101,10 @@ namespace Training
         public void SetCurrentInput(EKeystroke keystroke)
         {
             ////Break Lines
-            //if (owner.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
-            //    || owner.hitReactionComponent.currentRecoverState == ERecoverState.OnRecover) return;
+            if (owner.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
+                || owner.hitReactionComponent.currentRecoverState == ERecoverState.OnRecover) return;
+
+            if (owner.isApplyingKnockBack == true) return;
 
             if (lastInputTime + inputDelayTime <= Time.time)
             {
@@ -194,10 +196,10 @@ namespace Training
             currentComboState = EComboState.Finish;
             owner.isApplyAnimationMove = false;
             //Navmesh
-            //if (owner as CharacterAI)
-            //{
-            //    (owner as CharacterAI).navMeshAgent.enabled = true;
-            //}
+            if (owner as CharacterAI)
+            {
+                (owner as CharacterAI).currentBehaviorState = EBehaviorState.Finished;
+            }
 
         }
     }

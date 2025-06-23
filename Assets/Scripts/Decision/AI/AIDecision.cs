@@ -73,15 +73,12 @@ public class AIDecision : MonoBehaviour
         }
     }
     #endregion
+
     private void Start()
     {
         //StartMoveToTarget(EMoveType.Sprint);
-        StartMoveStrafeToTarget(EMoveType.Walk, EMoveStrafeType.LeftStrafe);
-    }
-    private void Update()
-    {
-    }
 
+    }
 
     #region MoveToTarget
     Coroutine C_MoveToTarget;
@@ -103,7 +100,8 @@ public class AIDecision : MonoBehaviour
         desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
         desiredMoveDirection.Normalize();
 
-        while (Utilities.Instance.DistanceCalculate(ownerAI.targetingComponent.target.transform.position, 
+        while (ownerAI.targetingComponent.target != null
+            && Utilities.Instance.DistanceCalculate(ownerAI.targetingComponent.target.transform.position,
             ownerAI.transform.position) > stoppingDistanceToTarget)
         {
             if (ownerAI.targetingComponent.target == null) break;
@@ -118,46 +116,12 @@ public class AIDecision : MonoBehaviour
         sprint = false;
         Move(new Vector2(0, 0));
         desiredMoveDirection = Vector3.zero;
+        ownerAI.currentBehaviorState = EBehaviorState.Finished;
     }
     #endregion
 
-    #region StrafeMoveToTarget
-    Coroutine C_MoveStrafeToTarget;
-    public void StartMoveStrafeToTarget(EMoveType moveType, EMoveStrafeType moveStrafeType)
-    {
-        if (C_MoveToTarget != null) StopCoroutine(C_MoveToTarget);
-        C_MoveToTarget = StartCoroutine(MoveStrafeToTarget(moveType, moveStrafeType));
-    }
-    IEnumerator MoveStrafeToTarget(EMoveType moveType, EMoveStrafeType moveStrafeType)
-    {
-        if (ownerAI.targetingComponent.target == null) yield break;
 
-        currentMoveType = moveType;
-        currentMoveStrafeType = moveStrafeType;
-        if (currentMoveType == EMoveType.Sprint)
-        {
-            sprint = true;
-        }
-        Move(new Vector2(((int)currentMoveStrafeType), 0));
-        desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
-        desiredMoveDirection.Normalize();
 
-        while (Utilities.Instance.DistanceCalculate(ownerAI.targetingComponent.target.transform.position,
-            ownerAI.transform.position) > stoppingDistanceToTarget)
-        {
-            if (ownerAI.targetingComponent.target == null) break;
 
-            desiredMoveDirection = ownerAI.targetingComponent.target.transform.position - ownerAI.transform.position;
-            desiredMoveDirection.Normalize();
 
-            yield return null;
-        }
-
-        currentMoveType = EMoveType.None;
-        currentMoveStrafeType = EMoveStrafeType.None;
-        sprint = false;
-        Move(new Vector2(0, 0));
-        desiredMoveDirection = Vector3.zero;
-    }
-    #endregion
 }

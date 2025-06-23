@@ -515,73 +515,7 @@ namespace Training
         }
         #endregion
 
-
-        public void PlayHitBlock(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
-        {
-            if (C_Block != null)
-            {
-                StopCoroutine(C_Block);
-            }
-            C_Block = StartCoroutine(Block(direction, hitPoint, reactionType));
-        }
-        IEnumerator Block(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
-        {
-            HitImpact hitImpact = new HitImpact();
-            if (reactionType == EReactionType.Combo)
-            {
-                hitImpact = currentHitReactionDataTake.hitImpact;
-            }
-            else if (reactionType == EReactionType.Skill)
-            {
-                //hitImpact = currentSkillDataTake.hitImpact;
-            }
-
-            //Start Knockback
-            //owner.applyingKnockback = true;
-            Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.BlockData.knockbackDistance;
-            float elapsedTime = 0;
-
-            //if (owner as CharacterAI)
-            //{
-            //    (owner as CharacterAI).navMeshAgent.enabled = false; 
-            //}
-            transform.LookAt(transform.position + -direction);
-
-            if(hitImpact.BlockData.defenceReactClip != null)owner.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
-
-
-            //if (hitImpact.KnockbackData.hitKnockBackClip != null)
-            //{
-            //    if(owner.TYPE != "Boss")owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
-            //    else
-            //    {
-            //        if (owner.targetingComponent.target.comboComponent.currentComboData.comboData.finisherData.isFinisher)
-            //        {
-            //            owner.animator.CrossFadeInFixedTime(hitImpact.KnockbackData.hitKnockBackClip.name, .1f);
-            //        }
-            //    }
-            //}
-
-
-            while (elapsedTime < hitImpact.BlockData.knockbackTime)
-            {
-                //Debug.Log("Knockbadasdasdasads");
-                Vector3 movement = new Vector3(knockbackVelocity.x, 0, knockbackVelocity.z) * Time.fixedDeltaTime;
-                knockbackVelocity = Vector3.Lerp(knockbackVelocity, Vector3.zero, elapsedTime / hitImpact.BlockData.knockbackTime);
-
-                // Di chuyển nhân vật chỉ theo X và Z
-                owner.characterController.Move(new Vector3(movement.x, 0, movement.z));
-
-                elapsedTime += Time.fixedDeltaTime;
-                yield return null;
-            }
-
-            //owner.applyingKnockback = false;
-            //if (owner as CharacterAI)
-            //{
-            //    (owner as CharacterAI).navMeshAgent.enabled = true;
-            //}
-        }
+        #region [KnockBackReact]
         public void PlayHitKnockBack(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
         {
             if (C_Knockback != null)
@@ -649,7 +583,6 @@ namespace Training
             //    (owner as CharacterAI).navMeshAgent.enabled = true;
             //}
         }
-
         AnimationClip GetValidAnimationClip(EHitReactDirection hitReactDirection)
         {
             if(currentHitReactionDataTake.hitImpact.KnockbackData.reactData.animationReactDatas.Count > 0)
@@ -690,6 +623,85 @@ namespace Training
 
             return EHitReactDirection.F;
         }
+        #endregion
+        #region [BlockReact]
+        public enum EBlockReactType
+        {
+            Defence,
+            Parry,
+            Rebound
+        }
+        public void PlayHitBlock(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
+        {
+            if (C_Block != null)
+            {
+                StopCoroutine(C_Block);
+            }
+            C_Block = StartCoroutine(Block(direction, hitPoint, reactionType));
+        }
+        IEnumerator Block(Vector3 direction, Vector3 hitPoint, EReactionType reactionType)
+        {
+            HitImpact hitImpact = new HitImpact();
+            if (reactionType == EReactionType.Combo)
+            {
+                hitImpact = currentHitReactionDataTake.hitImpact;
+            }
+            else if (reactionType == EReactionType.Skill)
+            {
+                //hitImpact = currentSkillDataTake.hitImpact;
+            }
+
+            //Start Knockback
+            owner.isApplyingKnockBack = true;
+            Vector3 knockbackVelocity = new Vector3(direction.x, 0, direction.z) * hitImpact.BlockData.knockbackDistance;
+            float elapsedTime = 0;
+
+            transform.LookAt(transform.position + -direction);
+
+            switch (GetValidBlockReactType())
+            {
+                case EBlockReactType.Defence:
+                    if (hitImpact.BlockData.defenceReactClip != null) owner.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
+                    break;
+                case EBlockReactType.Parry:
+                    if (hitImpact.BlockData.parryReactClip != null) owner.animator.CrossFadeInFixedTime(hitImpact.BlockData.parryReactClip.name, .1f);
+                    break;
+                case EBlockReactType.Rebound:
+                    break;
+                default:
+                    break;
+            }
+
+            while (elapsedTime < hitImpact.BlockData.knockbackTime)
+            {
+                //Debug.Log("Knockbadasdasdasads");
+                Vector3 movement = new Vector3(knockbackVelocity.x, 0, knockbackVelocity.z) * Time.fixedDeltaTime;
+                knockbackVelocity = Vector3.Lerp(knockbackVelocity, Vector3.zero, elapsedTime / hitImpact.BlockData.knockbackTime);
+
+                // Di chuyển nhân vật chỉ theo X và Z
+                owner.characterController.Move(new Vector3(movement.x, 0, movement.z));
+
+                elapsedTime += Time.fixedDeltaTime;
+                yield return null;
+            }
+
+            owner.isApplyingKnockBack = false;
+        }
+
+        EBlockReactType GetValidBlockReactType()
+        {
+            if(owner as CharacterPlayer)
+            {
+                if((owner as CharacterPlayer).GetComponent<InputManager>().blockTime <= 0.3f)
+                {
+                    return EBlockReactType.Parry;
+                }
+            }
+            return EBlockReactType.Defence;
+
+        }
+        #endregion
+
 
     }
 }

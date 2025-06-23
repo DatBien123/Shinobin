@@ -62,7 +62,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 5
             reactData:
-              isRotateToHitDirection: 1
+              isRotateToHitDirection: 0
               intensityData:
                 intensityType: 0
                 intensity: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 2
             defenceReactClip: {fileID: 7400002, guid: 104e14aa8b76f5840b2257ec4cd8b6a6, type: 3}
-            parryReactClip: {fileID: 0}
+            parryReactClip: {fileID: 7400002, guid: 8754210b3da299149a2dee52a0c8f763, type: 3}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -272,7 +272,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 2
             defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
-            parryReactClip: {fileID: 0}
+            parryReactClip: {fileID: 7400002, guid: edf27cf4b0ea28e4fade566dacc9c95d, type: 3}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 2
             defenceReactClip: {fileID: 7400002, guid: 104e14aa8b76f5840b2257ec4cd8b6a6, type: 3}
-            parryReactClip: {fileID: 0}
+            parryReactClip: {fileID: 7400002, guid: ac977895d7a6fdc44bcb0c35a509b533, type: 3}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -542,7 +542,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 2
             defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
-            parryReactClip: {fileID: 0}
+            parryReactClip: {fileID: 7400002, guid: edf27cf4b0ea28e4fade566dacc9c95d, type: 3}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
@@ -678,7 +678,7 @@ MonoBehaviour:
             knockbackTime: 1
             knockbackDistance: 2
             defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
-            parryReactClip: {fileID: 0}
+            parryReactClip: {fileID: 7400002, guid: ac977895d7a6fdc44bcb0c35a509b533, type: 3}
             blockFX:
               hitParryParticleSystem: {fileID: 0}
               hitParryFXPositionOffset: {x: 0, y: 0, z: 0}

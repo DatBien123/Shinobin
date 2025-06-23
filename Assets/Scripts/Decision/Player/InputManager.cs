@@ -21,6 +21,7 @@ public class InputManager : MonoBehaviour
     private PlayerControls playerControls;
     public CharacterPlayer player;
 
+    public float blockTime = 0.0f;
     void Awake()
     {
         playerControls = new PlayerControls();
@@ -30,6 +31,20 @@ public class InputManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         InputBinding();
+    }
+    private void Update()
+    {
+        if (player.isBlock)
+        {
+            blockTime += Time.deltaTime;
+            player.animator.SetFloat(AnimationParams.BlockTime_Param, blockTime);
+        }
+        else
+        {
+            blockTime = 0.0f;
+            if(player.animator.GetFloat(AnimationParams.BlockTime_Param) != 0.0f)
+                player.animator.SetFloat(AnimationParams.BlockTime_Param, blockTime);
+        }
     }
     void InputBinding()
     {

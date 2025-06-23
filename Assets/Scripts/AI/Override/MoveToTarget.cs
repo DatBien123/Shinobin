@@ -19,7 +19,7 @@ namespace Training
             //{
                 agent.currentBehaviorState = EBehaviorState.Executing;
                 //agent.navMeshAgent.SetDestination(agent.targetingComponent.target.transform.position);
-                agent.StartMoveToTarget(MoveType, Duration);
+                agent.aIDecision.StartMoveToTarget(MoveType);
 
             //}
         }

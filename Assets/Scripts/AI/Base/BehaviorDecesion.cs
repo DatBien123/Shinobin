@@ -11,7 +11,6 @@ namespace Training
     {
         public string name;
         public Action action;
-        public ETaticalState taticalState;
         public int priority;
         public Condition condition;
         public float delayTimeAfterFinish;
@@ -23,20 +22,7 @@ namespace Training
     {
 
         public string name;
-        public SkirmishAction skirmishAction;
-        public ETaticalState taticalState;
-        public int priority;
-        public Condition condition;
-        public float delayTimeAfterFinish;
-
-        public float currentCooldown;
-    }
-    [System.Serializable]
-    public class SkillActionData
-    {
-        public string name;
-        public SkillAction skillAction;
-        public ETaticalState taticalState;
+        public ComboAttackAction skirmishAction;
         public int priority;
         public Condition condition;
         public float delayTimeAfterFinish;
@@ -85,11 +71,9 @@ namespace Training
         [Header("Available Normal Actions")]
         public List<ActionData> actionDatas;
         public List<SkirmishActionData> skirmishActionDatas;
-        public List<SkillActionData> skillActionDatas;
         [Header("Current Normal Actions")]
         public ActionData currentActionData;
         public SkirmishActionData currentSkirmishActionData;
-        public SkillActionData currentSkillActionData;
 
         [Header("Available Combo Actions Priority")]
         public EComboPriorityState currentComboPriorityState;
@@ -110,13 +94,6 @@ namespace Training
         {
             ownerAI = GetComponent<CharacterAI>();
         }
-        private void Start()
-        {
-            ResetAllActionsState();
-            //if (!ownerAI.GetComponent<AITatical>())
-            //    StartExecuteBehaviors();
-
-        }
         public void ResetAllActionsState()
         {
             //Normal Actions
@@ -134,14 +111,6 @@ namespace Training
                     skirmishActionData.currentCooldown = 0.0f;
                 }
             }
-
-            if (skillActionDatas.Count > 0)
-            {
-                foreach (var skillActionData in skillActionDatas)
-                {
-                    skillActionData.currentCooldown = 0.0f;
-                }
-            }
             //Combo Priority Actions
             if (comboPriorityDatas.listComboPriority.Count > 0)
             {
@@ -154,8 +123,11 @@ namespace Training
                 }
             }
         }
-        private void Update()
+
+        private void Start()
         {
+            ResetAllActionsState();
+            StartExecuteBehaviors();
 
         }
         #region ComboPriority
@@ -245,43 +217,6 @@ namespace Training
             currentComboPriorityState = EComboPriorityState.Finish;
             priorityCombos.Clear();
         }
-        //public void ComboCooldown(SO_Behavior action)
-        //{
-        //    if (actionDatas.Count > 0)
-        //    {
-        //        foreach (var actionData in comboActionDatas)
-        //        {
-        //            if (actionData.action == action)
-        //            {
-        //                StartCoroutine(StartCooldown(actionData));
-        //                return;
-        //            }
-        //        }
-        //    }
-        //    if (skirmishActionDatas.Count > 0)
-        //    {
-        //        foreach (var actionData in comboSkirmishActionDatas)
-        //        {
-        //            if (actionData.skirmishAction == action)
-        //            {
-        //                StartCoroutine(StartCooldown(actionData));
-        //                return;
-        //            }
-        //        }
-        //    }
-        //    if (skillActionDatas.Count > 0)
-        //    {
-        //        foreach (var actionData in comboSkillActionDatas)
-        //        {
-        //            if (actionData.skillAction == action)
-        //            {
-        //                StartCoroutine(StartCooldown(actionData));
-        //                return;
-        //            }
-        //        }
-        //    }
-        //}
-
         #endregion
         public void StartExecuteBehaviors()
         {
@@ -303,33 +238,29 @@ namespace Training
         }
         public void EvaluateAndExecuteBehavior()
         {
-
-
             if (ownerAI.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
                 || ownerAI.hitReactionComponent.currentRecoverState == ERecoverState.OnRecover
                 || currentComboPriorityState == EComboPriorityState.Executing
                 || ownerAI.isDoingCombo) return;
 
-            Debug.Log("GOOOO");
-            //Multiple Action
-            if (comboPriorityDatas.listComboPriority.Count > 0)
-            {
-                if (Time.time > timeInput + comboPriorityDelay && currentComboPriorityState != EComboPriorityState.Executing)
-                {
-                    timeInput = Time.time;
-                    if (isExecuteComboPriority())
-                    {
-                        StartExecuteComboPriority();
-                        return;
-                    }
-                }
-            }
+            ////Multiple Action
+            //if (comboPriorityDatas.listComboPriority.Count > 0)
+            //{
+            //    if (Time.time > timeInput + comboPriorityDelay && currentComboPriorityState != EComboPriorityState.Executing)
+            //    {
+            //        timeInput = Time.time;
+            //        if (isExecuteComboPriority())
+            //        {
+            //            StartExecuteComboPriority();
+            //            return;
+            //        }
+            //    }
+            //}
 
 
-            //Single Action
-            List <ActionData> suffleActions = new List<ActionData>();
+                //Single Action
+                 List <ActionData> suffleActions = new List<ActionData>();
                 List<SkirmishActionData> suffleSkirmishActions = new List<SkirmishActionData>();
-                List<SkillActionData> suffleSkillActions = new List<SkillActionData>();
 
                 //Check and Get All Actions - Skill Actions - Skirmush Actions has valid conditions and 0s Cooldown
                 if (actionDatas.Count > 0)
@@ -359,50 +290,11 @@ namespace Training
                         }
                     }
                 }
-                if (skillActionDatas.Count > 0)
-                {
-                    foreach (var skillActionData in skillActionDatas)
-                    {
-                        if (EvaluateCondition(skillActionData.condition))
-                        {
-                            if (skillActionData.currentCooldown <= 0.0f)
-                            {
-                                suffleSkillActions.Add(skillActionData);
-                            }
-                        }
-                    }
-                }
+
 
                 //If Suffle Action - Skirmish Action - Skill Action have value then we EXECUTE the 
                 //action has HIGHEST priorty value
-                if (suffleSkillActions.Count > 0)
-                {
-                    //Get Action has highest priority
-                    SkillActionData actionOutput = new SkillActionData();
-                    int maxPriority = 0;
-                    foreach (var skillAction in suffleSkillActions)
-                    {
-                        if (skillAction.priority >= maxPriority)
-                        {
-                            maxPriority = skillAction.priority;
-                        }
-                    }
-                    foreach (var skillAction in suffleSkillActions)
-                    {
-                        if (skillAction.priority == maxPriority)
-                        {
-                            actionOutput = skillAction;
-                            break;
-                        }
-                    }
 
-                    currentSkillActionData = actionOutput;
-
-                    StartCoroutine(StartCooldown(currentSkillActionData));
-
-                    currentSkillActionData.skillAction.Execute(ownerAI);
-                    return;
-                }
                 if (suffleSkirmishActions.Count > 0)
                 {
                     //Get Action has highest priority
@@ -500,19 +392,6 @@ namespace Training
             skirmishActionData.currentCooldown = 0.0f;
 
         }
-        public IEnumerator StartCooldown(SkillActionData skillActionData)
-        {
-            //Start Cooldown
-            skillActionData.currentCooldown = skillActionData.skillAction.Cooldown;
-
-            while (skillActionData.currentCooldown >= 0.0f)
-            {
-                skillActionData.currentCooldown -= Time.deltaTime;
-                yield return null;
-            }
-            skillActionData.currentCooldown = 0.0f;
-
-        }
         #endregion
         #region CheckValue
         private bool EvaluateCheckBool(BoolValue boolValue)
@@ -608,7 +487,7 @@ namespace Training
                     }
                 case EBoolType.TargetGround:
                     {
-                        //Character target = ownerAI.targetingComponent.target;
+                        Transform target = ownerAI.targetingComponent.target;
                         return false;
                             //(target != null
                             //&& target.isGround);

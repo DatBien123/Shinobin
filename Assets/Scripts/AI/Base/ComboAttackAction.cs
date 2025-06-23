@@ -1,9 +1,9 @@
 
 namespace Training
 {
-    public class SkillAction : SO_Behavior
+    public class ComboAttackAction : SO_Behavior
     {
-        //public SO_SkillData skill;
+        public SO_Combo combo;
         public override void Execute(CharacterAI agent) { }
         public override void Finished(CharacterAI agent) { }
 

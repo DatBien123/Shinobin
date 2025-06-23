@@ -6,7 +6,7 @@ namespace Training
 {
     [System.Serializable]
     [CreateAssetMenu(fileName = "Behavior Data", menuName = "Combat System/Behavior/Melee Attack Action")]
-    public class MeleeAttack : SkirmishAction
+    public class MeleeAttack : ComboAttackAction
     {
         public override void Execute(CharacterAI agent)
         {

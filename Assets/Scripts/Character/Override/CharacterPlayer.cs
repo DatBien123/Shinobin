@@ -62,7 +62,11 @@ public class CharacterPlayer : Character
         base.Update();
         JumpAndGravity();
         GroundedCheck();
-        Move(); 
+
+        //Chỉ di chuyển/xoay khi ko bị đánh !
+        if (!isApplyingKnockBack
+            && comboComponent.currentComboState != EComboState.Playing
+            && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit) Move();
     }
     protected override void LateUpdate()
     {

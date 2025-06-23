@@ -835,6 +835,7 @@ MonoBehaviour:
   temporaryLocomotion: {fileID: 0}
   isBlock: 0
   isApplyAnimationMove: 0
+  isApplyingKnockBack: 0
   currentCombatState: 0
   motionFactor: 5
   currentState: 0
@@ -1187,7 +1188,7 @@ MonoBehaviour:
   leftHandSocket: {fileID: 9186500495640392442}
   rightHandSocket: {fileID: 8626512281749996330}
   skillCastSocket: {fileID: 8626512281749996330}
-  weapon1Prefab: {fileID: 8518651301230087397, guid: 49a016ae98222e64a94ef38a4cd4a22e, type: 3}
+  weapon1Prefab: {fileID: 8518651301230087397, guid: 950ef50f23f498540b0092c0c83fe689, type: 3}
   weapon2Prefab: {fileID: 0}
   weapon3Prefab: {fileID: 0}
   weapon4Prefab: {fileID: 0}
@@ -1247,6 +1248,8 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  currentMoveType: 0
+  currentMoveStrafeType: 0
   desiredMoveDirection: {x: 0, y: 0, z: 0}
   stoppingDistanceToTarget: 1.5
 --- !u!114 &1463842138
@@ -1315,6 +1318,7 @@ MonoBehaviour:
   temporaryLocomotion: {fileID: 0}
   isBlock: 0
   isApplyAnimationMove: 0
+  isApplyingKnockBack: 0
   currentCombatState: 0
   motionFactor: 5
   currentState: 0
@@ -3852,7 +3856,7 @@ Transform:
   m_GameObject: {fileID: 4416926082444160328}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.15, y: 0, z: -13.58}
+  m_LocalPosition: {x: 21.85, y: 0, z: -9.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4277,6 +4281,8 @@ GameObject:
   - component: {fileID: 1463842137}
   - component: {fileID: 1463842138}
   - component: {fileID: 6982812146693336457}
+  - component: {fileID: 6982812146693336458}
+  - component: {fileID: 6982812146693336459}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Player
@@ -5742,7 +5748,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  stoppingDistance: 1
+  stoppingDistance: 1.5
+--- !u!114 &6982812146693336458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926082444160328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b173dc383da6dc94fa69422e117e593c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerAI: {fileID: 0}
+  actionDatas:
+  - name: 
+    action: {fileID: 11400000, guid: 24002548de9970b4080e9cf8e56ec383, type: 2}
+    priority: 0
+    condition:
+      boolValue: []
+      intValue: []
+      floatValue: []
+    delayTimeAfterFinish: 0
+    currentCooldown: 0
+  skirmishActionDatas:
+  - name: 
+    skirmishAction: {fileID: 11400000, guid: 5a382bfada010994b81da81cb4e09957, type: 2}
+    priority: 0
+    condition:
+      boolValue: []
+      intValue: []
+      floatValue:
+      - variableType: 1
+        compareType: 1
+        value: 3
+    delayTimeAfterFinish: 0
+    currentCooldown: 0
+  currentActionData:
+    name: 
+    action: {fileID: 0}
+    priority: 0
+    condition:
+      boolValue: []
+      intValue: []
+      floatValue: []
+    delayTimeAfterFinish: 0
+    currentCooldown: 0
+  currentSkirmishActionData:
+    name: 
+    skirmishAction: {fileID: 0}
+    priority: 0
+    condition:
+      boolValue: []
+      intValue: []
+      floatValue: []
+    delayTimeAfterFinish: 0
+    currentCooldown: 0
+  currentComboPriorityState: 1
+  comboPriorityDatas:
+    listComboPriority: []
+  priorityCombos: []
+  timeDelayAfterCombo: 0
+  comboPriorityDelay: 2.5
+  timeInput: 0
+--- !u!114 &6982812146693336459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926082444160328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fea70e38e2f4da48882a3ff997f1abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 1000
+  maxHP: 0
+  currentMP: 1000
+  maxMP: 0
+  currentStamina: 0
+  maxStamina: 0
+  currentPosture: 0
+  maxPosture: 0
+  attack: 0
+  defense: 0
+  agility: 0
+  inteligence: 0
+  hyperArmor: 100
 --- !u!95 &6982812147933622147
 Animator:
   serializedVersion: 7

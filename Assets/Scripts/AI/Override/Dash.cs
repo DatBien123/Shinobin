@@ -17,7 +17,6 @@ namespace Training
         public override void Execute(CharacterAI agent)
         {
             agent.comboComponent.ResetCombo();
-            //agent.skillComponent.ResetSkill();
 
             Vector3 item1 = GetDashDirection(agent).Item1;
             Vector2 item2 = GetDashDirection(agent).Item2;

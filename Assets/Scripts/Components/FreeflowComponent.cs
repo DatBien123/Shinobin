@@ -51,7 +51,6 @@ namespace Training
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     owner.transform.rotation = Quaternion.Lerp(owner.transform.rotation, targetRotation, Time.deltaTime * 10f);
                 }
-                if (distance < stoppingDistance) owner.animator.applyRootMotion = false;
 
                 // Tiếp tục kiểm tra mỗi frame
                 yield return null;
