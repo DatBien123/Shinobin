@@ -119,6 +119,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &29158077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2070925441746177671, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+  m_PrefabInstance: {fileID: 1402827283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &29158080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29158077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7af5f49bb94594cb72273368730e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  impulseSource: {fileID: 29158081}
+  currentCamera: {fileID: 0}
+--- !u!114 &29158081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29158077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 2
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.2
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!1 &104102608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,10 +1610,32 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 8338988565591873055}
+    - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      propertyPath: Priority.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      propertyPath: Priority.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      propertyPath: m_LegacyPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      propertyPath: m_StreamingVersion
+      value: 20241001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2070925441746177671, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 29158081}
+    - targetCorrespondingSourceObject: {fileID: 2070925441746177671, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 29158080}
   m_SourcePrefab: {fileID: 100100000, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
 --- !u!1 &1447071385 stripped
 GameObject:
@@ -1777,13 +1872,36 @@ MonoBehaviour:
         parryReactClip: {fileID: 0}
         brokenReactClip: {fileID: 0}
         reboundReactClip: {fileID: 0}
-        blockFX:
-          hitParryParticleSystem: {fileID: 0}
-          hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
-          hitParryFXRotationOffset: {x: 0, y: 0, z: 0}
-          hitParryFXScaleOffset: {x: 0, y: 0, z: 0}
-        blockSFX:
-          hitParryAudioClip: {fileID: 0}
+        defenceFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        parryFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        brokenFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        reboundFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
           volume: 0
           pitch: 0
     hitFeedbackData:
@@ -1898,13 +2016,36 @@ MonoBehaviour:
         parryReactClip: {fileID: 0}
         brokenReactClip: {fileID: 0}
         reboundReactClip: {fileID: 0}
-        blockFX:
-          hitParryParticleSystem: {fileID: 0}
-          hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
-          hitParryFXRotationOffset: {x: 0, y: 0, z: 0}
-          hitParryFXScaleOffset: {x: 0, y: 0, z: 0}
-        blockSFX:
-          hitParryAudioClip: {fileID: 0}
+        defenceFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        parryFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        brokenFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        reboundFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
           volume: 0
           pitch: 0
     hitFeedbackData:
@@ -1935,7 +2076,6 @@ MonoBehaviour:
   currentHitReactionIndex: 0
   isOnHitReact: 0
   isRecovering: 0
-  currentReactionType: 0
   currentHitReactionState: 0
   currentRecoverState: 0
   cameraManager: {fileID: 0}
@@ -2341,7 +2481,7 @@ MonoBehaviour:
   leftHandSocket: {fileID: 6653583892825852163}
   rightHandSocket: {fileID: 2296711915762361096}
   skillCastSocket: {fileID: 2296711915762361096}
-  weapon1Prefab: {fileID: 8518651301230087397, guid: 49a016ae98222e64a94ef38a4cd4a22e, type: 3}
+  weapon1Prefab: {fileID: 1477637913098044789, guid: 49a016ae98222e64a94ef38a4cd4a22e, type: 3}
   weapon2Prefab: {fileID: 0}
   weapon3Prefab: {fileID: 0}
   weapon4Prefab: {fileID: 0}
@@ -2493,13 +2633,36 @@ MonoBehaviour:
         parryReactClip: {fileID: 0}
         brokenReactClip: {fileID: 0}
         reboundReactClip: {fileID: 0}
-        blockFX:
-          hitParryParticleSystem: {fileID: 0}
-          hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
-          hitParryFXRotationOffset: {x: 0, y: 0, z: 0}
-          hitParryFXScaleOffset: {x: 0, y: 0, z: 0}
-        blockSFX:
-          hitParryAudioClip: {fileID: 0}
+        defenceFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        parryFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        brokenFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        reboundFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
           volume: 0
           pitch: 0
     hitFeedbackData:
@@ -2614,13 +2777,36 @@ MonoBehaviour:
         parryReactClip: {fileID: 0}
         brokenReactClip: {fileID: 0}
         reboundReactClip: {fileID: 0}
-        blockFX:
-          hitParryParticleSystem: {fileID: 0}
-          hitParryFXPositionOffset: {x: 0, y: 0, z: 0}
-          hitParryFXRotationOffset: {x: 0, y: 0, z: 0}
-          hitParryFXScaleOffset: {x: 0, y: 0, z: 0}
-        blockSFX:
-          hitParryAudioClip: {fileID: 0}
+        defenceFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        parryFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        brokenFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+        reboundFX:
+          blockReactParticleSystem: {fileID: 0}
+          blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+          blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+          blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+          blockReactAudioClip: {fileID: 0}
           volume: 0
           pitch: 0
     hitFeedbackData:
@@ -2651,7 +2837,6 @@ MonoBehaviour:
   currentHitReactionIndex: 0
   isOnHitReact: 0
   isRecovering: 0
-  currentReactionType: 0
   currentHitReactionState: 0
   currentRecoverState: 0
   cameraManager: {fileID: 0}

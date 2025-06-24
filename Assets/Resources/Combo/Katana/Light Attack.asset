@@ -1,0 +1,829 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5899cb0396a5fcc4290cb8535b8d4659, type: 3}
+  m_Name: Light Attack
+  m_EditorClassIdentifier: 
+  comboData:
+    comboInputs: 01000000010000000100000001000000
+    comboClips:
+    - {fileID: 7400002, guid: 52c2de492ef1443458626e80a78b7c99, type: 3}
+    - {fileID: 7400000, guid: 77fc626278dbd774a9e6b1fee68562c4, type: 3}
+    - {fileID: 7400000, guid: 8decc86bf4985ea42b3005926975955f, type: 3}
+    - {fileID: 7400000, guid: 5029b485ac85ca0478e8877b25e6dec6, type: 3}
+    requiredState: 1
+    finisherData:
+      isFinisher: 0
+      distanceOffset: 0
+    listHitReactionDatas:
+    - Name: LA1
+      hitReactionDatas:
+      - Name: LA1 - 1
+        attackDirection: 0
+        hitTrace:
+          traceType: 1
+          traceAngle: 0
+          traceRadius: 0
+          boxOffset: {x: 0, y: 0, z: 0}
+          boxSize: {x: 0, y: 0, z: 0}
+        slashData:
+          slashFX:
+            slashParticleSystem: {fileID: 0}
+            slashFXPositionOffset: {x: 0, y: 0, z: 0}
+            slashFXRotationOffset: {x: 0, y: 0, z: 0}
+            slashFXScaleOffset: {x: 0, y: 0, z: 0}
+          slashSFX:
+            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            volume: 1
+            pitch: 1
+        attackExtendData:
+          isApplyHeightWithOwner: 0
+          height: 0
+          attackExtendFX:
+            attackFXExtendGO: {fileID: 0}
+            attackFXPositionOffset: {x: 0, y: 0, z: 0}
+            attackFXRotationOffset: {x: 0, y: 0, z: 0}
+            attackFXScaleOffset: {x: 0, y: 0, z: 0}
+          attackExtendSFX:
+            attackExtendAudioClip: {fileID: 0}
+            volume: 0
+            pitch: 0
+        hitImpact:
+          KnockbackData:
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 0
+              intensityData:
+                intensityType: 0
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: d9da4170bb481b444bdb6612b1d89353, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: a6e4ae7cc4410004b9b3bccb2a5df448, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 91639ebc49ac4ba42a7c21c34d410249, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+            knockbackFX:
+              KnockbackParticleSystem: {fileID: 0}
+              KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXRotationOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXScaleOffset: {x: 0, y: 0, z: 0}
+            knockbackSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          AirborneData:
+            isAirborne: 0
+            airborneDirection: 0
+            height: 0
+            airborneDuration: 0
+            airborneTime: 0
+            hitAirborneClip: {fileID: 0}
+            airborneFX:
+              AirborneParticleSystem: {fileID: 0}
+              AirborneFXPositionOffset: {x: 0, y: 0, z: 0}
+              AirborneFXRotationOffset: {x: 0, y: 0, z: 0}
+              AirborneFXScaleOffset: {x: 0, y: 0, z: 0}
+            airborneSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          CollideHitData:
+            isCollide: 0
+            collideType: 0
+            collideClip: {fileID: 0}
+            colliderHitFX:
+              CollideParticleSystem: {fileID: 0}
+              CollideFXPositionOffset: {x: 0, y: 0, z: 0}
+              CollideFXRotationOffset: {x: 0, y: 0, z: 0}
+              CollideFXScaleOffset: {x: 0, y: 0, z: 0}
+            colliderHitSFX:
+              collideHitAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          HitData:
+            hitFX:
+              hitParticleSystem: {fileID: 0}
+              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitFXRotationOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+            hitSFX:
+              hitAudioClip: {fileID: 8300000, guid: ba9dab163b3ed7b44bb8fc8bc6f4889e, type: 3}
+              volume: 1
+              pitch: 1
+          BlockData:
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: 104e14aa8b76f5840b2257ec4cd8b6a6, type: 3}
+            parryReactClip: {fileID: 7400002, guid: 8754210b3da299149a2dee52a0c8f763, type: 3}
+            brokenReactClip: {fileID: 7400002, guid: 9795529eec143164eb6902723c92d2e2, type: 3}
+            reboundReactClip: {fileID: 7400002, guid: d68654e5fb065604aa0a8b39152b79e0, type: 3}
+            defenceFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
+              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              volume: 1
+              pitch: 1
+            parryFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
+              blockReactAudioClip: {fileID: 8300000, guid: f1de01b1ce3200f44a3c71a78f3c5df0, type: 3}
+              volume: 1
+              pitch: 1
+            brokenFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+            reboundFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+        hitFeedbackData:
+          isApplyWithoutHit: 0
+          isShake: 1
+          shakeDirection: 3
+          shakeTime: 1
+          intensity: 100
+          isStop: 1
+          stopTime: 0.1
+          isSlowMotion: 0
+          slowMotionFactor: 0
+          slowMotionTime: 0
+          isSightToHitPoint: 0
+          stayTime: 0
+          duration: 0
+    - Name: LA2
+      hitReactionDatas:
+      - Name: LA1 - 1
+        attackDirection: 0
+        hitTrace:
+          traceType: 1
+          traceAngle: 0
+          traceRadius: 0
+          boxOffset: {x: 0, y: 0, z: 0}
+          boxSize: {x: 0, y: 0, z: 0}
+        slashData:
+          slashFX:
+            slashParticleSystem: {fileID: 0}
+            slashFXPositionOffset: {x: 0, y: 0, z: 0}
+            slashFXRotationOffset: {x: 0, y: 0, z: 0}
+            slashFXScaleOffset: {x: 0, y: 0, z: 0}
+          slashSFX:
+            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            volume: 1.5
+            pitch: 1
+        attackExtendData:
+          isApplyHeightWithOwner: 0
+          height: 0
+          attackExtendFX:
+            attackFXExtendGO: {fileID: 0}
+            attackFXPositionOffset: {x: 0, y: 0, z: 0}
+            attackFXRotationOffset: {x: 0, y: 0, z: 0}
+            attackFXScaleOffset: {x: 0, y: 0, z: 0}
+          attackExtendSFX:
+            attackExtendAudioClip: {fileID: 0}
+            volume: 0
+            pitch: 0
+        hitImpact:
+          KnockbackData:
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 1
+              intensityData:
+                intensityType: 1
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+            knockbackFX:
+              KnockbackParticleSystem: {fileID: 0}
+              KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXRotationOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXScaleOffset: {x: 0, y: 0, z: 0}
+            knockbackSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          AirborneData:
+            isAirborne: 0
+            airborneDirection: 0
+            height: 0
+            airborneDuration: 0
+            airborneTime: 0
+            hitAirborneClip: {fileID: 0}
+            airborneFX:
+              AirborneParticleSystem: {fileID: 0}
+              AirborneFXPositionOffset: {x: 0, y: 0, z: 0}
+              AirborneFXRotationOffset: {x: 0, y: 0, z: 0}
+              AirborneFXScaleOffset: {x: 0, y: 0, z: 0}
+            airborneSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          CollideHitData:
+            isCollide: 0
+            collideType: 0
+            collideClip: {fileID: 0}
+            colliderHitFX:
+              CollideParticleSystem: {fileID: 0}
+              CollideFXPositionOffset: {x: 0, y: 0, z: 0}
+              CollideFXRotationOffset: {x: 0, y: 0, z: 0}
+              CollideFXScaleOffset: {x: 0, y: 0, z: 0}
+            colliderHitSFX:
+              collideHitAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          HitData:
+            hitFX:
+              hitParticleSystem: {fileID: 0}
+              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitFXRotationOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+            hitSFX:
+              hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
+              volume: 1
+              pitch: 1
+          BlockData:
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
+            parryReactClip: {fileID: 7400002, guid: edf27cf4b0ea28e4fade566dacc9c95d, type: 3}
+            brokenReactClip: {fileID: 7400002, guid: 74dc9b5ea79ac2a4d88678d761c59117, type: 3}
+            reboundReactClip: {fileID: 7400002, guid: 78efa88e7843e30448d41f1253cd8d40, type: 3}
+            defenceFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
+              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              volume: 1
+              pitch: 1
+            parryFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
+              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              volume: 1
+              pitch: 1
+            brokenFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+            reboundFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+        hitFeedbackData:
+          isApplyWithoutHit: 0
+          isShake: 0
+          shakeDirection: 0
+          shakeTime: 0
+          intensity: 0
+          isStop: 0
+          stopTime: 0
+          isSlowMotion: 0
+          slowMotionFactor: 0
+          slowMotionTime: 0
+          isSightToHitPoint: 0
+          stayTime: 0
+          duration: 0
+    - Name: LA3
+      hitReactionDatas:
+      - Name: LA1 - 1
+        attackDirection: 0
+        hitTrace:
+          traceType: 1
+          traceAngle: 0
+          traceRadius: 0
+          boxOffset: {x: 0, y: 0, z: 0}
+          boxSize: {x: 0, y: 0, z: 0}
+        slashData:
+          slashFX:
+            slashParticleSystem: {fileID: 0}
+            slashFXPositionOffset: {x: 0, y: 0, z: 0}
+            slashFXRotationOffset: {x: 0, y: 0, z: 0}
+            slashFXScaleOffset: {x: 0, y: 0, z: 0}
+          slashSFX:
+            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            volume: 0.7
+            pitch: 1
+        attackExtendData:
+          isApplyHeightWithOwner: 0
+          height: 0
+          attackExtendFX:
+            attackFXExtendGO: {fileID: 0}
+            attackFXPositionOffset: {x: 0, y: 0, z: 0}
+            attackFXRotationOffset: {x: 0, y: 0, z: 0}
+            attackFXScaleOffset: {x: 0, y: 0, z: 0}
+          attackExtendSFX:
+            attackExtendAudioClip: {fileID: 0}
+            volume: 0
+            pitch: 0
+        hitImpact:
+          KnockbackData:
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 0
+              intensityData:
+                intensityType: 0
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: d9da4170bb481b444bdb6612b1d89353, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: a6e4ae7cc4410004b9b3bccb2a5df448, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 91639ebc49ac4ba42a7c21c34d410249, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+            knockbackFX:
+              KnockbackParticleSystem: {fileID: 0}
+              KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXRotationOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXScaleOffset: {x: 0, y: 0, z: 0}
+            knockbackSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          AirborneData:
+            isAirborne: 0
+            airborneDirection: 0
+            height: 0
+            airborneDuration: 0
+            airborneTime: 0
+            hitAirborneClip: {fileID: 0}
+            airborneFX:
+              AirborneParticleSystem: {fileID: 0}
+              AirborneFXPositionOffset: {x: 0, y: 0, z: 0}
+              AirborneFXRotationOffset: {x: 0, y: 0, z: 0}
+              AirborneFXScaleOffset: {x: 0, y: 0, z: 0}
+            airborneSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          CollideHitData:
+            isCollide: 0
+            collideType: 0
+            collideClip: {fileID: 0}
+            colliderHitFX:
+              CollideParticleSystem: {fileID: 0}
+              CollideFXPositionOffset: {x: 0, y: 0, z: 0}
+              CollideFXRotationOffset: {x: 0, y: 0, z: 0}
+              CollideFXScaleOffset: {x: 0, y: 0, z: 0}
+            colliderHitSFX:
+              collideHitAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          HitData:
+            hitFX:
+              hitParticleSystem: {fileID: 0}
+              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitFXRotationOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+            hitSFX:
+              hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
+              volume: 1
+              pitch: 1
+          BlockData:
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: 104e14aa8b76f5840b2257ec4cd8b6a6, type: 3}
+            parryReactClip: {fileID: 7400002, guid: ac977895d7a6fdc44bcb0c35a509b533, type: 3}
+            brokenReactClip: {fileID: 7400002, guid: 9795529eec143164eb6902723c92d2e2, type: 3}
+            reboundReactClip: {fileID: 7400002, guid: 71086a994f4e295429ed88f8c81f2bd9, type: 3}
+            defenceFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
+              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              volume: 1
+              pitch: 1
+            parryFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
+              blockReactFXPositionOffset: {x: -0.2, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
+              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              volume: 1
+              pitch: 1
+            brokenFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+            reboundFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+        hitFeedbackData:
+          isApplyWithoutHit: 0
+          isShake: 0
+          shakeDirection: 0
+          shakeTime: 0
+          intensity: 0
+          isStop: 0
+          stopTime: 0
+          isSlowMotion: 0
+          slowMotionFactor: 0
+          slowMotionTime: 0
+          isSightToHitPoint: 0
+          stayTime: 0
+          duration: 0
+      - Name: LA1 - 1
+        attackDirection: 0
+        hitTrace:
+          traceType: 1
+          traceAngle: 0
+          traceRadius: 0
+          boxOffset: {x: 0, y: 0, z: 0}
+          boxSize: {x: 0, y: 0, z: 0}
+        slashData:
+          slashFX:
+            slashParticleSystem: {fileID: 0}
+            slashFXPositionOffset: {x: 0, y: 0, z: 0}
+            slashFXRotationOffset: {x: 0, y: 0, z: 0}
+            slashFXScaleOffset: {x: 0, y: 0, z: 0}
+          slashSFX:
+            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            volume: 0.7
+            pitch: 1
+        attackExtendData:
+          isApplyHeightWithOwner: 0
+          height: 0
+          attackExtendFX:
+            attackFXExtendGO: {fileID: 0}
+            attackFXPositionOffset: {x: 0, y: 0, z: 0}
+            attackFXRotationOffset: {x: 0, y: 0, z: 0}
+            attackFXScaleOffset: {x: 0, y: 0, z: 0}
+          attackExtendSFX:
+            attackExtendAudioClip: {fileID: 0}
+            volume: 0
+            pitch: 0
+        hitImpact:
+          KnockbackData:
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 0
+              intensityData:
+                intensityType: 0
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: d6eeb617904987d4fb4b75e7481baa93, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: d9da4170bb481b444bdb6612b1d89353, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: a6e4ae7cc4410004b9b3bccb2a5df448, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 91639ebc49ac4ba42a7c21c34d410249, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: e8eb6cd6168bf2546b3d9381354553b8, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 79d3297b47514ab41b948c5154dc4539, type: 3}
+            knockbackFX:
+              KnockbackParticleSystem: {fileID: 0}
+              KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXRotationOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXScaleOffset: {x: 0, y: 0, z: 0}
+            knockbackSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          AirborneData:
+            isAirborne: 0
+            airborneDirection: 0
+            height: 0
+            airborneDuration: 0
+            airborneTime: 0
+            hitAirborneClip: {fileID: 0}
+            airborneFX:
+              AirborneParticleSystem: {fileID: 0}
+              AirborneFXPositionOffset: {x: 0, y: 0, z: 0}
+              AirborneFXRotationOffset: {x: 0, y: 0, z: 0}
+              AirborneFXScaleOffset: {x: 0, y: 0, z: 0}
+            airborneSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          CollideHitData:
+            isCollide: 0
+            collideType: 0
+            collideClip: {fileID: 0}
+            colliderHitFX:
+              CollideParticleSystem: {fileID: 0}
+              CollideFXPositionOffset: {x: 0, y: 0, z: 0}
+              CollideFXRotationOffset: {x: 0, y: 0, z: 0}
+              CollideFXScaleOffset: {x: 0, y: 0, z: 0}
+            colliderHitSFX:
+              collideHitAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          HitData:
+            hitFX:
+              hitParticleSystem: {fileID: 0}
+              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitFXRotationOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+            hitSFX:
+              hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
+              volume: 1
+              pitch: 1
+          BlockData:
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
+            parryReactClip: {fileID: 7400002, guid: edf27cf4b0ea28e4fade566dacc9c95d, type: 3}
+            brokenReactClip: {fileID: 7400002, guid: 74dc9b5ea79ac2a4d88678d761c59117, type: 3}
+            reboundReactClip: {fileID: 7400002, guid: d49bcbc5d9944534a9f3b612a45e2306, type: 3}
+            defenceFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
+              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              volume: 1
+              pitch: 1
+            parryFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
+              blockReactFXPositionOffset: {x: 0.2, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
+              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              volume: 1
+              pitch: 1
+            brokenFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+            reboundFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+        hitFeedbackData:
+          isApplyWithoutHit: 0
+          isShake: 0
+          shakeDirection: 0
+          shakeTime: 0
+          intensity: 0
+          isStop: 0
+          stopTime: 0
+          isSlowMotion: 0
+          slowMotionFactor: 0
+          slowMotionTime: 0
+          isSightToHitPoint: 0
+          stayTime: 0
+          duration: 0
+    - Name: LA4
+      hitReactionDatas:
+      - Name: LA1 - 1
+        attackDirection: 0
+        hitTrace:
+          traceType: 1
+          traceAngle: 0
+          traceRadius: 0
+          boxOffset: {x: 0, y: 0, z: 0}
+          boxSize: {x: 0, y: 0, z: 0}
+        slashData:
+          slashFX:
+            slashParticleSystem: {fileID: 0}
+            slashFXPositionOffset: {x: 0, y: 0, z: 0}
+            slashFXRotationOffset: {x: 0, y: 0, z: 0}
+            slashFXScaleOffset: {x: 0, y: 0, z: 0}
+          slashSFX:
+            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            volume: 2
+            pitch: 1
+        attackExtendData:
+          isApplyHeightWithOwner: 0
+          height: 0
+          attackExtendFX:
+            attackFXExtendGO: {fileID: 0}
+            attackFXPositionOffset: {x: 0, y: 0, z: 0}
+            attackFXRotationOffset: {x: 0, y: 0, z: 0}
+            attackFXScaleOffset: {x: 0, y: 0, z: 0}
+          attackExtendSFX:
+            attackExtendAudioClip: {fileID: 0}
+            volume: 0
+            pitch: 0
+        hitImpact:
+          KnockbackData:
+            isKnockback: 1
+            knockbackTime: 1
+            knockbackDistance: 5
+            reactData:
+              isRotateToHitDirection: 1
+              intensityData:
+                intensityType: 1
+                intensity: 0
+              animationReactDatas:
+              - hitReactDirection: 0
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 1
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 2
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 3
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 4
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 5
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+              - hitReactDirection: 6
+                hitReactClip: {fileID: 7400000, guid: 067aa9dc78c85ed4f880bd07e406425f, type: 3}
+              - hitReactDirection: 7
+                hitReactClip: {fileID: 7400000, guid: 1ac850e8e66e1f04d85182418cc5c368, type: 3}
+            knockbackFX:
+              KnockbackParticleSystem: {fileID: 0}
+              KnockbackFXPositionOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXRotationOffset: {x: 0, y: 0, z: 0}
+              KnockbackFXScaleOffset: {x: 0, y: 0, z: 0}
+            knockbackSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          AirborneData:
+            isAirborne: 0
+            airborneDirection: 0
+            height: 0
+            airborneDuration: 0
+            airborneTime: 0
+            hitAirborneClip: {fileID: 0}
+            airborneFX:
+              AirborneParticleSystem: {fileID: 0}
+              AirborneFXPositionOffset: {x: 0, y: 0, z: 0}
+              AirborneFXRotationOffset: {x: 0, y: 0, z: 0}
+              AirborneFXScaleOffset: {x: 0, y: 0, z: 0}
+            airborneSFX:
+              knockbackAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          CollideHitData:
+            isCollide: 0
+            collideType: 0
+            collideClip: {fileID: 0}
+            colliderHitFX:
+              CollideParticleSystem: {fileID: 0}
+              CollideFXPositionOffset: {x: 0, y: 0, z: 0}
+              CollideFXRotationOffset: {x: 0, y: 0, z: 0}
+              CollideFXScaleOffset: {x: 0, y: 0, z: 0}
+            colliderHitSFX:
+              collideHitAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+          HitData:
+            hitFX:
+              hitParticleSystem: {fileID: 0}
+              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitFXRotationOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+            hitSFX:
+              hitAudioClip: {fileID: 8300000, guid: ba9dab163b3ed7b44bb8fc8bc6f4889e, type: 3}
+              volume: 1
+              pitch: 1
+          BlockData:
+            isBlockable: 1
+            knockbackTime: 1
+            knockbackDistance: 2
+            defenceReactClip: {fileID: 7400002, guid: b12a2e6a0850b394a9c687e0f45672ab, type: 3}
+            parryReactClip: {fileID: 7400002, guid: ac977895d7a6fdc44bcb0c35a509b533, type: 3}
+            brokenReactClip: {fileID: 7400002, guid: 74dc9b5ea79ac2a4d88678d761c59117, type: 3}
+            reboundReactClip: {fileID: 7400002, guid: 78efa88e7843e30448d41f1253cd8d40, type: 3}
+            defenceFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
+              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              volume: 1
+              pitch: 1
+            parryFX:
+              blockReactParticleSystem: {fileID: 4596544553357837919, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
+              blockReactFXPositionOffset: {x: 0, y: 0.5, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0.4, y: 0.4, z: 0.4}
+              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              volume: 3
+              pitch: 1
+            brokenFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+            reboundFX:
+              blockReactParticleSystem: {fileID: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXScaleOffset: {x: 0, y: 0, z: 0}
+              blockReactAudioClip: {fileID: 0}
+              volume: 0
+              pitch: 0
+        hitFeedbackData:
+          isApplyWithoutHit: 0
+          isShake: 0
+          shakeDirection: 0
+          shakeTime: 0
+          intensity: 0
+          isStop: 0
+          stopTime: 0
+          isSlowMotion: 0
+          slowMotionFactor: 0
+          slowMotionTime: 0
+          isSightToHitPoint: 0
+          stayTime: 0
+          duration: 0

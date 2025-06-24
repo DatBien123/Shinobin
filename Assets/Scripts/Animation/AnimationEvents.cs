@@ -94,7 +94,7 @@ public class AnimationEvents : MonoBehaviour
 
     public void Anim_SetAirborneTime(float airborneTime)
     {
-        owner.hitReactionComponent.SetAirborneTime(airborneTime);
+        //owner.hitReactionComponent.SetAirborneTime(airborneTime);
     }
 
     public void Anim_OnFreeflow(int freeflowIndex)

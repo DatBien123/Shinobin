@@ -204,31 +204,39 @@ namespace Training
         public bool isBlockable;
         public float knockbackTime;
         public float knockbackDistance;  
+
         public AnimationClip defenceReactClip;
         public AnimationClip parryReactClip;
         public AnimationClip brokenReactClip;
         public AnimationClip reboundReactClip;
 
 
-        public BlockFX blockFX;
-        public BlockSFX blockSFX;
+        public BlockFX defenceFX;
+
+        public BlockFX parryFX;
+
+        public BlockFX brokenFX;
+
+        public BlockFX reboundFX;
     }
     [System.Serializable]
     public struct BlockFX
     {
         [Tooltip("Parrying FX")]
-        public ParticleSystem hitParryParticleSystem;
-        public Vector3 hitParryFXPositionOffset;
-        public Vector3 hitParryFXRotationOffset;
-        public Vector3 hitParryFXScaleOffset;
+        public ParticleSystem blockReactParticleSystem;
+        public Vector3 blockReactFXPositionOffset;
+        public Vector3 blockReactFXRotationOffset;
+        public Vector3 blockReactFXScaleOffset;
+
+        [Header("Parrying SoundFX")]
+        public AudioClip blockReactAudioClip;
+        public float volume;
+        public float pitch;
     }
     [System.Serializable]
     public struct BlockSFX
     {
-        [Header("Parrying SoundFX")]
-        public AudioClip hitParryAudioClip;
-        public float volume;
-        public float pitch;
+
     }
     #endregion
     #region AttackExtend

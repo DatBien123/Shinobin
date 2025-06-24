@@ -34,7 +34,8 @@ namespace Training
         {
             owner.hitReactionComponent.PlaySlashFX(owner);
             owner.currentWeapon.onAttackEvent?.Invoke();
-            if (owner.hitReactionComponent.currentHitReactionData.hitFeedbackData.isApplyWithoutHit) owner.hitReactionComponent.PlayHitFeedback(owner.transform.position, EReactionType.Combo);
+            if (owner.hitReactionComponent.currentHitReactionData.hitFeedbackData.isApplyWithoutHit) 
+                owner.hitReactionComponent.PlayHitFeedback(owner.transform.position);
             onTrace = true;
         }
         public void OnTrace()
@@ -245,9 +246,9 @@ namespace Training
 
 
 
-            taker.hitReactionComponent.PlayHitReactions(causer, taker, hitPoint, EReactionType.Combo);
+            taker.hitReactionComponent.PlayHitReactions(causer, taker, hitPoint);
             if(!taker.hitReactionComponent.currentHitReactionDataTake.hitFeedbackData.isApplyWithoutHit)
-            taker.hitReactionComponent.PlayHitFeedback(hitPoint, EReactionType.Combo);
+            taker.hitReactionComponent.PlayHitFeedback(hitPoint);
 
         }
         private void OnDrawGizmos()

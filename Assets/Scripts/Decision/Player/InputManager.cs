@@ -1,4 +1,5 @@
-﻿using Training;
+﻿using System.Collections;
+using Training;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -141,7 +142,7 @@ public class InputManager : MonoBehaviour
     #endregion
 
     #region Combat
-
+    #region Attack
     public void LightAttack(InputAction.CallbackContext context)
     {
         if (context.performed && player.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
@@ -150,22 +151,6 @@ public class InputManager : MonoBehaviour
             player.comboComponent.SetCurrentInput(EKeystroke.LightAttack);
         }
     }
-    public void Block(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            player.isBlock = true;
-            player.animator.SetBool(AnimationParams.Block_Param, true);
-        }
-        else if (context.canceled)
-        {
-            player.isBlock = false;
-            player.animator.SetBool(AnimationParams.Block_Param, false);
-        }
-    }
-
-
-
     public void StrongAttack(InputAction.CallbackContext context)
     {
         if (context.performed && player.dodgeComponent.currentDodgeState == EDodgeState.OffDodge)
@@ -193,6 +178,38 @@ public class InputManager : MonoBehaviour
             //}
         }
     }
+    #endregion
+
+    #region Block
+    Coroutine C_BlockDelay;
+    public void StartBlockDelay(bool desiredBlockTarget)
+    {
+        if(C_BlockDelay != null) StopCoroutine(C_BlockDelay);
+        C_BlockDelay =  StartCoroutine(BlockDelay(desiredBlockTarget));
+    }
+    IEnumerator BlockDelay(bool desiredBlockTarget)
+    {
+        if(player.isBlock != desiredBlockTarget)
+        {
+            yield return new WaitForSeconds(.2f);
+        }
+        player.isBlock = desiredBlockTarget;
+        player.animator.SetBool(AnimationParams.Block_Param, player.isBlock);
+    }
+    public void Block(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            player.isBlock = true;
+            player.animator.SetBool(AnimationParams.Block_Param, player.isBlock);
+        }
+        else if (context.canceled)
+        {
+            StartBlockDelay(false);
+        }
+    }
+    #endregion
+
     #endregion
 
     #region SwitchWeapon
