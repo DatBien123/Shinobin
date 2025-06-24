@@ -48,6 +48,10 @@ public class InputManager : MonoBehaviour
     }
     void InputBinding()
     {
+        //Camera
+        playerControls.Camera.Look.performed += Look;
+        playerControls.Camera.Look.canceled += Look;
+
         //Player Movement
         playerControls.Movement.Move.performed += Move;
         playerControls.Movement.Move.canceled += Move;
@@ -58,9 +62,11 @@ public class InputManager : MonoBehaviour
         playerControls.Movement.Jump.performed += Jump;
         playerControls.Movement.Jump.canceled += Jump;
 
-        playerControls.Camera.Look.performed += Look;
-        playerControls.Camera.Look.canceled += Look;
 
+
+        playerControls.Movement.Dodge.performed += Dodge;
+
+        //Combat
         playerControls.Combat.Block.performed += Block;
         playerControls.Combat.Block.canceled += Block;
 
@@ -121,13 +127,24 @@ public class InputManager : MonoBehaviour
             jump = false;
         }
     }
+    public void Dodge(InputAction.CallbackContext context)
+    {
+        if (context.performed 
+            && player.comboComponent.currentComboState != EComboState.Playing
+            && player.hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
+            && player.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
+        {
+            player.dodgeComponent.StartDodge(player.transform.forward);
+        }
+
+    }
     #endregion
 
     #region Combat
 
     public void LightAttack(InputAction.CallbackContext context)
     {
-        if (context.performed /*&& player.dodgeComponent.currentDodgeState == EDodgeState.OffDodge*/)
+        if (context.performed && player.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
         {
             //if (player.currentWeapon.currentWeaponState != EWeaponState.Equip) player.characterRigComponent.EquipWeapon();
             player.comboComponent.SetCurrentInput(EKeystroke.LightAttack);

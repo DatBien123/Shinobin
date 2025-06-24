@@ -64,9 +64,7 @@ public class CharacterPlayer : Character
         GroundedCheck();
 
         //Chỉ di chuyển/xoay khi ko bị đánh !
-        if (!isApplyingKnockBack
-            && comboComponent.currentComboState != EComboState.Playing
-            && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit) Move();
+        Move();
     }
     protected override void LateUpdate()
     {
@@ -161,15 +159,23 @@ public class CharacterPlayer : Character
                 RotationSmoothTime);
 
             // rotate to face input direction relative to camera position
+            if (!isApplyingKnockBack
+    && comboComponent.currentComboState != EComboState.Playing
+    && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
+    && dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
-
-
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+        if (!isApplyingKnockBack
+    && comboComponent.currentComboState != EComboState.Playing
+    && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
+    && dodgeComponent.currentDodgeState != EDodgeState.OnDodge) 
+            targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+        else targetDirection = Vector3.zero;
+
 
         // move the player
-        if(comboComponent.currentComboState != EComboState.Playing)
-            characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
+        characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                          new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
         // update animator if using character

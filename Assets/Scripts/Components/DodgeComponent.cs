@@ -66,6 +66,29 @@ public class DodgeComponent : MonoBehaviour
         }
         C_Dodge = StartCoroutine(Dodge(dodgeDirection));
     }
+
+    IEnumerator Dodge(Vector3 dodgeDirection)
+    {
+        //Initialized before Start
+        float elapsedTime = 0.0f;
+        Vector3 direction = dodgeDirection.normalized;
+        float speed = dodgeDistance / dodgeDuration;
+
+        //currentDodgeState = EDodgeState.OnDodge;
+        owner.animator.CrossFadeInFixedTime(AnimationParams.Dodge_State, .1f);
+
+        onDodgeEvent?.Invoke();
+        while(currentDodgeState != EDodgeState.OffDodge)
+        { 
+            yield return null;
+        }
+        offDodgeEvent?.Invoke();
+        //currentDodgeState = EDodgeState.OffDodge;
+
+        Debug.Log("End Dodge");
+    }
+
+    #region [AI]
     public void StartDashAI(Vector3 dashDirection, Vector2 paramsVH)
     {
         //Break Lines
@@ -85,31 +108,6 @@ public class DodgeComponent : MonoBehaviour
             StopCoroutine(C_DodgeAI);
         }
         C_DodgeAI = StartCoroutine(DodgeAI(dodgeDirection, paramsVH));
-    }
-    IEnumerator Dodge(Vector3 dodgeDirection)
-    {
-        //Initialized before Start
-        float elapsedTime = 0.0f;
-        Vector3 direction = dodgeDirection.normalized;
-        float speed = dodgeDistance / dodgeDuration;
-
-        currentDodgeState = EDodgeState.OnDodge;
-        owner.animator.CrossFadeInFixedTime(AnimationParams.Dodge_State, .1f);
-
-        onDodgeEvent?.Invoke();
-        while(elapsedTime < dodgeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            float displaceDistance = dodgeCurve.Evaluate(elapsedTime);
-            Vector3 displacement = direction * displaceDistance;
-            owner.characterController.Move(displacement * speed * Time.deltaTime);
-            currentDodgeTime += Time.deltaTime;
-            yield return null;
-        }
-        offDodgeEvent?.Invoke();
-        currentDodgeState = EDodgeState.OffDodge;
-
-        Debug.Log("End Dodge");
     }
     IEnumerator DodgeAI(Vector3 dodgeDirection, Vector2 paramsVH)
     {
@@ -238,4 +236,5 @@ public class DodgeComponent : MonoBehaviour
         isDodging = false;
         currentDodgeState = EDodgeState.OffDodge;
     }
+    #endregion
 }

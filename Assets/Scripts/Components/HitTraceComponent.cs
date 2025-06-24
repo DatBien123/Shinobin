@@ -90,7 +90,7 @@ namespace Training
                         // Xử lý logic khi va chạm
                         Character opponent = collider.GetComponent<Character>();
                         Vector3 collisionPoint = collider.ClosestPoint(owner.transform.position);
-                        if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
+                        if (opponent != null && opponent.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
                         {
                             //if (opponent.atributeComponent.currentHP <= 0) return;
                             HandleAttackHit(owner, opponent, collisionPoint);
@@ -108,8 +108,8 @@ namespace Training
 
                         // Xử lý logic khi va chạm
                         Character opponent = collider.GetComponent<Character>();
-                        Vector3 collisionPoint = collider.ClosestPoint(owner.transform.position);
-                        if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
+                        Vector3 collisionPoint = collider.ClosestPoint(owner.transform.position); 
+                        if (opponent != null && opponent.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
                         {
                             //if (opponent.atributeComponent.currentHP <= 0) return;
                             HandleAttackHit(owner, opponent, collisionPoint);

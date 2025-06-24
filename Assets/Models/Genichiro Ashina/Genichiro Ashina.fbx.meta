@@ -1,0 +1,3567 @@
+fileFormatVersion: 2
+guid: 910b38f64d66ede4fb6d8b141cb6af4a
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__220_
+    second: {fileID: 2100000, guid: 4f99b2c2a7d33494ca36e91359adfe26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__221_
+    second: {fileID: 2100000, guid: 47f7827db9dd56b4a8fd0628cc8d4232, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__222_
+    second: {fileID: 2100000, guid: 60a057216e58e454d85a6cc5233586f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__255_
+    second: {fileID: 2100000, guid: cfd6bc90fb937c84ba73dce4f272ec50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__256_
+    second: {fileID: 2100000, guid: 3870106b8079a0145be3987de57a8d6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__260_
+    second: {fileID: 2100000, guid: 0fa44afeff111f94886627e3e2767e22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__261_
+    second: {fileID: 2100000, guid: f8e6696899fd01b428840ffc8e821924, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__280_
+    second: {fileID: 2100000, guid: bc99688280d664644b4723af05b7b0b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__281_
+    second: {fileID: 2100000, guid: eb4b1adb4451ebe48ad04cb37fdc976e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__283_
+    second: {fileID: 2100000, guid: eeb7d9aafa2bd224cba7550bc1d037ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _00_MI_c7109_wearrow_00_
+    second: {fileID: 2100000, guid: 3364721cbc378274aa16986440f918c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _10__
+    second: {fileID: 2100000, guid: fb15d6ef7ae394b4db02e4282263e0a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _10__cloth_
+    second: {fileID: 2100000, guid: 2eab1404eb14f314f85da28eca07311f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _11__
+    second: {fileID: 2100000, guid: d832ebee52b0fa14fac111e340c82bc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _12__
+    second: {fileID: 2100000, guid: ebd445e2dd0aab748b3de6db8b712ae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: c7100_BodyMaterial_
+    second: {fileID: 2100000, guid: a7951e04ede0e8549ab2fdca446e4104, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: c7100_EyeMaterial_
+    second: {fileID: 2100000, guid: a9f2e4476c1823a43916869c5de83e8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: c7100_Hair_
+    second: {fileID: 2100000, guid: 07831a4aba1a289468830c4c28db5c08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: c7100_HeadMaterial_
+    second: {fileID: 2100000, guid: b3fe984ce9aa42f4099e9439dc221349, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default_
+    second: {fileID: 2100000, guid: a79a958f31daaf04da14b1111d3263c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default_.001
+    second: {fileID: 2100000, guid: a1992fba0bc8a6145bbea9a79a668b4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default_.002
+    second: {fileID: 2100000, guid: 5b1aa2e67f6c8bc46a4a597a56153707, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: helment_fur_cloth_
+    second: {fileID: 2100000, guid: 6725105ad2c8fcb42af950fcd3cae943, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: katana_
+    second: {fileID: 2100000, guid: d3625a24b261c024b8c2ed54cd2da8e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tutu_
+    second: {fileID: 2100000, guid: 443289ac0f2e80a488d9d9c94a1c1981, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yumi_
+    second: {fileID: 2100000, guid: fa31e74aeeb9fed4eb1dc46fbed769d9, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Eyeball_L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Eyeball_R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Jaw_Pivot
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger4
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger41
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger42
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger3
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger31
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger32
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger21
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger22
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger11
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger12
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger0
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger01
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Finger02
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger4
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger41
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger42
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger3
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger31
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger32
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger21
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger22
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger11
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger12
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger0
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger01
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_Finger02
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Genichiro Ashina(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.010
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.011
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.012
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.013
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.014
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.015
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.016
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.017
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.018
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.019
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.002
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.020
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.021
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.022
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.023
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.024
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.025
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.026
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.027
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.003
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.004
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.005
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.006
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.007
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.008
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7101.009
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Master
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root
+      parentName: Master
+      position: {x: -7.9090157e-10, y: 1.0197724, z: 6.206059e-14}
+      rotation: {x: 0.7071068, y: -0.70710677, z: 0.00000005722217, w: 0.00000015351225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis
+      parentName: Root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0000005, y: 0.00000018, z: 9.612e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Yadutu
+      parentName: Pelvis
+      position: {x: -0.055026855, y: 0.18632297, z: -0.056350064}
+      rotation: {x: -0.3113729, y: 0.6922975, z: -0.5750559, w: -0.30509314}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+    - name: R_Hip
+      parentName: Pelvis
+      position: {x: 0.00027800267, y: -0.12638198, z: -0.0042420016}
+      rotation: {x: -0.016280461, y: -0.00021356628, z: 0.99986744, w: -0.000008114246}
+      scale: {x: 1, y: 1.0000005, z: 0.99999994}
+    - name: L_Hip
+      parentName: Pelvis
+      position: {x: 0.00019199267, y: 0.12638599, z: -0.004244998}
+      rotation: {x: -0.016280387, y: 0.00020657804, z: 0.99986744, w: 0.000008228048}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.9999999}
+    - name: R_Thigh
+      parentName: Pelvis
+      position: {x: -3.842615e-13, y: -0.12638596, z: -0.0000000017080948}
+      rotation: {x: -0.03255643, y: -0.000000038211795, z: 0.9994699, w: 0.0000000012462007}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: R_ThighTwist
+      parentName: R_Thigh
+      position: {x: -0.0042499993, y: 0.0000000013174987, z: -2.2268638e-10}
+      rotation: {x: -0.0007109326, y: -0.0000004809912, z: 0.00000007966035, w: 0.99999976}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7100_kusasuri_Bone_coth_02
+      parentName: R_ThighTwist
+      position: {x: 0.013379999, y: 0.033096973, z: 0.10213198}
+      rotation: {x: 0.547834, y: 0.5468055, z: 0.44306692, w: 0.45229787}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_ThighTwist1
+      parentName: R_Thigh
+      position: {x: -0.19463404, y: 0.0000003203365, z: -0.0000000071426123}
+      rotation: {x: -0.00014837504, y: 0.0000000052665907, z: -0.0000019299994, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Knee
+      parentName: R_Thigh
+      position: {x: -0.4625401, y: 0.000000733461, z: 0.004222962}
+      rotation: {x: -0.00000052845843, y: -0.0554616, z: 0.000000024910241, w: 0.9984608}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Calf
+      parentName: R_Thigh
+      position: {x: -0.46206912, y: 0.0000007232413, z: -0.00000003030017}
+      rotation: {x: -0.0000014551617, y: -0.11075132, z: 0.00000016687883, w: 0.99384815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_CalfTwist
+      parentName: R_Calf
+      position: {x: -0.25947312, y: 0.0000003266474, z: -0.000000002698959}
+      rotation: {x: -0.0006423093, y: -0.000000058027506, z: -0.0000019300376, w: 0.9999998}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_CalfTwist1
+      parentName: R_Calf
+      position: {x: -0.18020007, y: 0.00000022378198, z: -0.0000000040611905}
+      rotation: {x: 0.000004347516, y: 0.000000014812896, z: -0.0000004850001, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Foot
+      parentName: R_Calf
+      position: {x: -0.41909918, y: 0.00000053228104, z: -0.000000013106892}
+      rotation: {x: -0.9894767, y: 0.009529789, z: 0.07792283, w: 0.121544845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Toe0
+      parentName: R_Foot
+      position: {x: -0.11497702, y: -0.0000001270047, z: 0.14042799}
+      rotation: {x: 0.0000009897991, y: 0.7072293, z: 0.0000003041371, w: 0.7069842}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_FootTwist
+      parentName: R_Foot
+      position: {x: -0.11497703, y: 0.0000001429954, z: 0.0000000115397505}
+      rotation: {x: 0.0000009444453, y: 0.7071067, z: 0.00000058997705, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7100_kusasuri_Bone_coth_01
+      parentName: Pelvis
+      position: {x: -0.0062252185, y: 0.0024299934, z: 0.17288196}
+      rotation: {x: -0.5615662, y: 0.56163234, z: 0.4346357, w: -0.42462274}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: c7100_kusasuri_Bone_coth_04
+      parentName: Pelvis
+      position: {x: -0.023705741, y: -0.07473199, z: -0.15331301}
+      rotation: {x: -0.561566, y: 0.5616324, z: 0.43463576, w: -0.42462274}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: L_Thigh
+      parentName: Pelvis
+      position: {x: 3.844036e-13, y: 0.12638596, z: 0.0000000017080948}
+      rotation: {x: -0.03255642, y: -0.000000038211056, z: 0.9994699, w: -0.000000008759128}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: L_ThighTwist
+      parentName: L_Thigh
+      position: {x: -0.004250062, y: 0.000000011402738, z: 0.000000045851433}
+      rotation: {x: 0.00068517425, y: -0.0000005619932, z: -0.0000017796127, w: 0.99999976}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7100_kusasuri_Bone_coth_07
+      parentName: L_ThighTwist
+      position: {x: 0.014174088, y: -0.031537965, z: 0.104522996}
+      rotation: {x: 0.5472048, y: 0.54742825, z: 0.44230148, w: 0.4530548}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: L_ThighTwist1
+      parentName: L_Thigh
+      position: {x: -0.1946501, y: 0.0000004942347, z: 0.000000041234998}
+      rotation: {x: 0.00013364102, y: -0.000000015101753, z: -0.0000009649979, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Knee
+      parentName: L_Thigh
+      position: {x: -0.4625402, y: 0.0000012127093, z: 0.004223023}
+      rotation: {x: -0.0000010756279, y: -0.055460986, z: 0.000000059640044, w: 0.9984609}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Calf
+      parentName: L_Thigh
+      position: {x: -0.46206924, y: 0.000001182483, z: 0.000000021004125}
+      rotation: {x: -0.0000016169292, y: -0.11075131, z: -0.0000017627341, w: 0.99384815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_CalfTwist1
+      parentName: L_Calf
+      position: {x: -0.18019705, y: -0.0000002673626, z: -0.000000007061248}
+      rotation: {x: 0.0000062221075, y: 0.000000014822971, z: 0.0000009649999, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Foot
+      parentName: L_Calf
+      position: {x: -0.41909918, y: -0.00000063191385, z: -0.000000017244764}
+      rotation: {x: 0.989477, y: 0.009532302, z: -0.07792261, w: 0.12154278}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Toe0
+      parentName: L_Foot
+      position: {x: -0.11497703, y: -0.00000021005893, z: 0.14042793}
+      rotation: {x: 0.00000083402034, y: 0.7072292, z: 0.0000008343203, w: 0.70698434}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.99999994}
+    - name: L_FootTwist
+      parentName: L_Foot
+      position: {x: -0.11497702, y: 0.000000039939994, z: -0.00000001836116}
+      rotation: {x: 0.0000006187001, y: 0.70710605, z: 0.00000057630746, w: 0.70710754}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_CalfTwist
+      parentName: L_Calf
+      position: {x: -0.25946912, y: -0.0000003941455, z: -0.000000008267089}
+      rotation: {x: 0.0006631696, y: -0.000000019113509, z: 0.000000965013, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7100_kusasuri_Bone_coth_05
+      parentName: Pelvis
+      position: {x: -0.01975682, y: 0.07543099, z: -0.14288299}
+      rotation: {x: -0.5615663, y: 0.56163216, z: 0.43463585, w: -0.4246227}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: c7100_kusasuri_Bone_coth_03
+      parentName: Pelvis
+      position: {x: -0.014363974, y: -0.18186797, z: -0.041418016}
+      rotation: {x: -0.5615642, y: 0.56163067, z: 0.43463922, w: -0.42462388}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_kusasuri_Bone_coth_06
+      parentName: Pelvis
+      position: {x: -0.017010063, y: 0.18022396, z: -0.041429028}
+      rotation: {x: -0.5615714, y: 0.56163764, z: 0.4346299, w: -0.42461464}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Spine
+      parentName: Root
+      position: {x: -0.09690189, y: -8.76224e-11, z: 0.000015003836}
+      rotation: {x: 0.000002, y: 0.00000023, z: 8.832e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sheath
+      parentName: Spine
+      position: {x: 0.0037602037, y: 0.0046039913, z: -0.14193992}
+      rotation: {x: -0.00000051200783, y: -0.0000011487386, z: 0.7608615, w: 0.6489143}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Sheath_Katana
+      parentName: Sheath
+      position: {x: 0.30439207, y: 0.01708381, z: -0.012931004}
+      rotation: {x: 0.000000212665, y: -1.1515117e-12, z: 0.0000009667049, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1
+      parentName: Spine
+      position: {x: -0.09196603, y: 0.00000009000025, z: -0.00000013713505}
+      rotation: {x: 0.0000009199998, y: -0.0006326701, z: -5.820565e-10, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SpineArmor1
+      parentName: Spine1
+      position: {x: -0.249857, y: 0.00000025, z: -0.00046201868}
+      rotation: {x: -0.00023816848, y: 0.000033989894, z: 0.00000047309535, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Spine2
+      parentName: Spine1
+      position: {x: -0.09196896, y: 0.00000009, z: -0.000000005132458}
+      rotation: {x: 0.00000066675057, y: 0.008131377, z: 0.0000000045785526, w: 0.999967}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Back_yumi
+      parentName: Spine2
+      position: {x: -0.19929202, y: -0.03987382, z: -0.16851799}
+      rotation: {x: 0.006387091, y: -0.003929807, z: -0.8516785, w: 0.52401096}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1}
+    - name: Collar
+      parentName: Spine2
+      position: {x: -0.24632928, y: 0.00000025151468, z: -0.025057994}
+      rotation: {x: 0.000078782774, y: 0.08795067, z: -0.000007590072, w: 0.99612486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Clavicle
+      parentName: Spine2
+      position: {x: -0.17406486, y: 0.046617173, z: -0.037695006}
+      rotation: {x: -0.6868943, y: 0.7267573, z: -0.00027429697, w: 0.0002887545}
+      scale: {x: 1, y: 1.0000004, z: 1}
+    - name: L_Shoulder
+      parentName: L_Clavicle
+      position: {x: -0.15586703, y: 0.0039797705, z: 0.0000029966172}
+      rotation: {x: -0.00056756235, y: 0.005215805, z: 0.17825702, w: 0.98397}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: L_UpperArm
+      parentName: L_Clavicle
+      position: {x: -0.15437602, y: -0.000000013475104, z: -0.000000007668465}
+      rotation: {x: 0.009434486, y: 0.0006620882, z: -0.003914862, w: 0.9999476}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: L_Elbow
+      parentName: L_UpperArm
+      position: {x: -0.27021492, y: -0.0000011660659, z: 0.0042369715}
+      rotation: {x: 0.00000011574728, y: -0.03759413, z: 0.000000019109688, w: 0.9992931}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_UpArmTwist
+      parentName: L_UpperArm
+      position: {x: -0.00425002, y: -0.00000004388481, z: -0.0000000011452819}
+      rotation: {x: -0.010934393, y: -0.0000009837051, z: 0.0000019436618, w: 0.9999402}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: L_UpArmTwist1
+      parentName: L_UpperArm
+      position: {x: -0.08499995, y: -0.0000003698789, z: -0.000000008299713}
+      rotation: {x: -0.0054674954, y: -0.0000005078327, z: 0.0000028915067, w: 0.99998504}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Forearm
+      parentName: L_UpperArm
+      position: {x: -0.26989594, y: -0.0000012669599, z: -0.0000010278591}
+      rotation: {x: 0.00089652825, y: -0.03894756, z: -0.011890274, w: 0.9991701}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Hand
+      parentName: L_Forearm
+      position: {x: -0.28079897, y: 0.0000010280837, z: 0.0000009374535}
+      rotation: {x: 0.7041429, y: 0.064707935, z: -0.06465906, w: 0.7041412}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_Yumi
+      parentName: L_Hand
+      position: {x: -0.43100214, y: -0.12312416, z: -0.2829924}
+      rotation: {x: 0.6331453, y: 0.6693956, z: -0.2885324, w: -0.2603567}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.9999998}
+    - name: L_Yumi_shinari_01
+      parentName: R_Yumi
+      position: {x: -0.155121, y: -0.006864997, z: 0.000000040590226}
+      rotation: {x: 0.0000010200007, y: -0.000000030003367, z: -0.00000048499936, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Yumi_shinari_02
+      parentName: R_Yumi
+      position: {x: 0.28463897, y: -0.006864013, z: -0.0000010996586}
+      rotation: {x: 0.0000009649987, y: 1, z: 0.0000010200009, w: 0.000000075006696}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Gen
+      parentName: R_Yumi
+      position: {x: -0.0000010121258, y: 0.21990687, z: -0.0000002340477}
+      rotation: {x: -0.009146155, y: -0.009146891, z: 0.7070487, w: 0.70704657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger0
+      parentName: L_Hand
+      position: {x: -0.0261859, y: -0.028442046, z: 0.02166297}
+      rotation: {x: -0.64764977, y: -0.023188943, z: 0.06057997, w: 0.759172}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1}
+    - name: L_Finger01
+      parentName: L_Finger0
+      position: {x: -0.043542985, y: 0.00000017391406, z: -0.00000004251226}
+      rotation: {x: -0.0000012704793, y: 0.00000006084097, z: -0.0000014557122, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger02
+      parentName: L_Finger01
+      position: {x: -0.03759101, y: 0.000000031812366, z: -0.00000002578939}
+      rotation: {x: 0.00000017158207, y: -0.013147195, z: -0.00000012468863, w: 0.9999136}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger1
+      parentName: L_Hand
+      position: {x: -0.1027729, y: -0.029468087, z: -0.0022229229}
+      rotation: {x: -0.03926958, y: 0.022636661, z: 0.080483794, w: 0.99572486}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: L_Finger11
+      parentName: L_Finger1
+      position: {x: -0.04714898, y: -0.00000012793208, z: 0.00000019959423}
+      rotation: {x: -0.000000067414256, y: 0.00000004906708, z: 0.00000024411142, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: L_Finger12
+      parentName: L_Finger11
+      position: {x: -0.031522032, y: -0.00000006385568, z: 0.00000017438673}
+      rotation: {x: -0.000000027724244, y: -0.00000004938501, z: -0.00000023915592, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger2
+      parentName: L_Hand
+      position: {x: -0.107428946, y: -0.0018380797, z: -0.0034948208}
+      rotation: {x: 0.033633556, y: 0.02876537, z: -0.0236929, w: 0.9987392}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: L_Finger21
+      parentName: L_Finger2
+      position: {x: -0.049919013, y: -0.00000005554821, z: -0.000000012699412}
+      rotation: {x: 0.00000011974652, y: 0.00000012756855, z: -7.74089e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger22
+      parentName: L_Finger21
+      position: {x: -0.032400962, y: -0.00000003035769, z: 0.0000000046303934}
+      rotation: {x: -0.000000060577634, y: -0.000000011299241, z: 0.00000012296375, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: L_Finger3
+      parentName: L_Hand
+      position: {x: -0.10336104, y: 0.01974492, z: -0.003580763}
+      rotation: {x: 0.04932807, y: 0.012915137, z: -0.06256925, w: 0.9967372}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger31
+      parentName: L_Finger3
+      position: {x: -0.047547992, y: 0.00000009391687, z: 0.0000000062978}
+      rotation: {x: -0.00000019704729, y: -0.000000053437475, z: -0.000000108428345, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: L_Finger32
+      parentName: L_Finger31
+      position: {x: -0.030807989, y: 0.00000005188716, z: -0.000000013040026}
+      rotation: {x: 0.000000102775886, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: L_Finger4
+      parentName: L_Hand
+      position: {x: -0.09628805, y: 0.040733937, z: -0.0019127883}
+      rotation: {x: 0.04729579, y: 0.021117985, z: -0.31258613, w: 0.9484762}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Finger41
+      parentName: L_Finger4
+      position: {x: -0.03422501, y: 0.0000000134351295, z: 0.0000000066537322}
+      rotation: {x: 0.000000019271438, y: -0.000000011428531, z: -0.00000012279126, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: L_Finger42
+      parentName: L_Finger41
+      position: {x: -0.01982702, y: -0.000000019366, z: 0.000000011033971}
+      rotation: {x: 0.000000013441877, y: -0.000000001939464, z: 0.00000018444912, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_ForeArmTwist
+      parentName: L_Forearm
+      position: {x: -0.15471604, y: 0.0000004793421, z: 0.0000009769815}
+      rotation: {x: 0.0000018099698, y: 0.0000024813464, z: -0.000004341163, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_ForeArmTwist1
+      parentName: L_Forearm
+      position: {x: -0.10200013, y: 0.00000027750775, z: 0.0000010021744}
+      rotation: {x: 0.0000010850868, y: 0.0000014706849, z: -0.0000043468417, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Clavicle
+      parentName: Spine2
+      position: {x: -0.174065, y: -0.046616826, z: -0.037693992}
+      rotation: {x: 0.68689626, y: 0.7267554, z: 0.00027269457, w: 0.0002900832}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: R_Shoulder
+      parentName: R_Clavicle
+      position: {x: -0.15586594, y: -0.0039740163, z: -0.00023633523}
+      rotation: {x: 0.000570005, y: 0.005214049, z: -0.1782583, w: 0.9839698}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_UpperArm
+      parentName: R_Clavicle
+      position: {x: -0.15437596, y: 0.0000000148470995, z: -0.0000003383934}
+      rotation: {x: -0.009434273, y: 0.00065704103, z: 0.0039105113, w: 0.99994767}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: R_UpArmTwist
+      parentName: R_UpperArm
+      position: {x: -0.004250041, y: 0.000000044647734, z: -0.0000000025986155}
+      rotation: {x: 0.010938263, y: -0.000001047927, z: 0.0000021433277, w: 0.9999402}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: R_UpArmTwist1
+      parentName: R_UpperArm
+      position: {x: -0.085000016, y: 0.0000001466985, z: -0.000000010251155}
+      rotation: {x: 0.005468961, y: -0.00000053122073, z: 0.0000009661932, w: 0.99998504}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: R_Elbow
+      parentName: R_UpperArm
+      position: {x: -0.270215, y: -0.0000005777906, z: 0.004237963}
+      rotation: {x: 0.00000012652605, y: -0.0375937, z: 0.000000013119956, w: 0.99929315}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Forearm
+      parentName: R_UpperArm
+      position: {x: -0.26989597, y: 0.00000042802398, z: -0.000000029499441}
+      rotation: {x: -0.00089614897, y: -0.03894603, z: 0.011894377, w: 0.9991701}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Hand
+      parentName: R_Forearm
+      position: {x: -0.280799, y: 0.0000000622096, z: 0.0000009997332}
+      rotation: {x: -0.70414317, y: 0.06470886, z: 0.06465685, w: 0.70414114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Finger1
+      parentName: R_Hand
+      position: {x: -0.10277298, y: 0.02946886, z: -0.0022229573}
+      rotation: {x: 0.039269146, y: 0.022639362, z: -0.08048293, w: 0.9957248}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: R_Finger11
+      parentName: R_Finger1
+      position: {x: -0.04714898, y: 0.00000006480226, z: -0.00000009949364}
+      rotation: {x: -0.00000005891413, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Finger12
+      parentName: R_Finger11
+      position: {x: -0.031521995, y: 0.000000045695717, z: -0.00000005621244}
+      rotation: {x: 6.938894e-18, y: -2.7755576e-17, z: -3.469447e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Finger2
+      parentName: R_Hand
+      position: {x: -0.107428975, y: 0.0018378554, z: -0.0034948546}
+      rotation: {x: -0.033633552, y: 0.02876405, z: 0.02369391, w: 0.99873924}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: R_Finger21
+      parentName: R_Finger2
+      position: {x: -0.049919043, y: 0.000000044109527, z: 0.00000016728143}
+      rotation: {x: 0.0000000030270386, y: 0.00000003137105, z: -0.00000012435632, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Finger22
+      parentName: R_Finger21
+      position: {x: -0.03240099, y: 0.00000002428395, z: 0.000000053153574}
+      rotation: {x: -0.000000062124215, y: -0.000000085341185, z: 0.0000000027852396, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Finger3
+      parentName: R_Hand
+      position: {x: -0.103360906, y: -0.019745138, z: -0.0035809206}
+      rotation: {x: -0.049329687, y: 0.012914051, z: 0.06257025, w: 0.9967371}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_Finger31
+      parentName: R_Finger3
+      position: {x: -0.047547996, y: -0.0000000801958, z: 0.000000017388919}
+      rotation: {x: -0.00000019433588, y: 0.000000011540973, z: -0.000000112646326, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_Finger32
+      parentName: R_Finger31
+      position: {x: -0.030807992, y: -0.000000060582344, z: 0.000000009146762}
+      rotation: {x: 0.0000000882307, y: 0.00000007434483, z: 0.00000010739795, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_Finger4
+      parentName: R_Hand
+      position: {x: -0.09628785, y: -0.040734112, z: -0.0019128876}
+      rotation: {x: -0.047296476, y: 0.021116383, z: 0.31258708, w: 0.94847584}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: R_Finger41
+      parentName: R_Finger4
+      position: {x: -0.034224987, y: -0.000000011955169, z: 0.00000005439521}
+      rotation: {x: -0.00000003185172, y: 0.00000008063972, z: 0.0000000057966454, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Finger42
+      parentName: R_Finger41
+      position: {x: -0.019826999, y: -0.000000019490852, z: 0.00000007016162}
+      rotation: {x: 0.000004359413, y: 0.0000037828318, z: -0.0000020514328, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Ya
+      parentName: R_Hand
+      position: {x: -0.80642515, y: -0.0056004636, z: -0.6314671}
+      rotation: {x: -0.26035717, y: 0.288531, z: -0.6693961, w: 0.6331452}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: R_Katana
+      parentName: R_Hand
+      position: {x: -1.08587, y: 0.12253692, z: -0.9247969}
+      rotation: {x: -0.26035547, y: 0.28853282, z: -0.66939515, w: 0.6331461}
+      scale: {x: 1, y: 1.0000002, z: 0.9999998}
+    - name: R_Finger0
+      parentName: R_Hand
+      position: {x: -0.026185866, y: 0.028441962, z: 0.021662904}
+      rotation: {x: 0.647651, y: -0.023190752, z: -0.06057922, w: 0.75917095}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: R_Finger01
+      parentName: R_Finger0
+      position: {x: -0.04354295, y: -0.00000006305011, z: 0.00000003347948}
+      rotation: {x: -0.00000000563715, y: 0.00000004304548, z: 0.0000000019263633, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_Finger02
+      parentName: R_Finger01
+      position: {x: -0.037590973, y: -0.00000005517065, z: 0.000000045548394}
+      rotation: {x: -0.00000007570518, y: -0.013146996, z: 2.3382626e-10, w: 0.9999136}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: R_ForeArmTwist
+      parentName: R_Forearm
+      position: {x: -0.154717, y: 0.00000004146123, z: 0.0000010067042}
+      rotation: {x: -0.0000022918985, y: 0.000002939544, z: 0.0000004870334, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: R_ForeArmTwist1
+      parentName: R_Forearm
+      position: {x: -0.10200005, y: 0.000000054827364, z: 0.000000009287298}
+      rotation: {x: -0.00000083442075, y: 0.0000015515549, z: -0.0000000012757623, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck
+      parentName: Spine2
+      position: {x: -0.24632928, y: 0.00000025151468, z: -0.025057994}
+      rotation: {x: 0.000007145707, y: 0.08834709, z: 0.000085962645, w: 0.99608976}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Neck
+      position: {x: -0.072827004, y: 0.000030375346, z: 0.008509001}
+      rotation: {x: -0.000008462804, y: -0.095815726, z: -0.000085896034, w: 0.9953991}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Face_root
+      parentName: Head
+      position: {x: 1.5869398, y: -0.004211488, z: -0.011086415}
+      rotation: {x: -0.7071067, y: 0.7071068, z: 0.0000020199648, w: -0.0000005892593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Face_Root
+      parentName: Head
+      position: {x: 0.0027607125, y: -0.000009990343, z: -0.021342987}
+      rotation: {x: 0.0000000015979883, y: -0.00000102, z: -0.00000007, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw_Pivot
+      parentName: Face_Root
+      position: {x: -0.052335944, y: -0.0000039094807, z: 0.03377999}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000004172358, w: -0.00000043836343}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tongue_Back
+      parentName: Jaw_Pivot
+      position: {x: 0.0000029951045, y: -0.034533985, z: -0.03448698}
+      rotation: {x: -0.0000012050007, y: -0.00000046499997, z: 0.000000025001082, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tongue_Center
+      parentName: Tongue_Back
+      position: {x: 0.0000010043623, y: 0.0014040183, z: -0.019528002}
+      rotation: {x: -0.000000060000005, y: 9.4503776e-23, z: -1.0587911e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tongue_Top
+      parentName: Tongue_Center
+      position: {x: -0.0000019949455, y: -0.0028840422, z: -0.012183988}
+      rotation: {x: -0.000000030000002, y: 7.433212e-24, z: 1.0587912e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Corner_L
+      parentName: Jaw_Pivot
+      position: {x: -0.022265004, y: -0.035987068, z: -0.08706696}
+      rotation: {x: -0.00000023996895, y: 0.000036535, z: -0.0000004801202, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Lower_Inner_R
+      parentName: Jaw_Pivot
+      position: {x: 0.012247993, y: -0.037230007, z: -0.09357696}
+      rotation: {x: -0.00000023994855, y: 0.000037035003, z: 0.000000059878154, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Lower_Inner_L
+      parentName: Jaw_Pivot
+      position: {x: -0.014251996, y: -0.037244044, z: -0.09377796}
+      rotation: {x: 5.1473766e-11, y: 0.000037035003, z: 0.000000059869265, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Lower_C
+      parentName: Jaw_Pivot
+      position: {x: 0.0000020007126, y: -0.039243095, z: -0.09684496}
+      rotation: {x: -0.00000023994983, y: 0.000037035003, z: 0.000000024878155, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Corner_R
+      parentName: Jaw_Pivot
+      position: {x: 0.019539993, y: -0.036571003, z: -0.08694996}
+      rotation: {x: -0.0000007249668, y: 0.000036535002, z: -0.0000004201025, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Face_Jaw
+      parentName: Jaw_Pivot
+      position: {x: 0.00039999967, y: -0.0625069, z: -0.09447797}
+      rotation: {x: 0.0000002449994, y: -0.00000046499994, z: 0.000000025001757, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyebrow_Outer_R
+      parentName: Face_Root
+      position: {x: -0.09860999, y: -0.044397816, z: 0.11268297}
+      rotation: {x: -0.7071065, y: 0.7071072, z: 0.0000010218131, w: -0.0000010287969}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyebrow_Inner_R
+      parentName: Face_Root
+      position: {x: -0.09431197, y: -0.028903838, z: 0.12265697}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.00000067179434, w: -0.00000069292196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyebrow_Center_R
+      parentName: Face_Root
+      position: {x: -0.08576701, y: -0.014864849, z: 0.13062595}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000010218125, w: -0.0000010287972}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyebrow_Center_L
+      parentName: Face_Root
+      position: {x: -0.08630595, y: 0.0149921505, z: 0.13069998}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000006717944, w: -0.00000069292173}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyebrow_Inner_L
+      parentName: Face_Root
+      position: {x: -0.09468294, y: 0.028992161, z: 0.12552695}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000003288474, w: -0.0000003570462}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyebrow_Outer_L
+      parentName: Face_Root
+      position: {x: -0.09870881, y: 0.04399218, z: 0.11256097}
+      rotation: {x: -0.70710635, y: 0.7071072, z: 0.00000084503586, w: -0.0000008590916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cheek_Low_L
+      parentName: Face_Root
+      position: {x: -0.033425976, y: 0.030992059, z: 0.11556096}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.00000067179434, w: -0.00000069292196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nostral_L
+      parentName: Face_Root
+      position: {x: -0.04321892, y: 0.01099208, z: 0.13641895}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000003288474, w: -0.0000003570462}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Upper_C
+      parentName: Face_Root
+      position: {x: -0.024425013, y: -0.000027949773, z: 0.12857199}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.00000032884722, w: -0.00000035704642}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Upper_Inner_L
+      parentName: Face_Root
+      position: {x: -0.024368998, y: 0.01601905, z: 0.12731196}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000017112421, w: -0.0000017040838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cheek_Low_R
+      parentName: Face_Root
+      position: {x: -0.035612997, y: -0.030799929, z: 0.115342975}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.00000050208854, w: -0.00000052321644}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Nostral_R
+      parentName: Face_Root
+      position: {x: -0.043219995, y: -0.011241919, z: 0.13641196}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000003288474, w: -0.0000003570462}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lips_Upper_Inner_R
+      parentName: Face_Root
+      position: {x: -0.024541005, y: -0.01600795, z: 0.12756097}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.0000017112421, w: -0.0000017040841}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyeball_L
+      parentName: Face_Root
+      position: {x: -0.08069692, y: 0.02860914, z: 0.106962964}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000010218125, w: -0.0000010287972}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Blink_Upper_R
+      parentName: Face_Root
+      position: {x: -0.08573199, y: -0.028007848, z: 0.12585096}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.00000067179434, w: -0.00000069292196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Blink_Lower_R
+      parentName: Face_Root
+      position: {x: -0.06814505, y: -0.030007878, z: 0.12189396}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.00000084503563, w: -0.0000008590919}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cheek_High_R
+      parentName: Face_Root
+      position: {x: -0.055192035, y: -0.0356549, z: 0.11702197}
+      rotation: {x: -0.7071063, y: 0.70710737, z: 0.0000011915183, w: -0.000001198503}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eyeball_R
+      parentName: Face_Root
+      position: {x: -0.08069703, y: -0.028602859, z: 0.10696297}
+      rotation: {x: -0.70710635, y: 0.7071072, z: 0.00000084503586, w: -0.0000008590916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cheek_High_L
+      parentName: Face_Root
+      position: {x: -0.055514973, y: 0.0359921, z: 0.11740196}
+      rotation: {x: -0.70710635, y: 0.7071072, z: 0.0000006717946, w: -0.00000069292156}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Blink_Lower_L
+      parentName: Face_Root
+      position: {x: -0.0693679, y: 0.029978119, z: 0.12198695}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.00000067179445, w: -0.00000069292173}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Blink_Upper_L
+      parentName: Face_Root
+      position: {x: -0.08617998, y: 0.02799215, z: 0.12572294}
+      rotation: {x: -0.7071063, y: 0.70710725, z: 0.0000010218125, w: -0.0000010287972}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw
+      parentName: Head
+      position: {x: -0.029258963, y: 0.000000004243029, z: 0.043885}
+      rotation: {x: 0.0000028178235, y: 0.7071063, z: -0.0000028178194, w: 0.70710737}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7100_body1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.005811, y: 0, z: 0}
+      rotation: {x: 0.000000010606603, y: 0.7071068, z: -0.000000010606603, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Quiver002
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Bow
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: neck_armor_low_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_sword002
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_saya
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_sword001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Bow002
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_inner
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_hakama
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_foot_armor
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_body_armor_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_kusasuri
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Hip_rope
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_arm_armor
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_manto
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_manto_rope_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_kote
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: -0.00056200003, z: 3.8518598e-36}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Helfur
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_manto_rope_02
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_manto_rope_cloth
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_mouth
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_teeth
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_beard
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_kabuto
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_kabuto_rope_11_
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7101_kabuto_hair
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_eye001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7400_eyeshadow
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7109_eyelash001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Eye008
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_head_20180502_1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_manto_rope_03
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7100_wearrow
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_kabuto_rope_12_
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: FC_Fibers15
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_N_
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_N____
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_200
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_850
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly___
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Pelvis
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -0.5000006, y: 0.4999994, z: 0.50000066, w: -0.49999937}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Spine
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.000014949999, y: 1.086448, z: 0}
+      rotation: {x: 0.50019854, y: -0.49980137, z: -0.4998006, w: 0.5001993}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_Spine1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.000014949999, y: 1.178414, z: 0}
+      rotation: {x: 0.50019854, y: -0.49980137, z: -0.4998006, w: 0.5001993}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_Spine2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.000101059995, y: 1.270382, z: 0.000001}
+      rotation: {x: 0.5037356, y: -0.49623695, z: -0.49623552, w: 0.5037357}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Neck
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.02146207, y: 1.51706, z: 0.000001}
+      rotation: {x: 0.54542774, y: -0.45001036, z: -0.4500088, w: 0.54542774}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Head
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00078193, y: 1.586927, z: 0.000019}
+      rotation: {x: 0.5000009, y: -0.49999994, z: -0.4999992, w: 0.5000001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_HeadNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00078192004, y: 1.760613, z: 0.000020000001}
+      rotation: {x: 0.5000009, y: -0.49999994, z: -0.4999992, w: 0.5000001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Jaw
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.04466793, y: 1.616186, z: 0.000019}
+      rotation: {x: 0.70711225, y: 0.00000013788427, z: -0.0000002015265, w: 0.70710135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_JawNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.12636593, y: 1.616186, z: 0.00001901}
+      rotation: {x: -0.5001993, y: -0.4998006, z: 0.4998006, w: 0.5001993}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Eye
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.086405925, y: 1.664826, z: 0.028594}
+      rotation: {x: 0.7069967, y: -0.013107232, z: -0.0377728, w: 0.7060858}
+      scale: {x: 1.0000004, y: 1, z: 1}
+    - name: Ctrl_L_EyeNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.18987891, y: 1.672287, z: 0.032217007}
+      rotation: {x: -0.5087413, y: -0.47300297, z: 0.4898073, w: 0.52681994}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Ctrl_R_Eye
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.086405925, y: 1.664826, z: -0.028556}
+      rotation: {x: 0.70608854, y: -0.03777171, z: -0.013108386, w: 0.70699406}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Ctrl_R_EyeNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.18987891, y: 1.672287, z: -0.03217799}
+      rotation: {x: -0.5268172, y: -0.48980844, z: 0.47300193, w: 0.50874406}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Ctrl_L_Eyelid
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.086405925, y: 1.664826, z: 0.028594}
+      rotation: {x: 0.7010628, y: -0.09229447, z: -0.09229718, w: 0.701052}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_EyelidNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.18667392, y: 1.691692, z: 0.028595008}
+      rotation: {x: -0.56115425, y: -0.43023708, z: 0.43023485, w: 0.56115943}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Eyelid
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.086405925, y: 1.664826, z: -0.028556}
+      rotation: {x: 0.7010574, y: -0.09229599, z: -0.09229599, w: 0.7010574}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_EyelidNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.18667392, y: 1.691693, z: -0.02855599}
+      rotation: {x: -0.56115645, y: -0.43023595, z: 0.4302365, w: 0.56115687}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Clavicle
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03518007, y: 1.4449929, z: 0.046618}
+      rotation: {x: 0.014911321, y: 0.7069498, z: 0.0249501, w: 0.70666623}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.9999998}
+    - name: Ctrl_L_UpperArm
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530407, y: 1.436294, z: 0.200749}
+      rotation: {x: 0.26795873, y: 0.6669149, z: 0.26492813, w: 0.64283425}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: Ctrl_L_Forearm
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04338107, y: 1.2479, z: 0.393846}
+      rotation: {x: 0.28710696, y: 0.61673045, z: 0.24404645, w: 0.6911255}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: Ctrl_L_Hand
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00963707, y: 1.053736, z: 0.59387}
+      rotation: {x: 0.63314766, y: 0.6693952, z: -0.28852978, w: 0.26035488}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Ctrl_L_Finger0
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.01746693, y: 1.01906, z: 0.599055}
+      rotation: {x: 0.5495739, y: 0.3426299, z: 0.27742952, w: 0.7096521}
+      scale: {x: 1, y: 1, z: 0.9999987}
+    - name: Ctrl_L_Finger01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.044083927, y: 0.985517, z: 0.606952}
+      rotation: {x: 0.5495756, y: 0.34262928, z: 0.2774303, w: 0.7096509}
+      scale: {x: 0.99999994, y: 1, z: 0.9999986}
+    - name: Ctrl_L_Finger02
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.06706193, y: 0.956558, z: 0.61377}
+      rotation: {x: 0.5531755, y: 0.33326975, z: 0.27018094, w: 0.7140941}
+      scale: {x: 0.99999994, y: 1, z: 0.9999986}
+    - name: Ctrl_L_Finger0Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.091847934, y: 0.92695796, z: 0.620715}
+      rotation: {x: 0.5531755, y: 0.33326975, z: 0.27018094, w: 0.7140941}
+      scale: {x: 0.99999994, y: 1, z: 0.9999986}
+    - name: Ctrl_L_Finger1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013288929, y: 0.982717, z: 0.670462}
+      rotation: {x: 0.6882063, y: 0.6272505, z: -0.21928142, w: 0.29128113}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_L_Finger11
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.01880293, y: 0.948033, z: 0.701921}
+      rotation: {x: 0.6882063, y: 0.6272505, z: -0.21928142, w: 0.29128113}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_L_Finger12
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.02248993, y: 0.9248449, z: 0.7229539}
+      rotation: {x: 0.6882063, y: 0.6272505, z: -0.21928142, w: 0.29128113}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_L_Finger1Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.02523293, y: 0.90758693, z: 0.738608}
+      rotation: {x: 0.68820626, y: 0.6272505, z: -0.21928148, w: 0.29128098}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: Ctrl_L_Finger2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.01459607, y: 0.981258, z: 0.67310894}
+      rotation: {x: 0.6335457, y: 0.6813373, z: -0.29863614, w: 0.2126401}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Ctrl_L_Finger21
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.01992807, y: 0.944502, z: 0.706463}
+      rotation: {x: 0.6335457, y: 0.6813373, z: -0.29863608, w: 0.21264012}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_L_Finger22
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.023388071, y: 0.92064494, z: 0.7281119}
+      rotation: {x: 0.6335457, y: 0.6813373, z: -0.29863614, w: 0.2126401}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Ctrl_L_Finger2Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.026168069, y: 0.901486, z: 0.74549794}
+      rotation: {x: 0.63354546, y: 0.6813371, z: -0.29863665, w: 0.21264073}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Ctrl_L_Finger4
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.056353066, y: 0.989247, z: 0.66164196}
+      rotation: {x: 0.41858268, y: 0.8221465, z: -0.3697552, w: 0.11020348}
+      scale: {x: 1, y: 0.9999994, z: 0.9999999}
+    - name: Ctrl_L_Finger41
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.077754065, y: 0.96848, z: 0.678438}
+      rotation: {x: 0.4185812, y: 0.82214755, z: -0.3697544, w: 0.11020375}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_L_Finger42
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.09015107, y: 0.956449, z: 0.6881679}
+      rotation: {x: 0.4185812, y: 0.82214755, z: -0.3697544, w: 0.11020375}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_L_Finger4Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.10480107, y: 0.942233, z: 0.69966596}
+      rotation: {x: 0.41858104, y: 0.8221475, z: -0.3697546, w: 0.11020416}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Ctrl_L_Finger3
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03588007, y: 0.984841, z: 0.669044}
+      rotation: {x: 0.5372173, y: 0.76577556, z: -0.32572562, w: 0.13743456}
+      scale: {x: 1, y: 0.99999964, z: 0.99999994}
+    - name: Ctrl_L_Finger31
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.054187067, y: 0.9499769, z: 0.695693}
+      rotation: {x: 0.53721726, y: 0.7657755, z: -0.3257257, w: 0.13743478}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1.0000001}
+    - name: Ctrl_L_Finger32
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.06604908, y: 0.927387, z: 0.71295995}
+      rotation: {x: 0.53721726, y: 0.7657755, z: -0.32572564, w: 0.13743469}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: Ctrl_L_Finger3Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.07612007, y: 0.908207, z: 0.72762}
+      rotation: {x: 0.53721726, y: 0.7657755, z: -0.32572564, w: 0.13743469}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: Ctrl_L_WeaponRoot
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.01564207, y: 0.99267596, z: 0.640827}
+      rotation: {x: -0.3881211, y: 0.019922586, z: 0.025630506, w: 0.9210365}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Yumi
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.08145691, y: 0.951855, z: 1.10605}
+      rotation: {x: -2.1212603e-35, y: 0.00000173, z: 1.0593195e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Yumi_shinari_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.23657791, y: 0.944991, z: 1.10605}
+      rotation: {x: -2.1212603e-35, y: 0.00000173, z: 1.0593195e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Yumi_shinari_02
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.20318209, y: 0.944991, z: 1.10605}
+      rotation: {x: 6.1232204e-17, y: 1, z: 6.1232204e-17, w: 0.00000222}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Gen
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0814569, y: 1.171762, z: 1.106051}
+      rotation: {x: 0.0000018278712, y: -0.0000018278712, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_L_Weapon_EX_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.025125848, y: 0.949776, z: 2.587618}
+      rotation: {x: -4.4576175e-33, y: 0.000002205, z: 1.350173e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_UpTwist_L_Shoulder
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03534907, y: 1.439227, z: 0.14882499}
+      rotation: {x: 0.01451561, y: 0.7072224, z: 0.025130322, w: 0.70639527}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+    - name: Ctrl_UpTwist_L_ShoulderNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03551408, y: 1.43341, z: 0.252466}
+      rotation: {x: 0.00018857079, y: -0.02803936, z: 0.9995787, w: -0.007496296}
+      scale: {x: 1, y: 1.0000004, z: 1}
+    - name: Ctrl_R_Clavicle
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03518006, y: 1.4449929, z: -0.046616}
+      rotation: {x: 0.7066687, y: 0.024948081, z: 0.70694745, w: 0.014909636}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Ctrl_R_UpperArm
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530405, y: 1.436295, z: -0.20074698}
+      rotation: {x: 0.6428353, y: 0.26492795, z: 0.6669141, w: 0.26795805}
+      scale: {x: 1, y: 1.0000002, z: 1.0000004}
+    - name: Ctrl_R_Forearm
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04338004, y: 1.247902, z: -0.393845}
+      rotation: {x: 0.69112664, y: 0.24404651, z: 0.6167297, w: 0.2871061}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: Ctrl_R_Hand
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00963502, y: 1.053739, z: -0.59387}
+      rotation: {x: 0.26035652, y: -0.28853124, z: 0.6693946, w: 0.633147}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Ctrl_R_Finger0
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.01746898, y: 1.019064, z: -0.599055}
+      rotation: {x: 0.70965344, y: 0.277429, z: 0.3426275, w: 0.5495741}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999326}
+    - name: Ctrl_R_Finger01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.044085987, y: 0.98552, z: -0.606952}
+      rotation: {x: 0.70965344, y: 0.2774291, z: 0.34262738, w: 0.549574}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999937}
+    - name: Ctrl_R_Finger02
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.06706399, y: 0.956561, z: -0.61377}
+      rotation: {x: 0.7140966, y: 0.2701798, z: 0.33326805, w: 0.5531739}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999344}
+    - name: Ctrl_R_Finger0Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.091849975, y: 0.926962, z: -0.620715}
+      rotation: {x: 0.7140966, y: 0.2701798, z: 0.33326805, w: 0.5531739}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999344}
+    - name: Ctrl_R_Finger1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.01329099, y: 0.98272, z: -0.670462}
+      rotation: {x: 0.291283, y: -0.21928088, z: 0.62724954, w: 0.68820643}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_R_Finger11
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.01880499, y: 0.948037, z: -0.701922}
+      rotation: {x: 0.29128307, y: -0.21928084, z: 0.6272496, w: 0.6882065}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_R_Finger12
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.022491988, y: 0.9248489, z: -0.722955}
+      rotation: {x: 0.2912827, y: -0.21928042, z: 0.6272497, w: 0.6882066}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Ctrl_R_Finger1Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.025235988, y: 0.907591, z: -0.738608}
+      rotation: {x: 0.2912827, y: -0.21928042, z: 0.6272497, w: 0.6882066}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Ctrl_R_Finger2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.01459401, y: 0.981262, z: -0.67311}
+      rotation: {x: 0.21264215, y: -0.29863897, z: 0.6813352, w: 0.6335459}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: Ctrl_R_Finger21
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.01992601, y: 0.944506, z: -0.706464}
+      rotation: {x: 0.21264194, y: -0.29863873, z: 0.68133533, w: 0.633546}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: Ctrl_R_Finger22
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.02338601, y: 0.92064893, z: -0.728113}
+      rotation: {x: 0.21264194, y: -0.29863873, z: 0.68133533, w: 0.633546}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: Ctrl_R_Finger2Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.02616501, y: 0.9014899, z: -0.745499}
+      rotation: {x: 0.21264194, y: -0.29863873, z: 0.68133533, w: 0.633546}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: Ctrl_R_Finger4
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.056351006, y: 0.98925, z: -0.661643}
+      rotation: {x: 0.11020753, y: -0.36975715, z: 0.8221459, w: 0.41858107}
+      scale: {x: 1, y: 0.9999995, z: 1}
+    - name: Ctrl_R_Finger41
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.07775202, y: 0.968483, z: -0.678439}
+      rotation: {x: 0.11020753, y: -0.36975715, z: 0.8221459, w: 0.41858107}
+      scale: {x: 1, y: 0.9999995, z: 1}
+    - name: Ctrl_R_Finger42
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.09014902, y: 0.956453, z: -0.688169}
+      rotation: {x: 0.110207565, y: -0.36975712, z: 0.8221459, w: 0.41858113}
+      scale: {x: 1, y: 0.9999997, z: 1}
+    - name: Ctrl_R_Finger4Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.10479901, y: 0.942237, z: -0.699667}
+      rotation: {x: 0.11020753, y: -0.36975715, z: 0.8221459, w: 0.41858107}
+      scale: {x: 1, y: 0.9999995, z: 1}
+    - name: Ctrl_R_Finger3
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03587801, y: 0.9848449, z: -0.6690449}
+      rotation: {x: 0.13743787, y: -0.32572886, z: 0.76577365, w: 0.5372172}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_R_Finger31
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.054185007, y: 0.949981, z: -0.695694}
+      rotation: {x: 0.13743788, y: -0.32572886, z: 0.76577365, w: 0.5372172}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_R_Finger32
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.066047005, y: 0.92739093, z: -0.712961}
+      rotation: {x: 0.137438, y: -0.3257289, z: 0.7657737, w: 0.5372171}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Ctrl_R_Finger3Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.07611801, y: 0.90821093, z: -0.72762096}
+      rotation: {x: 0.13743788, y: -0.32572886, z: 0.76577365, w: 0.5372172}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_R_WeaponRoot
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.01564102, y: 0.992681, z: -0.64083}
+      rotation: {x: 0.38812485, y: -0.019921549, z: 0.02563017, w: 0.92103493}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Ctrl_R_Ya
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.076377966, y: 0.943624, z: -1.6100019}
+      rotation: {x: 0.000003875, y: 0.000003815, z: -1.4783124e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Katana
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.02904705, y: 0.95468396, z: -2.021481}
+      rotation: {x: -1.1088014e-33, y: 0.00000423, z: 2.590128e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Weapon_EX_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.02512607, y: 0.94978994, z: -2.587339}
+      rotation: {x: -4.9660384e-34, y: 0.00000316, z: 1.9349419e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_UpTwist_R_Shoulder
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03534805, y: 1.439228, z: -0.148823}
+      rotation: {x: 0.7063978, y: 0.025130438, z: 0.70721996, w: 0.014511432}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_UpTwist_R_ShoulderNub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03551305, y: 1.433412, z: -0.252465}
+      rotation: {x: -0.0074963253, y: 0.9995789, z: -0.028033547, w: 0.00018519656}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_Back_yumi
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.16561106, y: 1.47218, z: -0.03987301}
+      rotation: {x: 0.6878646, y: 0.16383891, z: -0.6878634, w: -0.16383854}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.9999999}
+    - name: Ctrl_L_Thigh
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.000000049999997, y: 0.98954594, z: 0.126386}
+      rotation: {x: -0.5160125, y: -0.4834566, z: 0.48345748, w: 0.51601326}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Calf
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006997, y: 0.528456, z: 0.126385}
+      rotation: {x: -0.45929456, y: -0.53763163, z: 0.53763235, w: 0.45929533}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_L_Foot
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03539001, y: 0.11449999, z: 0.126384}
+      rotation: {x: 0.4999134, y: 0.5000866, z: -0.50008583, w: -0.49991414}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_L_Toe0
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10499699, y: -0.000525, z: 0.126385}
+      rotation: {x: -0.7071063, y: 0.0000005480081, z: 0.00000047729674, w: 0.70710725}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_L_Toe0Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.186938, y: -0.00052498997, z: 0.12638502}
+      rotation: {x: -0.7071063, y: 0.00000054800785, z: 0.00000013788546, w: 0.70710725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Thigh
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -0.126386}
+      rotation: {x: -0.5160125, y: -0.4834566, z: 0.48345748, w: 0.51601326}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Calf
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006998, y: 0.528456, z: -0.12638699}
+      rotation: {x: -0.45929456, y: -0.53763163, z: 0.53763235, w: 0.45929533}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_Foot
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03539, y: 0.114501, z: -0.126388}
+      rotation: {x: 0.4999134, y: 0.5000866, z: -0.50008583, w: -0.49991414}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_Toe0
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10499801, y: -0.000525, z: -0.126388}
+      rotation: {x: -0.7071063, y: 0.0000005480081, z: 0.00000047729674, w: 0.70710725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Toe0Nub
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.186938, y: -0.00052398996, z: -0.12638699}
+      rotation: {x: -0.7071063, y: 0.00000054800785, z: 0.00000013788546, w: 0.70710725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Yadutu
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.05636299, y: 0.186322, z: -0.024005}
+      rotation: {x: 0.6268, y: -0.27379426, z: 0.18645374, w: 0.70526135}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Ctrl_Sheath
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.141937, y: 0.00460401, z: 0.014109009}
+      rotation: {x: 0.5380103, y: 0.4588519, z: 0.5380097, w: 0.4588523}
+      scale: {x: 1, y: 0.99999976, z: 0.99999255}
+    - name: Ctrl_Sheath_Katana
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.15486899, y: 0.302485, z: 0.079018}
+      rotation: {x: 0.53801024, y: 0.4588507, z: 0.5380107, w: 0.45885238}
+      scale: {x: 1.0000001, y: 1, z: 1.0000082}
+    - name: R_Foot_Target2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.12638596, y: 0.995669, z: -0.035391}
+      rotation: {x: -0.002776665, y: -0.0027766624, z: 0.70710105, w: 0.7071017}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: R_Foot_Target1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.12638699, y: 0.5336, z: -0.035385}
+      rotation: {x: 0.0008249728, y: 0.00083101157, z: 0.7071063, w: 0.7071063}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: R_Foot_Target
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.126386, y: 0.11450001, z: -0.035398}
+      rotation: {x: 0.00013466719, y: -0.00011460916, z: 0.7071071, w: 0.7071064}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: L_Foot_Target2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.12638605, y: 0.995669, z: -0.03539}
+      rotation: {x: 0.0001747509, y: 0.00017475079, z: 0.7071066, w: 0.70710695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Foot_Target1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.12638602, y: 0.5336, z: -0.03539}
+      rotation: {x: -0.004312256, y: -0.0043105166, z: 0.70709366, w: 0.70709366}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
+    - name: L_Foot_Target
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.126386, y: 0.114499986, z: -0.035389}
+      rotation: {x: 0.00012148095, y: -0.00012148095, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: L_Calf_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 6.1629757e-35, z: 0.00425}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: L_Thigh_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000069296505, y: 0.7071065, z: 0.00000069296436, w: 0.7071072}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Knee_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000002, y: 3.9443044e-33, z: 0.462069}
+      rotation: {x: 0.0000003471223, y: 0.6668012, z: -0.0000003843906, w: 0.7452356}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Calf_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 6.1629757e-35, z: 0.00425}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: R_Thigh_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.0000028142863, y: 0.7071065, z: 0.0000028142836, w: 0.7071071}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Knee_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00000098, y: 3.9443044e-33, z: 0.462069}
+      rotation: {x: 0.0000007224973, y: 0.6668012, z: 0.0000006350179, w: 0.7452356}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Weapon_EX_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -1.316483, y: -0.15082794, z: 1.4937109}
+      rotation: {x: -0.24368179, y: -0.2892359, z: 0.6517224, w: 0.6574342}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: R_Weapon_EX_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -1.3162878, y: 0.15080406, z: 1.4935119}
+      rotation: {x: 0.65743303, y: -0.65172327, z: 0.2892387, w: -0.24367937}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: L_Eye
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.08562401, y: 0.028575, z: 0.07789899}
+      rotation: {x: -0.017442089, y: 0.9992002, z: -0.000642697, w: 0.035976652}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: R_Eyelid
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.085623994, y: -0.028575, z: 0.07789899}
+      rotation: {x: -0.00000041540648, y: 0.991445, z: 0.0000005504884, w: 0.13052529}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Eye
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.085623994, y: -0.028575, z: 0.07789899}
+      rotation: {x: 0.01743912, y: 0.9992003, z: 0.0006405294, w: 0.035976425}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: L_Eyelid
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.08562401, y: 0.028575, z: 0.07789899}
+      rotation: {x: -0.0000018471593, y: 0.991445, z: -0.0000029009182, w: 0.13052528}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SpineArmor2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00046199, y: 1.9721522e-33, z: 0.24985698}
+      rotation: {x: -0.00018377294, y: 0.7071499, z: 0.000183067, w: 0.7070636}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Ctrl_System
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: TwistDummy
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -0.49999988, y: -0.49999985, z: 0.5000002, w: 0.50000024}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_NeckTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.02146207, y: 1.51706, z: -1.5777218e-32}
+      rotation: {x: 0.5454277, y: -0.45001483, z: -0.4500044, w: 0.5454277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Elbow
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04338007, y: 1.2479, z: 0.393845}
+      rotation: {x: 0.2777295, y: 0.6422767, z: 0.25466725, w: 0.66745156}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+    - name: Ctrl_L_Knee
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006997, y: 0.528456, z: 0.126386}
+      rotation: {x: -0.48840547, y: -0.5113315, z: 0.5113317, w: 0.48840567}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Knee
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006998, y: 0.528456, z: -0.126386}
+      rotation: {x: -0.48840547, y: -0.5113315, z: 0.5113317, w: 0.48840567}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Elbow
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04338004, y: 1.2479008, z: -0.393845}
+      rotation: {x: 0.6674526, y: 0.2546677, z: 0.64227563, w: 0.27772903}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_Collar
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.02146207, y: 1.51706, z: -1.5777218e-32}
+      rotation: {x: 0.5454448, y: -0.4500943, z: -0.4499243, w: 0.54541105}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_SpineArmer1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00076206, y: 1.42827, z: 0}
+      rotation: {x: 0.5007684, y: 0.49962386, z: 0.49923038, w: 0.5003759}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_SpineArmer2
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00076206, y: 1.42827, z: 0}
+      rotation: {x: 0.5006568, y: 0.49968064, z: 0.49934232, w: 0.50031924}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_L_Calf_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006997, y: 0.528456, z: 0.126386}
+      rotation: {x: -0.45929456, y: -0.53763163, z: 0.53763235, w: 0.45929533}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_Calf_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006998, y: 0.528456, z: -0.126386}
+      rotation: {x: -0.45929477, y: -0.53763187, z: 0.53763217, w: 0.45929506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Thigh_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.000000049999997, y: 0.98954594, z: 0.126386}
+      rotation: {x: -0.51601243, y: -0.4834572, z: 0.4834575, w: 0.5160127}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Thigh_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -0.126386}
+      rotation: {x: -0.5160122, y: -0.4834569, z: 0.4834578, w: 0.51601297}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Knee_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006997, y: 0.528456, z: 0.126386}
+      rotation: {x: -0.48840547, y: -0.5113304, z: 0.5113317, w: 0.4884068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Knee_Skirt
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.03006998, y: 0.528456, z: -0.126386}
+      rotation: {x: -0.48840547, y: -0.5113304, z: 0.5113317, w: 0.4884068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _Mn____g
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00651, y: 0.036923997, z: 0}
+      rotation: {x: 0.5037334, y: -0.4962385, z: -0.4962385, w: 0.5037334}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mn___6P6____
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00065099995, y: 0.029539, z: -2.4651903e-34}
+      rotation: {x: 0.5037358, y: -0.49623284, z: -0.49624023, w: 0.50373507}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _____6P6____
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.028032, y: 0.028899, z: 0}
+      rotation: {x: 0.5037356, y: -0.49623168, z: -0.49624145, w: 0.5037352}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ________
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.010179959, y: 0.833441, z: 0}
+      rotation: {x: -0.51601195, y: -0.48345605, z: 0.48345804, w: 0.5160138}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _M____g
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.000010049999, y: 1.195964, z: -1.5777218e-32}
+      rotation: {x: 0.000000014142157, y: 0.70710576, z: -0.000000014142114, w: 0.70710784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ___________
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04086307, y: 1.4053799, z: 0.233311}
+      rotation: {x: 0.014910818, y: 0.70694983, z: 0.024949582, w: 0.70666623}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: ___________.001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04085905, y: 1.405375, z: -0.232902}
+      rotation: {x: 0.7066688, y: 0.024949716, z: 0.7069472, w: 0.014911049}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Ctrl_L_Shoulder
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530407, y: 1.436294, z: 0.200748}
+      rotation: {x: 0.14015971, y: 0.6966307, z: 0.1509979, w: 0.68721217}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Ctrl_R_Shoulder
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530305, y: 1.4362959, z: -0.200749}
+      rotation: {x: 0.6872133, y: 0.15099916, z: 0.69662964, w: 0.14015794}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_UpArmTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03784707, y: 1.376962, z: 0.261561}
+      rotation: {x: 0.26444238, y: 0.66545546, z: 0.26857275, w: 0.6442887}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_UpArmTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03784705, y: 1.376962, z: -0.261561}
+      rotation: {x: 0.6442902, y: 0.26857415, z: 0.6654541, w: 0.264441}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: Ctrl_L_ForeArmTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03112307, y: 1.177371, z: 0.466504}
+      rotation: {x: 0.28710747, y: 0.6167319, z: 0.2440459, w: 0.6911243}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    - name: Ctrl_R_ForeArmTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.031122029, y: 1.1773698, z: -0.466504}
+      rotation: {x: 0.69112504, y: 0.24404627, z: 0.616731, w: 0.28710717}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000005}
+    - name: Ctrl_L_ForeArmTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.019852068, y: 1.112511, z: 0.53332}
+      rotation: {x: 0.28710812, y: 0.6167329, z: 0.24404515, w: 0.6911233}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_L_ForeArmTwist_UP
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 9.860761e-34, z: 0.099999994}
+      rotation: {x: -0.000013723722, y: 0.67399114, z: -0.000012542086, w: 0.73873943}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_ForeArmTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.019851029, y: 1.112511, z: -0.533321}
+      rotation: {x: 0.6911233, y: 0.24404879, z: 0.61673063, w: 0.2871099}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999997}
+    - name: Ctrl_R_ForeArmTwist_UP
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 9.860761e-34, z: 0.099999994}
+      rotation: {x: 0.000013753272, y: 0.67399114, z: 0.000012515126, w: 0.73873943}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_Hip
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00424605, y: 0.989354, z: 0.126386}
+      rotation: {x: -0.507896, y: -0.49162802, z: 0.4919596, w: 0.5082512}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_Hip
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.0042420398, y: 0.98926693, z: -0.12638198}
+      rotation: {x: -0.5082566, y: -0.4919662, z: 0.49162242, w: 0.5078896}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: _______gMn__
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.010179959, y: 0.833441, z: 0.126386}
+      rotation: {x: -0.5160127, y: -0.48345688, z: 0.4834572, w: 0.516013}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _______g____
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.010179959, y: 0.833441, z: 0.126386}
+      rotation: {x: -0.5160125, y: -0.4834566, z: 0.48345748, w: 0.51601326}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _______gMn__.001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.010180971, y: 0.833441, z: -0.126386}
+      rotation: {x: -0.51601166, y: -0.48345637, z: 0.48345834, w: 0.5160135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _______g____.001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.010180971, y: 0.833441, z: -0.126386}
+      rotation: {x: -0.51601243, y: -0.4834572, z: 0.4834575, w: 0.5160127}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_ThighTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00621496, y: 0.89423597, z: 0.126386}
+      rotation: {x: -0.5160127, y: -0.4834575, z: 0.4834572, w: 0.51601243}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_ThighTwist_UP
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 9.860761e-34, z: 0.095511995}
+      rotation: {x: 0.00000027145992, y: -0.699074, z: -0.00000007024611, w: 0.7150493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_ThighTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.012666959, y: 0.795308, z: 0.126386}
+      rotation: {x: -0.5158357, y: -0.48329005, z: 0.48362416, w: 0.51618993}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_ThighTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.01266597, y: 0.795324, z: -0.126386}
+      rotation: {x: -0.51619434, y: -0.48362675, z: 0.48328727, w: 0.51583135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_ThighTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0062159696, y: 0.89423597, z: -0.126089}
+      rotation: {x: -0.5167715, y: -0.48266408, z: 0.4842503, w: 0.51525164}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+    - name: Ctrl_R_ThighTwist_UP
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0.095513}
+      rotation: {x: -0.0005426344, y: -0.6990738, z: 0.00055543525, w: 0.7150491}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_L_CalfTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00192398, y: 0.350471, z: 0.126386}
+      rotation: {x: -0.45914227, y: -0.53745365, z: 0.53781086, w: 0.4594468}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: Ctrl_R_CalfTwist1
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0019239899, y: 0.350467, z: -0.126386}
+      rotation: {x: 0.45944187, y: 0.5378043, z: -0.53745973, w: -0.45914787}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: Ctrl_L_FootTwist_Pos
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03543, y: -0.000476, z: 0.126386}
+      rotation: {x: -0.49999973, y: -0.49999955, z: 0.5000003, w: 0.5000005}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_CalfTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.022114009, y: 0.19845699, z: 0.126386}
+      rotation: {x: 0.45933664, y: 0.53768194, z: -0.537582, w: -0.45925328}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_CalfTwist_UP
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 9.860761e-34, z: 0.099999994}
+      rotation: {x: 0.00004045792, y: 0.67880106, z: 0.000037336635, w: 0.7343222}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_CalfTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.022114, y: 0.19845699, z: -0.126386}
+      rotation: {x: 0.45933607, y: 0.5376815, z: -0.53758204, w: -0.45925432}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_CalfTwist_UP
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 9.860761e-34, z: 0.099999994}
+      rotation: {x: 0.00004010639, y: 0.67880106, z: 0.000037007918, w: 0.7343222}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_R_FootTwist_Pos
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03543, y: -0.000476, z: -0.126386}
+      rotation: {x: -0.49999985, y: -0.49999964, z: 0.50000024, w: 0.5000003}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_FootTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03543, y: -0.000476, z: -0.126386}
+      rotation: {x: -0.7070764, y: -0.00012159589, z: 0.00012244079, w: 0.7071373}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_FootTwist
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03543, y: -0.000476, z: 0.126386}
+      rotation: {x: -0.70710665, y: -0.00012150921, z: 0.00012253455, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MasterRig_Root
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Master6__Ctrl__
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Master6__Master___H
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MSamp__
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: _g__MSamp____g
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: _g__Mastern___6P
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _g__MasterMn
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: _g__Master__
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _g__0bMn
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -6e-15, y: 0.0000003, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MasterRig_Variable
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_Spine_Roll_Root
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_Spine_RollStart
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -0.50012165, y: 0.49987832, z: 0.5001217, w: -0.49987826}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Ctrl_Spine1_RollBase
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.000014949999, y: 1.178414, z: 0}
+      rotation: {x: 0.50182575, y: -0.49816757, z: -0.49816778, w: 0.5018255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Spine1_Roll
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.000014949999, y: 1.178414, z: 0}
+      rotation: {x: -0.49968857, y: 0.50031126, z: 0.50031114, w: -0.49968868}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Spine0_RollBase
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.000014949999, y: 1.086448, z: 0}
+      rotation: {x: 0.5008711, y: -0.49911016, z: -0.4991448, w: 0.5008709}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_Spine0_Roll
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.000014949999, y: 1.086448, z: 0}
+      rotation: {x: 0.5, y: -0.4999992, z: -0.5, w: 0.50000083}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_L_UpperArm_UpperTwistRig_Root
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_L_UpperArm_UpperTwist______
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530407, y: 1.436294, z: 0.200748}
+      rotation: {x: 0.2609155, y: 0.66397715, z: 0.27220607, w: 0.6457254}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: Ctrl_L_UpperArm_UpperTwist_______6_
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03784807, y: 1.376962, z: 0.261561}
+      rotation: {x: 0.1717304, y: 0.6862094, z: 0.18189333, w: 0.68303746}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: Ctrl_L_UpperArm_UpperTwist________
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03516907, y: 1.441057, z: 0.115881994}
+      rotation: {x: 0.014515235, y: 0.7072224, z: 0.025130013, w: 0.70639527}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Ctrl_L_UpperArm_UpperTwist______6P
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03653407, y: 1.457081, z: 0.116779}
+      rotation: {x: 0.01451564, y: 0.7072224, z: 0.02512961, w: 0.70639527}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_L_UpperArm_UpperTwistRig_Variable
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_UpperArm_UpperTwistRig_Root
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Ctrl_R_UpperArm_UpperTwist______
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530305, y: 1.436294, z: -0.200748}
+      rotation: {x: 0.6457275, y: 0.27220896, z: 0.66397506, w: 0.26091254}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Ctrl_R_UpperArm_UpperTwist_______6_
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03784705, y: 1.376962, z: -0.261562}
+      rotation: {x: 0.6830388, y: 0.1818959, z: 0.68620837, w: 0.17172655}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
+    - name: Ctrl_R_UpperArm_UpperTwist________
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03516906, y: 1.441057, z: -0.115881994}
+      rotation: {x: 0.7063998, y: 0.02513186, z: 0.7072178, w: 0.014513112}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Ctrl_R_UpperArm_UpperTwist______6P
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03653406, y: 1.45708, z: -0.116779}
+      rotation: {x: 0.7063993, y: 0.02513228, z: 0.7072183, w: 0.014512681}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Ctrl_R_UpperArm_UpperTwistRig_Variable
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: 0b_cb__
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: _p
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: MoveSampling
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -1.55e-14, y: 0.000000775, z: -0.00000002, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ___
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -1.259768, y: 0.9867201, z: -2.021479}
+      rotation: {x: -0.50000006, y: 0.50000197, z: 0.49999803, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ___Master
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.98954594, z: -7.888609e-33}
+      rotation: {x: -0.50000006, y: 0.49999997, z: 0.49999997, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ____
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.978804, y: 0.94361603, z: -1.61}
+      rotation: {x: -0.49999616, y: 0.50000197, z: 0.5000019, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: _
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -1.6311408, y: 0.00000007, z: 0.00000007}
+      rotation: {x: -2.1648903e-17, y: 0.7071068, z: 2.1648902e-17, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Collidable_Sheath_Katana001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.15485705, y: 1.147595, z: 0.302484}
+      rotation: {x: -0.055974353, y: -0.7048875, z: 0.055973615, w: 0.7048882}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: kusasuri01_sim
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Collidable_Ctrl_Pelvis
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00000004, y: 0.989545, z: -7.888609e-33}
+      rotation: {x: 0.5000003, y: -0.5, z: -0.4999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: manto_rope_cloth_02_sim
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.002075, y: 0.0065369997, z: -6.1629757e-35}
+      rotation: {x: -0.000000024748742, y: 0.7071068, z: 0.000000024748742, w: 0.7071068}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.9999999}
+    - name: Collidable_Ctrl_R_UpperArm001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530405, y: 1.436293, z: -0.200748}
+      rotation: {x: 0.6428352, y: 0.26492974, z: 0.66691303, w: 0.26795918}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Collidable_Ctrl_R_Forearm001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04337904, y: 1.247899, z: -0.393845}
+      rotation: {x: 0.6911248, y: 0.2440481, z: 0.6167308, w: 0.28710654}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Collidable_Ctrl_L_UpperArm001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.03530407, y: 1.436293, z: 0.200748}
+      rotation: {x: 0.26795974, y: 0.6669142, z: 0.2649287, w: 0.6428342}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000004}
+    - name: Collidable_Ctrl_L_Forearm001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.04338007, y: 1.2479, z: 0.393845}
+      rotation: {x: 0.287107, y: 0.616732, z: 0.24404764, w: 0.6911237}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: Dmypoly_SFX
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_SFX___
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly____
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_______
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly____.001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly_______.001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Dmypoly______
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: root_ani_ctr
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768993, y: 1.784613, z: -0.199998}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Forehead_R_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076879296, y: 1.731701, z: -0.20799798}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Forehead_R_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076879296, y: 1.731701, z: -0.20799798}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Forehead_R_03
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768193, y: 1.736611, z: -0.232998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Forehead_R_03
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768193, y: 1.736611, z: -0.232998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Forehead_L_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076919296, y: 1.731634, z: -0.19446199}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Forehead_L_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076919296, y: 1.731634, z: -0.19446199}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Forehead_L_03
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769693, y: 1.736611, z: -0.166998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Forehead_L_03
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769693, y: 1.736611, z: -0.166998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Eye_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076849298, y: 1.716611, z: -0.221928}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Eye_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769493, y: 1.716611, z: -0.178066}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Eyelid_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076849298, y: 1.7261349, z: -0.221928}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Eyelid_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076849298, y: 1.7261349, z: -0.221928}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Eyelid_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769493, y: 1.7261349, z: -0.178066}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Eyelid_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769493, y: 1.7261349, z: -0.178066}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_EyeLower_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768494, y: 1.707259, z: -0.221928}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_EyeLower_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768494, y: 1.707259, z: -0.221928}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_EyeLower_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769493, y: 1.707259, z: -0.178066}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_EyeLower_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769493, y: 1.707259, z: -0.178066}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Jaw
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.643871, z: -0.199998}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Jaw
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.643871, z: -0.199998}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_R_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076859402, y: 1.660636, z: -0.215671}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076859402, y: 1.660636, z: -0.215671}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076859402, y: 1.660636, z: -0.215671}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_UR_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.66388, z: -0.20814899}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_UR
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.66388, z: -0.20814899}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_UR
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.66388, z: -0.20814899}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_DR_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.660552, z: -0.20814899}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_DR
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.660552, z: -0.20814899}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_DR
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.660606, z: -0.20814899}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_U_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.664309, z: -0.199998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_U
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.664309, z: -0.199998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_U
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.664309, z: -0.199998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_D_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.6601238, z: -0.199998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_D
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.6601238, z: -0.199998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_D
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076899393, y: 1.6601238, z: -0.199998}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_DL_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769194, y: 1.660552, z: -0.191848}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_DL
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769194, y: 1.660552, z: -0.191848}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_DL
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769194, y: 1.660581, z: -0.191848}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_UL_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769194, y: 1.66388, z: -0.191848}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_UL
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769194, y: 1.66388, z: -0.191848}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_UL
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769194, y: 1.66388, z: -0.191848}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Nose_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076919296, y: 1.68267, z: -0.192298}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Nose_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.0076919296, y: 1.68267, z: -0.192298}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Nose_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.68267, z: -0.20769899}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Nose_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768794, y: 1.68267, z: -0.20769899}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_U_Rot
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00770293, y: 1.6623199, z: -0.137512}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_D_Rot
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00770293, y: 1.6498159, z: -0.137525}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Eye
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768993, y: 1.716003, z: -0.200461}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Eye
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768993, y: 1.716003, z: -0.200461}
+      rotation: {x: 0.000000021213204, y: 0.70710677, z: -0.000000021213202, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Root_Eyelid
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768993, y: 1.726003, z: -0.200461}
+      rotation: {x: 0.0000007248656, y: 0.7070276, z: -0.0000007247033, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Eyelid
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00768993, y: 1.726003, z: -0.200461}
+      rotation: {x: 0.000000021213204, y: 0.70710677, z: -0.000000021213202, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Root_Mouth_L_base
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769294, y: 1.660636, z: -0.18432598}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_L_move
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769294, y: 1.660636, z: -0.18432598}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Mouth_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769294, y: 1.660636, z: -0.18432598}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctr_Mouth_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.00769294, y: 1.660636, z: -0.18432598}
+      rotation: {x: 0.0000007142578, y: 0.7070276, z: -0.00000071409784, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Master
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.020560069, y: 1.584166, z: 0.000008}
+      rotation: {x: 0.00000004242641, y: 0.7071068, z: -0.00000004242641, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Pos_Eyebrow_Outer_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.091999926, y: 1.682875, z: 0.044}
+      rotation: {x: 0.0000006823573, y: 0.7071075, z: -0.00000068235875, w: 0.70710605}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: ani_Eyebrow_Outer_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.091999926, y: 1.682875, z: 0.044}
+      rotation: {x: 0.0000006823573, y: 0.7071075, z: -0.00000068235875, w: 0.70710605}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Pos_Jaw
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013218929, y: 1.636501, z: 0.000004}
+      rotation: {x: 0.0000014388869, y: 0.7070286, z: 0.000000682517, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw_C
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013218929, y: 1.636501, z: 0.000004}
+      rotation: {x: 0.0000014388869, y: 0.7070286, z: 0.000000682517, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Lower_Inner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.106793925, y: 1.599175, z: -0.012264989}
+      rotation: {x: 0.0000014388853, y: 0.7070286, z: 0.00000069665913, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Lips_Lower_Inner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.106793925, y: 1.599271, z: -0.012264989}
+      rotation: {x: 0.0000014389111, y: 0.70705485, z: 0.0000006966059, w: 0.70715874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Lower_Inner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.106999926, y: 1.599205, z: 0.014234999}
+      rotation: {x: 0.0000016086292, y: 0.7070548, z: 0.00000052691274, w: 0.70715874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Lips_Lower_Inner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.106999926, y: 1.599257, z: 0.014234999}
+      rotation: {x: 0.0000016086292, y: 0.7070548, z: 0.00000052691274, w: 0.70715874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw_A
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013218929, y: 1.636501, z: 0.000004}
+      rotation: {x: 0.0000014388869, y: 0.7070286, z: 0.000000682517, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Jaw
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10769694, y: 1.573995, z: -0.000417}
+      rotation: {x: 0.0000013964558, y: 0.7070286, z: 0.00000072493873, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw_D
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013218929, y: 1.636501, z: 0.000004}
+      rotation: {x: 0.0000010995162, y: 0.7070286, z: 0.000000314784, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Corner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10016493, y: 1.599931, z: -0.018305}
+      rotation: {x: 0.0000010570956, y: 0.7070545, z: 0.00000039252245, w: 0.7071591}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Lips_Corner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10016493, y: 1.599931, z: -0.018305}
+      rotation: {x: 0.0000010570956, y: 0.7070545, z: 0.00000039252245, w: 0.7071591}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Corner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10029092, y: 1.6005149, z: 0.020999998}
+      rotation: {x: 0.0000010570956, y: 0.7070545, z: 0.00000039252245, w: 0.7071591}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Lips_Corner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10029092, y: 1.6005149, z: 0.020999998}
+      rotation: {x: 0.0000010570956, y: 0.7070545, z: 0.00000039252245, w: 0.7071591}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw_B
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013218929, y: 1.636501, z: 0.000004}
+      rotation: {x: 0.0000014388869, y: 0.7070286, z: 0.000000682517, w: 0.7071849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Tongue_Back
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.04770593, y: 1.601967, z: -0.0000069999996}
+      rotation: {x: 0.0000010534706, y: 0.7070283, z: 0.0000010678481, w: 0.7071852}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Tongue_Center
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.06723393, y: 1.6033709, z: -0.000012}
+      rotation: {x: 0.0000010534706, y: 0.7070283, z: 0.0000010678481, w: 0.7071852}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Tongue_Top
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.07941794, y: 1.600487, z: -0.000013}
+      rotation: {x: 0.0000010534706, y: 0.7070283, z: 0.0000010678481, w: 0.7071852}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Lower_C
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.11006393, y: 1.597258, z: -0.000019}
+      rotation: {x: 0.0000013964826, y: 0.70705485, z: 0.00000072488706, w: 0.70715874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Lips_Lower_C
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.11006393, y: 1.597258, z: -0.000019}
+      rotation: {x: 0.0000013964826, y: 0.70705485, z: 0.00000072488706, w: 0.70715874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jaw_E
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.013218929, y: 1.636501, z: 0.000004}
+      rotation: {x: 0.7071068, y: -0.0000026693278, z: -0.7071067, w: -0.0000026693283}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Upper_Inner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.106999926, y: 1.608708, z: -0.016}
+      rotation: {x: -2.1648903e-17, y: 0.7071068, z: 2.1648902e-17, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: ani_Lips_Upper_Inner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.106999926, y: 1.608708, z: -0.016}
+      rotation: {x: 2.164385e-17, y: 0.7071333, z: 2.164385e-17, w: 0.70708025}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Pos_Lips_Upper_Inner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10675093, y: 1.608536, z: 0.01602601}
+      rotation: {x: -2.1648903e-17, y: 0.7071068, z: 2.1648902e-17, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: ani_Lips_Upper_Inner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10675093, y: 1.608536, z: 0.01602601}
+      rotation: {x: 2.164385e-17, y: 0.7071333, z: 2.164385e-17, w: 0.70708025}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Pos_Cheek_Low_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.094999924, y: 1.617592, z: 0.030999998}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Cheek_Low_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.094999924, y: 1.617592, z: 0.030999998}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Lips_Upper_C
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10801193, y: 1.608591, z: -0.000020000001}
+      rotation: {x: 0.0000008521591, y: 0.7070276, z: -0.0000008519682, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Lips_Upper_C
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10801193, y: 1.608591, z: -0.000020000001}
+      rotation: {x: 0.00000085212713, y: 0.7070541, z: -0.0000008520002, w: 0.70715946}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Cheek_Low_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09478194, y: 1.619779, z: -0.030792}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Cheek_Low_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09478194, y: 1.619779, z: -0.030792}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Cheek_High_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09684192, y: 1.6396809, z: 0.036}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Cheek_High_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09684192, y: 1.6396809, z: 0.036}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Nostral_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.11585893, y: 1.627386, z: 0.011}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Nostral_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.11585893, y: 1.627386, z: 0.011}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Nostral_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.115850925, y: 1.627387, z: -0.011233999}
+      rotation: {x: 0.0000008521591, y: 0.7070276, z: -0.0000008519682, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Nostral_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.115850925, y: 1.627387, z: -0.011233999}
+      rotation: {x: 0.0000008521591, y: 0.7070276, z: -0.0000008519682, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Blink_Lower_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10142592, y: 1.653534, z: 0.029986}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Blink_Lower_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10142592, y: 1.653534, z: 0.029986}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyeball_Ld
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.08640192, y: 1.664863, z: 0.028617}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyeball_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.08640192, y: 1.664863, z: 0.028617}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyeball_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.08640192, y: 1.664863, z: -0.028594999}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyeball_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.08640192, y: 1.664863, z: -0.028594999}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Cheek_High_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09646093, y: 1.639358, z: -0.035646997}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Cheek_High_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09646093, y: 1.639358, z: -0.035646997}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Blink_Lower_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10133293, y: 1.6523108, z: -0.03}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Blink_Lower_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10133293, y: 1.6523108, z: -0.03}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Blink_Upper_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10528992, y: 1.669899, z: -0.027999999}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Blink_Upper_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10528992, y: 1.669899, z: -0.027999999}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyebrow_Outer_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09212192, y: 1.682776, z: -0.04439}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyebrow_Outer_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.09212192, y: 1.682776, z: -0.04439}
+      rotation: {x: 0.0000006824341, y: 0.70702803, z: -0.000000682282, w: 0.7071856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyebrow_Inner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10209592, y: 1.6784779, z: -0.028896}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyebrow_Inner_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10209592, y: 1.6784779, z: -0.028896}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyebrow_Center_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.110065915, y: 1.669933, z: -0.014857}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyebrow_Center_R
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.110065915, y: 1.669933, z: -0.014857}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyebrow_Center_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.11013993, y: 1.6704719, z: 0.015}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyebrow_Center_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.11013993, y: 1.6704719, z: 0.015}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Eyebrow_Inner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10496593, y: 1.678849, z: 0.029000001}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Eyebrow_Inner_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.10496593, y: 1.678849, z: 0.029000001}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pos_Blink_Upper_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.105161935, y: 1.67017, z: 0.027999999}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ani_Blink_Upper_L
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.105161935, y: 1.670347, z: 0.027999999}
+      rotation: {x: 0.00000068243446, y: 0.7070276, z: -0.0000006822816, w: 0.707186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: c7100_manto_sim
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Collidable_Pelvis001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00422804, y: 0.92360395, z: 0}
+      rotation: {x: -0.50000113, y: 0.49999887, z: 0.5000012, w: -0.49999884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Collidable_L_Thigh
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00422804, y: 0.892873, z: 0.126386}
+      rotation: {x: -0.51601446, y: -0.48345822, z: 0.48345536, w: 0.5160118}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Collidable_R_Thigh
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.00422703, y: 0.892872, z: -0.126386}
+      rotation: {x: -0.5160142, y: -0.48345798, z: 0.4834556, w: 0.516012}
+      scale: {x: 1, y: 1, z: 1}
+    - name: manto_rope_103_
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_hair01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_hair02
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_kimono
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_haidate
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_hakama
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_kozane_rope
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_kozane
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_tabi
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_Hip_rope
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_haidate_seamfray
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_webow_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_webow_00
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wequiver
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_Bow002_rope
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_body02
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_body01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_Hip_rope_cloth
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wesheath00_00
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wesword00_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wesword00_00
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_Eye005
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: -1.5046327e-38, z: -0.000002}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7100_head_20180502_4
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: -1.5046327e-38, z: -0.000002}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wesword01_00
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wesword01_01
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: S_c7110_wesheath01_00
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Collidable_Ctrl_Head002
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.047274087, y: 1.947379, z: 0.000020999998}
+      rotation: {x: 0.5295912, y: -0.46854454, z: -0.46854275, w: 0.5295912}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Collidable_Ctrl_Head001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0.04860291, y: 2.09675, z: 0.042062}
+      rotation: {x: 0.74314463, y: 0.66913086, z: -0.000000010332553, w: 0.00000014544456}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999998}
+    - name: Collidable_Ctrl_Spine001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.039577067, y: 1.668163, z: -1.5777218e-32}
+      rotation: {x: 0.5188379, y: -0.48042586, z: -0.4804221, w: 0.5188379}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Collidable_Ctrl_Neck001
+      parentName: Genichiro Ashina(Clone)
+      position: {x: 0.054310076, y: 1.873909, z: -1.5777218e-32}
+      rotation: {x: 0.70290864, y: 0.076989874, z: 0.076985806, w: 0.7028978}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_kimono_sim
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_hakama_sim
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: c7110_Hip_rope_cloth_sim
+      parentName: Genichiro Ashina(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000014142136, y: 0.7071068, z: -0.000000014142136, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,13 +10,15 @@ public class AnimationEvents : MonoBehaviour
         owner = GetComponent<Character>();
     }
     #region Dodge
-    public void Anim_OnDodgeBegin()
+    public void Anim_OnDodge()
     {
         owner.dodgeComponent.currentDodgeState = EDodgeState.OnDodge;
+        owner.isApplyDodgeMove = true;
     }
-    public void Anim_OnDodgeEnd()
+    public void Anim_OffDodge()
     {
         owner.dodgeComponent.currentDodgeState = EDodgeState.OffDodge;
+        owner.isApplyDodgeMove = false;
 
     }
     #endregion

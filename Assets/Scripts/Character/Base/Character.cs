@@ -44,6 +44,7 @@ public class Character : MonoBehaviour
     [Header("Combat State")]
     public bool isBlock = false;
     public bool isApplyAnimationMove = false;
+    public bool isApplyDodgeMove = false;
     public bool isApplyingKnockBack = false;
     public ECombatState currentCombatState;
 
@@ -163,6 +164,23 @@ public class Character : MonoBehaviour
                 }
 
             }
+            // Áp dụng chuyển động theo CharacterController
+            characterController.Move(motion * Time.deltaTime + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        }
+
+        if (isApplyDodgeMove)
+        {
+            //Lấy thời gian đã chuẩn hóa trong animation
+            float normalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+
+            // Đọc các giá trị Curve từ Animator
+            float xMovement = animator.GetFloat("xMovementSpeed");
+            float yMovement = animator.GetFloat("yMovementSpeed");
+            float zMovement = animator.GetFloat("zMovementSpeed");
+
+            // Tạo vector chuyển động theo Curve
+            Vector3 motion = new Vector3(xMovement, yMovement, zMovement) * transform.localScale.x * motionFactor;
+            motion = transform.TransformDirection(motion); // Chuyển từ Local Space sang World Space
 
             // Áp dụng chuyển động theo CharacterController
             characterController.Move(motion * Time.deltaTime + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);

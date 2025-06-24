@@ -22,8 +22,10 @@ public static class AnimationParams
     public static readonly int Block_Param = Animator.StringToHash("Blocking");
     public static readonly int BlockSide_Param = Animator.StringToHash("BlockSide");
     public static readonly int BlockTime_Param = Animator.StringToHash("BlockTime");
+    public static readonly int Dodge_State = Animator.StringToHash("Dodge");
 
-    
+
+
 
 
 
@@ -37,7 +39,6 @@ public static class AnimationParams
     public static readonly int Jump_Start_State = Animator.StringToHash("Jump Start");
     public static readonly int Double_Jump_Start_State = Animator.StringToHash("Double Jump Start");
     public static readonly int Locomotion_State = Animator.StringToHash("Locomotion");
-    public static readonly int Dodge_State = Animator.StringToHash("Dodge");
     public static readonly int Dash_State = Animator.StringToHash("Dash");
     public static readonly int Turn_State = Animator.StringToHash("Turn");
     public static readonly int Teleport_State = Animator.StringToHash("Teleport");

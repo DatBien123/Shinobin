@@ -372,9 +372,10 @@ public class CharacterAI : Character
         GroundedCheck();
 
         //Chỉ di chuyển/xoay khi ko bị đánh !
-        if (!isApplyingKnockBack 
+        if (!isApplyingKnockBack
             && comboComponent.currentComboState != EComboState.Playing
-            && hitReactionComponent.currentHitReactionState  != EHitReactionState.OnHit) Move();
+            && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
+            && dodgeComponent.currentDodgeState != EDodgeState.OnDodge) Move();
     }
     protected override void FixedUpdate()
     {
