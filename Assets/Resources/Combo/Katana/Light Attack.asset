@@ -178,7 +178,7 @@ MonoBehaviour:
           shakeTime: 1
           intensity: 100
           isStop: 1
-          stopTime: 0.1
+          stopTime: 0.07
           isSlowMotion: 0
           slowMotionFactor: 0
           slowMotionTime: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
           shakeDirection: 0
           shakeTime: 0
           intensity: 0
-          isStop: 0
-          stopTime: 0
+          isStop: 1
+          stopTime: 0.07
           isSlowMotion: 0
           slowMotionFactor: 0
           slowMotionTime: 0
@@ -464,7 +464,7 @@ MonoBehaviour:
             defenceFX:
               blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
               blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
-              blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
+              blockReactFXRotationOffset: {x: -0.2, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
               blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
               volume: 1
@@ -499,8 +499,8 @@ MonoBehaviour:
           shakeDirection: 0
           shakeTime: 0
           intensity: 0
-          isStop: 0
-          stopTime: 0
+          isStop: 1
+          stopTime: 0.07
           isSlowMotion: 0
           slowMotionFactor: 0
           slowMotionTime: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
             reboundReactClip: {fileID: 7400002, guid: d49bcbc5d9944534a9f3b612a45e2306, type: 3}
             defenceFX:
               blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
-              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXPositionOffset: {x: 0.2, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
               blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
@@ -658,8 +658,8 @@ MonoBehaviour:
           shakeDirection: 0
           shakeTime: 0
           intensity: 0
-          isStop: 0
-          stopTime: 0
+          isStop: 1
+          stopTime: 0.07
           isSlowMotion: 0
           slowMotionFactor: 0
           slowMotionTime: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
             reboundReactClip: {fileID: 7400002, guid: 78efa88e7843e30448d41f1253cd8d40, type: 3}
             defenceFX:
               blockReactParticleSystem: {fileID: 4596544553357837919, guid: b569c40d446e0ae45b7f4ca79b338b5d, type: 3}
-              blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
+              blockReactFXPositionOffset: {x: 0, y: 0.5, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
               blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
@@ -819,8 +819,8 @@ MonoBehaviour:
           shakeDirection: 0
           shakeTime: 0
           intensity: 0
-          isStop: 0
-          stopTime: 0
+          isStop: 1
+          stopTime: 0.12
           isSlowMotion: 0
           slowMotionFactor: 0
           slowMotionTime: 0
