@@ -134,9 +134,7 @@ namespace Training
             if (currentHitReactionData.slashData.slashSFX.slashAudioClip != null)
             {
                 // Thêm AudioSource vào GameObject này
-                AudioSource.PlayClipAtPoint(currentHitReactionData.slashData.slashSFX.slashAudioClip,
-                    position,
-                    currentHitReactionData.slashData.slashSFX.volume);
+                PlaySoundUnscaled(currentHitReactionData.slashData.slashSFX.slashAudioClip, position, currentHitReactionData.slashData.slashSFX.volume);
             }
         }
         //HitFX
@@ -177,6 +175,7 @@ namespace Training
                 AudioSource.PlayClipAtPoint(hitImpact.HitData.hitSFX.hitAudioClip,
                     position,
                     hitImpact.HitData.hitSFX.volume);
+                PlaySoundUnscaled(hitImpact.HitData.hitSFX.hitAudioClip, position, hitImpact.HitData.hitSFX.volume);
             }
         }
         //BlockFX
@@ -241,9 +240,7 @@ namespace Training
 
             if (blockFX.blockReactAudioClip != null)
             {
-                AudioSource.PlayClipAtPoint(blockFX.blockReactAudioClip,
-                    position,
-                   blockFX.volume);
+                PlaySoundUnscaled(blockFX.blockReactAudioClip, position, blockFX.volume);
             }
         }
         public void PlayImpactCollide(Vector3 position, HitImpact hitImpact)
@@ -266,6 +263,27 @@ namespace Training
         #endregion
 
         #region [AdditiveFuncs]
+        void PlaySoundUnscaled(AudioClip clip, Vector3 position, float volume = 1f)
+        {
+            if (clip == null) return;
+
+            GameObject audioObj = new GameObject("TempAudio");
+            audioObj.transform.position = position;
+
+            AudioSource audioSource = audioObj.AddComponent<AudioSource>();
+            audioSource.clip = clip;
+            audioSource.volume = volume;
+            audioSource.spatialBlend = 1f; // 3D sound
+            audioSource.playOnAwake = false;
+
+            // 👇 Quan trọng: Phát âm thanh khi timeScale = 0
+            audioSource.ignoreListenerPause = true;
+
+            audioSource.Play();
+
+            // Hủy sau khi clip kết thúc
+            Destroy(audioObj, clip.length);
+        }
         IEnumerator DestroyEffectWhenFinished(ParticleSystem effect)
         {
             yield return new WaitUntil(() => !effect.IsAlive());
