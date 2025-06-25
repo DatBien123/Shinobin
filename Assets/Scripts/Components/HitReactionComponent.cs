@@ -482,6 +482,7 @@ namespace Training
                     if (causer.atributeComponent.currentPosture >= causer.atributeComponent.maxPosture)
                     {
                         if (hitImpact.BlockData.reboundReactClip != null) causer.animator.CrossFadeInFixedTime(hitImpact.BlockData.reboundReactClip.name, .1f);
+
                         causer.atributeComponent.currentPosture = 0;
                         causer.comboComponent.ResetCombo();
                     }

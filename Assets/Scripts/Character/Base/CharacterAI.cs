@@ -318,8 +318,8 @@ public class CharacterAI : Character
             result = new Vector2(0, -1);
         }
 
-        animator.SetFloat(AnimationParams.Input_Horizontal_Turn_Param, result.x);
-        animator.SetFloat(AnimationParams.Input_Vertical_Turn_Param, result.y);
+        //animator.SetFloat(AnimationParams.Input_Horizontal_Turn_Param, result.x);
+        //animator.SetFloat(AnimationParams.Input_Vertical_Turn_Param, result.y);
 
         ////Speed 
         //if (navMeshAgent.speed == 0.0f)

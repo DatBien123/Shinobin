@@ -34,6 +34,7 @@ public class Character : MonoBehaviour
     public DodgeComponent dodgeComponent;
     public CharacterRigComponent characterRigComponent;
     public TeleportComponent teleportComponent;
+    public FinisherComponent finisherComponent;
     public AnimationEvents animationEvent;
 
     [Header("Current Props")]
@@ -46,6 +47,7 @@ public class Character : MonoBehaviour
     public bool isApplyAnimationMove = false;
     public bool isApplyDodgeMove = false;
     public bool isApplyingKnockBack = false;
+    public bool isOnStagger = false;
     public ECombatState currentCombatState;
 
     [Header("Movement State")]
@@ -130,6 +132,7 @@ public class Character : MonoBehaviour
         characterRigComponent = GetComponent<CharacterRigComponent>();
         animationEvent = GetComponent<AnimationEvents>();
         teleportComponent = GetComponent<TeleportComponent>();
+        finisherComponent = GetComponent<FinisherComponent>();
     }
     protected virtual void Start(){
         animator.SetFloat(AnimationParams.BlockSide_Param, 1.0f);

@@ -80,8 +80,8 @@ public class TeleportComponent : MonoBehaviour
         owner.currentCombatState = ECombatState.Untouchable;
 
         //owner.lookAtComponent.LookAtEnemy(owner.targetingComponent.target.transform.position, .2f);
-        owner.animator.SetFloat(AnimationParams.Input_Horizontal_Dash_Param, 0.0f);
-        owner.animator.SetFloat(AnimationParams.Input_Vertical_Dash_Param, -1.0f);
+        //owner.animator.SetFloat(AnimationParams.Input_Horizontal_Dash_Param, 0.0f);
+        //owner.animator.SetFloat(AnimationParams.Input_Vertical_Dash_Param, -1.0f);
 
         owner.animator.CrossFadeInFixedTime(AnimationParams.Teleport_State, .1f);
 

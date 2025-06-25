@@ -227,6 +227,10 @@ namespace Training
 
             C_ExecuteBehavior = StartCoroutine(ExecuteBehaviors());
         }
+        public void StopExecuteBehaviors()
+        {
+            StopCoroutine(C_ExecuteBehavior);
+        }
         IEnumerator ExecuteBehaviors()
         {
             while(ownerAI.atributeComponent.currentHP > 0)

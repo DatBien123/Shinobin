@@ -579,7 +579,7 @@ ModelImporter:
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
-        intParameter: 0
+        intParameter: 1
         messageOptions: 0
       - time: 0.8503265
         functionName: Anim_OffHit

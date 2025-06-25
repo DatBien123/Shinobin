@@ -59,6 +59,7 @@ namespace Training
                 EquipWeapon();
 
                 owner.comboComponent.ResetCombo();
+                owner.finisherComponent.LoadFinisher();
                 //owner.skillComponent.ResetSkill();
             }
         }

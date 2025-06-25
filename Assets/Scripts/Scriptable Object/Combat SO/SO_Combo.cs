@@ -335,15 +335,8 @@ namespace Training
         public List<EKeystroke> comboInputs;
         public List<AnimationClip> comboClips;
         public EStateType requiredState;
-
-        public FinisherData finisherData;
         public List<ListHitReactionData> listHitReactionDatas;
-    }
-    [System.Serializable]
-    public struct FinisherData
-    {
-        public bool isFinisher;
-        public float distanceOffset;
+
     }
     [CreateAssetMenu(menuName = "Combat System/Combat/Combo Data", fileName = "Combo Data")]
     public class SO_Combo : ScriptableObject

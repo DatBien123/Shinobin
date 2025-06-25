@@ -23,6 +23,9 @@ public static class AnimationParams
     public static readonly int BlockSide_Param = Animator.StringToHash("BlockSide");
     public static readonly int BlockTime_Param = Animator.StringToHash("BlockTime");
     public static readonly int Dodge_State = Animator.StringToHash("Dodge");
+    public static readonly int Dodge_Speed_Param = Animator.StringToHash("Dodge Speed");
+    public static readonly int Input_Dodge_Horizontal_Param = Animator.StringToHash("Dodge Horizontal Input Factor");
+    public static readonly int Input_Dodge_Vertical_Param = Animator.StringToHash("Dodge Vertical Input Factor");
 
 
 
@@ -49,14 +52,14 @@ public static class AnimationParams
 
 
 
-    public static readonly int Input_Horizontal_Dodge_Param = Animator.StringToHash("Dodge Horizontal");
-    public static readonly int Input_Vertical_Dodge_Param = Animator.StringToHash("Dodge Vertical");
+    //public static readonly int Input_Horizontal_Dodge_Param = Animator.StringToHash("Dodge Horizontal");
+    //public static readonly int Input_Vertical_Dodge_Param = Animator.StringToHash("Dodge Vertical");
 
-    public static readonly int Input_Vertical_Turn_Param = Animator.StringToHash("Turn Vertical");
-    public static readonly int Input_Horizontal_Turn_Param = Animator.StringToHash("Turn Horizontal");
+    //public static readonly int Input_Vertical_Turn_Param = Animator.StringToHash("Turn Vertical");
+    //public static readonly int Input_Horizontal_Turn_Param = Animator.StringToHash("Turn Horizontal");
 
-    public static readonly int Input_Horizontal_Dash_Param = Animator.StringToHash("Dash Horizontal");
-    public static readonly int Input_Vertical_Dash_Param = Animator.StringToHash("Dash Vertical");
+    //public static readonly int Input_Horizontal_Dash_Param = Animator.StringToHash("Dash Horizontal");
+    //public static readonly int Input_Vertical_Dash_Param = Animator.StringToHash("Dash Vertical");
 
 
 
@@ -69,7 +72,6 @@ public static class AnimationParams
 
 
     //+ Float
-    public static readonly int Dodge_Speed_Param = Animator.StringToHash("Dodge Speed");
     public static readonly int Random_Param = Animator.StringToHash("Random");
     public static readonly int Stop_Factor_Param = Animator.StringToHash("Stop Factor");
 

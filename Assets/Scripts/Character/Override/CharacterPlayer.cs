@@ -31,7 +31,7 @@ public class CharacterPlayer : Character
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
 
-    private InputManager _input;
+    public InputManager _input;
     public GameObject _mainCamera;
 
     private const float _threshold = 0.01f;

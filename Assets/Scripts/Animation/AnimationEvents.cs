@@ -32,9 +32,14 @@ public class AnimationEvents : MonoBehaviour
     {
         owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OffHit;
     }
-    public void Anim_OnHit()
+    public void Anim_OnHit(int staggerSign)
     {
         owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OnHit;
+
+        if(staggerSign == 1)
+        {
+            owner.isOnStagger = true;
+        }
         //owner.hitReactionComponent.currentRecoverState = ERecoverState.OffRecover;
         //if (owner as CharacterPlayer)
         //{
@@ -44,6 +49,7 @@ public class AnimationEvents : MonoBehaviour
     public void Anim_OffHit()
     {
         owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OffHit;
+        owner.isOnStagger = false;
         //owner.hitReactionComponent.ResetHitReaction();
         //if (owner as CharacterAI)
         //{
@@ -109,4 +115,9 @@ public class AnimationEvents : MonoBehaviour
         owner.gameObject.SetActive(false);
     }
     #endregion
+
+    public void Anim_OnFinisherBegin()
+    {
+
+    }
 }

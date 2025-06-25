@@ -1709,6 +1709,7 @@ MonoBehaviour:
   dodgeComponent: {fileID: 0}
   characterRigComponent: {fileID: 0}
   teleportComponent: {fileID: 0}
+  finisherComponent: {fileID: 0}
   animationEvent: {fileID: 0}
   currentWeapon: {fileID: 0}
   temporaryLocomotion: {fileID: 0}
@@ -1716,6 +1717,7 @@ MonoBehaviour:
   isApplyAnimationMove: 0
   isApplyDodgeMove: 0
   isApplyingKnockBack: 0
+  isOnStagger: 0
   currentCombatState: 0
   motionFactor: 5
   currentState: 0
@@ -2066,9 +2068,6 @@ MonoBehaviour:
     comboInputs: 
     comboClips: []
     requiredState: 0
-    finisherData:
-      isFinisher: 0
-      distanceOffset: 0
     listHitReactionDatas: []
   currentListHitReactionData:
     Name: 
@@ -2393,6 +2392,7 @@ MonoBehaviour:
   dodgeComponent: {fileID: 0}
   characterRigComponent: {fileID: 0}
   teleportComponent: {fileID: 0}
+  finisherComponent: {fileID: 0}
   animationEvent: {fileID: 0}
   currentWeapon: {fileID: 0}
   temporaryLocomotion: {fileID: 0}
@@ -2400,6 +2400,7 @@ MonoBehaviour:
   isApplyAnimationMove: 0
   isApplyDodgeMove: 0
   isApplyingKnockBack: 0
+  isOnStagger: 0
   currentCombatState: 0
   motionFactor: 5
   currentState: 0
@@ -2436,6 +2437,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  _input: {fileID: 0}
   _mainCamera: {fileID: 0}
 --- !u!114 &1762682268
 MonoBehaviour:
@@ -2827,9 +2829,6 @@ MonoBehaviour:
     comboInputs: 
     comboClips: []
     requiredState: 0
-    finisherData:
-      isFinisher: 0
-      distanceOffset: 0
     listHitReactionDatas: []
   currentListHitReactionData:
     Name: 
@@ -7165,6 +7164,7 @@ GameObject:
   - component: {fileID: 6982812146693336458}
   - component: {fileID: 6982812146693336459}
   - component: {fileID: 6982812146693336460}
+  - component: {fileID: 6982812146693336461}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Player
@@ -7195,6 +7195,7 @@ GameObject:
   - component: {fileID: 6982812147933622148}
   - component: {fileID: 6982812147933622149}
   - component: {fileID: 6982812147933622150}
+  - component: {fileID: 6982812147933622151}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -9224,7 +9225,7 @@ MonoBehaviour:
   currentStamina: 0
   maxStamina: 0
   currentPosture: 0
-  maxPosture: 1000
+  maxPosture: 200
   attack: 0
   defense: 0
   agility: 0
@@ -9283,6 +9284,21 @@ MonoBehaviour:
   offTeleportEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6982812146693336461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926082444160328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57d558abd5da4e439d0cef44085f02c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  currentFinisherData: {fileID: 0}
+  loadedFinisher: []
 --- !u!95 &6982812147933622147
 Animator:
   serializedVersion: 7
@@ -9424,6 +9440,21 @@ MonoBehaviour:
   offTeleportEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6982812147933622151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926083347132227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57d558abd5da4e439d0cef44085f02c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  currentFinisherData: {fileID: 0}
+  loadedFinisher: []
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0

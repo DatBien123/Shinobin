@@ -74,7 +74,14 @@ public class DodgeComponent : MonoBehaviour
         Vector3 direction = dodgeDirection.normalized;
         float speed = dodgeDistance / dodgeDuration;
 
-        //currentDodgeState = EDodgeState.OnDodge;
+        float currentHorizontalFactor = owner.animator.GetFloat(AnimationParams.Input_Horizontal_Param);
+        float currentVerticalFactor = owner.animator.GetFloat(AnimationParams.Input_Vertical_Param);
+        float currentSpeedParam = owner.animator.GetFloat(AnimationParams.Speed_Param);
+
+        owner.animator.SetFloat(AnimationParams.Input_Dodge_Horizontal_Param, currentHorizontalFactor);
+        owner.animator.SetFloat(AnimationParams.Input_Dodge_Vertical_Param, currentVerticalFactor);
+        owner.animator.SetFloat(AnimationParams.Dodge_Speed_Param, currentSpeedParam);
+        
         owner.animator.CrossFadeInFixedTime(AnimationParams.Dodge_State, .1f);
 
         onDodgeEvent?.Invoke();
@@ -83,9 +90,7 @@ public class DodgeComponent : MonoBehaviour
             yield return null;
         }
         offDodgeEvent?.Invoke();
-        //currentDodgeState = EDodgeState.OffDodge;
 
-        Debug.Log("End Dodge");
     }
 
     #region [AI]
@@ -129,8 +134,8 @@ public class DodgeComponent : MonoBehaviour
         //if (owner.targetingComponent.target != null)owner.freeflowComponent.owner.lookAtComponent.LookAtEnemy(owner.targetingComponent.target.transform.position, .1f);
 
         //..
-        owner.animator.SetFloat(AnimationParams.Input_Horizontal_Dodge_Param, paramsVH.x);
-        owner.animator.SetFloat(AnimationParams.Input_Vertical_Dodge_Param, paramsVH.y);
+        //owner.animator.SetFloat(AnimationParams.Input_Horizontal_Dodge_Param, paramsVH.x);
+        //owner.animator.SetFloat(AnimationParams.Input_Vertical_Dodge_Param, paramsVH.y);
 
         owner.animator.speed = dodgeSpeed;
         owner.animator.CrossFadeInFixedTime(AnimationParams.Dodge_State, .1f);
@@ -182,8 +187,8 @@ public class DodgeComponent : MonoBehaviour
         //if (owner.targetingComponent.target != null) owner.lookAtComponent.LookAtEnemy(owner.targetingComponent.target.transform.position, .1f);
 
         //..
-        owner.animator.SetFloat(AnimationParams.Input_Horizontal_Dash_Param, paramsVH.x);
-        owner.animator.SetFloat(AnimationParams.Input_Vertical_Dash_Param, paramsVH.y);
+        //owner.animator.SetFloat(AnimationParams.Input_Horizontal_Dash_Param, paramsVH.x);
+        //owner.animator.SetFloat(AnimationParams.Input_Vertical_Dash_Param, paramsVH.y);
 
         owner.animator.speed = dodgeSpeed;
         owner.animator.CrossFadeInFixedTime(AnimationParams.Dash_State, .1f);

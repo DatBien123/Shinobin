@@ -102,8 +102,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477637913098044789}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7559344, y: 0.109958336, z: -0.6449833, w: 0.021654904}
-  m_LocalPosition: {x: 0.78148, y: 0.637, z: 6.61101}
+  m_LocalRotation: {x: 0.6653516, y: -0.11410766, z: -0.72206646, w: -0.1513497}
+  m_LocalPosition: {x: -0.0646, y: 0.026, z: 0.0303}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -113,7 +113,7 @@ Transform:
   - {fileID: 2430891567654316781}
   - {fileID: 4089330261246548391}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 10.054, y: -99.768, z: 171.925}
+  m_LocalEulerAnglesHint: {x: -21.481, y: -84.538, z: 175.888}
 --- !u!114 &6848084549239557732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   rigTransformEquip: 1
   rigTransformUnEquip: 0
   equipPositionOffset: {x: -0.0646, y: 0.026, z: 0.0303}
-  equipRotationOffset: {x: 10.054331, y: 260.2319, z: 171.9252}
+  equipRotationOffset: {x: 338.5193, y: 275.46194, z: 175.888}
   equipScaleOffset: {x: 1, y: 1, z: 1}
   unEquipPositionOffset: {x: 0, y: 0, z: 0}
   unEquipRotationOffset: {x: 0, y: 0, z: 0}

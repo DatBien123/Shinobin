@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
     public bool cursorLocked = true;
     public bool cursorInputForLook = true;
 
-    private PlayerControls playerControls;
+    public PlayerControls playerControls;
     public CharacterPlayer player;
 
     public float blockTime = 0.0f;
@@ -148,7 +148,18 @@ public class InputManager : MonoBehaviour
         if (context.performed && player.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
         {
             //if (player.currentWeapon.currentWeaponState != EWeaponState.Equip) player.characterRigComponent.EquipWeapon();
+            //Test
+            if (player.targetingComponent.target != null)
+            {
+                if (player.targetingComponent.target.gameObject.GetComponent<Character>().isOnStagger)
+                {
+                    player.finisherComponent.StartPlayFinisher(player.targetingComponent.target.gameObject.GetComponent<Character>());
+                    return;
+                }
+
+            }
             player.comboComponent.SetCurrentInput(EKeystroke.LightAttack);
+
         }
     }
     public void StrongAttack(InputAction.CallbackContext context)

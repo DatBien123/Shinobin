@@ -20,9 +20,6 @@ MonoBehaviour:
     - {fileID: 7400000, guid: 8decc86bf4985ea42b3005926975955f, type: 3}
     - {fileID: 7400000, guid: 5029b485ac85ca0478e8877b25e6dec6, type: 3}
     requiredState: 1
-    finisherData:
-      isFinisher: 0
-      distanceOffset: 0
     listHitReactionDatas:
     - Name: LA1
       hitReactionDatas:
@@ -144,7 +141,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
-              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 8cafa0c6449cd234390625dc20991795, type: 3}
               volume: 1
               pitch: 1
             parryFX:
@@ -152,7 +149,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
-              blockReactAudioClip: {fileID: 8300000, guid: f1de01b1ce3200f44a3c71a78f3c5df0, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 7aede7246631e214aabc76c6adf01391, type: 3}
               volume: 1
               pitch: 1
             brokenFX:
@@ -185,6 +182,7 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+        finisher: {fileID: 11400000, guid: 65ad503093e6f7c41b1462ae493bed4a, type: 2}
     - Name: LA2
       hitReactionDatas:
       - Name: LA1 - 1
@@ -305,7 +303,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
-              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 8cafa0c6449cd234390625dc20991795, type: 3}
               volume: 1
               pitch: 1
             parryFX:
@@ -313,7 +311,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
-              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 3ddc5188e7a79ac46a9354773813312c, type: 3}
               volume: 1
               pitch: 1
             brokenFX:
@@ -346,6 +344,7 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+        finisher: {fileID: 11400000, guid: 081cc747ad9dab8428c0c42a502b75f9, type: 2}
     - Name: LA3
       hitReactionDatas:
       - Name: LA1 - 1
@@ -466,7 +465,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 1, z: 0}
               blockReactFXRotationOffset: {x: -0.2, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
-              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: d828a5a621d25ab4aaa6e0fadff04b0a, type: 3}
               volume: 1
               pitch: 1
             parryFX:
@@ -474,7 +473,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: -0.2, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
-              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: d828a5a621d25ab4aaa6e0fadff04b0a, type: 3}
               volume: 1
               pitch: 1
             brokenFX:
@@ -507,6 +506,7 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+        finisher: {fileID: 11400000, guid: 65ad503093e6f7c41b1462ae493bed4a, type: 2}
       - Name: LA1 - 1
         attackDirection: 0
         hitTrace:
@@ -625,7 +625,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0.2, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
-              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 8cafa0c6449cd234390625dc20991795, type: 3}
               volume: 1
               pitch: 1
             parryFX:
@@ -633,7 +633,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0.2, y: 1, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.3, y: 0.3, z: 0.3}
-              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 4d133c44e00b3ed4faa8069dadee617c, type: 3}
               volume: 1
               pitch: 1
             brokenFX:
@@ -666,6 +666,7 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+        finisher: {fileID: 11400000, guid: 081cc747ad9dab8428c0c42a502b75f9, type: 2}
     - Name: LA4
       hitReactionDatas:
       - Name: LA1 - 1
@@ -786,7 +787,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 0.5, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.1, y: 0.1, z: 0.1}
-              blockReactAudioClip: {fileID: 8300000, guid: 498050bc12ac3b34aa7555975d602c22, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 8cafa0c6449cd234390625dc20991795, type: 3}
               volume: 1
               pitch: 1
             parryFX:
@@ -794,7 +795,7 @@ MonoBehaviour:
               blockReactFXPositionOffset: {x: 0, y: 0.5, z: 0}
               blockReactFXRotationOffset: {x: 0, y: 0, z: 0}
               blockReactFXScaleOffset: {x: 0.4, y: 0.4, z: 0.4}
-              blockReactAudioClip: {fileID: 8300000, guid: 5ec2820e5af72f94ebb7675a2e314bdb, type: 3}
+              blockReactAudioClip: {fileID: 8300000, guid: 47d3c45cd26007946aa071a9c168a3d1, type: 3}
               volume: 3
               pitch: 1
             brokenFX:
@@ -827,3 +828,4 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+        finisher: {fileID: 11400000, guid: 081cc747ad9dab8428c0c42a502b75f9, type: 2}

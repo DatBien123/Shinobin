@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5c397a3eebc0141b99f6d085a8174a, type: 3}
+  m_Name: Execute 03
+  m_EditorClassIdentifier: 
+  data:
+    finisherType: 0
+    causerData:
+      executionClip: {fileID: 7400002, guid: 3e0a1d5dae6723c4480c3db5e814a41b, type: 3}
+      causerPositionOffset: {x: 0, y: 0, z: 0}
+      causerRotationOffset: {x: 0, y: 0, z: 0}
+      causerFinisherFX:
+        finisherVFXData:
+          particleSystem: {fileID: 0}
+          positionOffset: {x: 0, y: 0, z: 0}
+          rotationOffset: {x: 0, y: 0, z: 0}
+          scaleOffset: {x: 0, y: 0, z: 0}
+        finisherSFXData:
+          audioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+    takerData:
+      executedClip: {fileID: 7400002, guid: dbeb9c417adb8984181188b3096c947f, type: 3}
+      takerPositionOffset: {x: 0.05, y: 0, z: 1.3}
+      takerRotationOffset: {x: 0, y: 0, z: 0}
+      takerFinisherFX:
+        finisherVFXData:
+          particleSystem: {fileID: 0}
+          positionOffset: {x: 0, y: 0, z: 0}
+          rotationOffset: {x: 0, y: 0, z: 0}
+          scaleOffset: {x: 0, y: 0, z: 0}
+        finisherSFXData:
+          audioClip: {fileID: 0}
+          volume: 0
+          pitch: 0
+    ListHitReactionData:
+      Name: 
+      hitReactionDatas: []
