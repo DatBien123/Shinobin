@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e71bc94b3aef72244b4dd4647ad26688
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/Combo/TwinBlade/Light Attack_01.asset
+  uploadId: 710666

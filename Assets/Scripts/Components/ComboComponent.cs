@@ -190,7 +190,7 @@ namespace Training
             loadCombos.Clear();
             currentInputs.Clear();
             saveCombos.Clear();
-            owner.hitTraceComponent.OffTrace();
+            owner.hitTraceComponent.OffTrace(false);
             LoadCombo();
             owner.currentCombatState = ECombatState.None;
             currentComboState = EComboState.Finish;

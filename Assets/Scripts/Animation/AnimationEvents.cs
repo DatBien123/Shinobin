@@ -87,13 +87,13 @@ public class AnimationEvents : MonoBehaviour
     {
         if (hitReactionIndex > owner.hitReactionComponent.currentListHitReactionData.hitReactionDatas.Count - 1) hitReactionIndex = 0;
         owner.hitReactionComponent.currentHitReactionData = owner.hitReactionComponent.currentListHitReactionData.hitReactionDatas[hitReactionIndex];
-        owner.hitTraceComponent.BeginTrace();
+        owner.hitTraceComponent.BeginTrace(false);
 
     }
 
     public void Anim_OffAttack()
     {
-        owner.hitTraceComponent.OffTrace();
+        owner.hitTraceComponent.OffTrace(false);
 
     }
 
@@ -117,6 +117,22 @@ public class AnimationEvents : MonoBehaviour
     #endregion
 
     public void Anim_OnFinisherBegin()
+    {
+        owner.hitReactionComponent.currentListHitReactionData = owner.finisherComponent.currentFinisherData.data.ListHitReactionData;
+
+    }
+    public void Anim_OnFinisherAttack(int finisherAttackIndex)
+    {
+        if (finisherAttackIndex > owner.hitReactionComponent.currentListHitReactionData.hitReactionDatas.Count - 1) finisherAttackIndex = 0;
+        owner.hitReactionComponent.currentHitReactionData = owner.hitReactionComponent.currentListHitReactionData.hitReactionDatas[finisherAttackIndex];
+        owner.hitTraceComponent.BeginTrace(true);
+    }
+    public void Anim_OffFinisherAttack()
+    {
+        owner.hitTraceComponent.OffTrace(true);
+
+    }
+    public void Anim_OnFinisherEnd()
     {
 
     }

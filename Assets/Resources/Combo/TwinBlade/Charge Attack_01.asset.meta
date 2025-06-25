@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 555b9f4fce25c064fbf8cd4a3469409f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/Combo/TwinBlade/Charge Attack_01.asset
+  uploadId: 710666

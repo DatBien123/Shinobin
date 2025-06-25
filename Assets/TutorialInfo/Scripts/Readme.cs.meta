@@ -10,3 +10,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/TutorialInfo/Scripts/Readme.cs
+  uploadId: 710666

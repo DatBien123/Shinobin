@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aaf52dbb77c1b854cb3414dcf314cef9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/UI/HUD/Player/Attribute UI.prefab
+  uploadId: 710666

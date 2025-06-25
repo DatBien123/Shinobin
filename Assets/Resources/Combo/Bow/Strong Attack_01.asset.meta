@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 30facb45a19d74240b74b886041fe4a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/Combo/Bow/Strong Attack_01.asset
+  uploadId: 710666

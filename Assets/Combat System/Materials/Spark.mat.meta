@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b4552c7021979c14089153eb94b19cad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Materials/Spark.mat
+  uploadId: 710666

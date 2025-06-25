@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cacae15fa9aaaa3409a9bd32d35bbfbe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/Editor/Preview Object.prefab
+  uploadId: 710666

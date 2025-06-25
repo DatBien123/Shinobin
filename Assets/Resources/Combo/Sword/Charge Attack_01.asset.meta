@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6785ffab943fbaa4aa099d80653d2221
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/Combo/Sword/Charge Attack_01.asset
+  uploadId: 710666

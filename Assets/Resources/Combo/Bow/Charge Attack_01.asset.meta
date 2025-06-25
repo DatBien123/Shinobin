@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 401cab94cd5c2c24392ac6ad750ede5b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Resources/Combo/Bow/Charge Attack_01.asset
+  uploadId: 710666

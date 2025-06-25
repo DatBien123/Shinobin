@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 51955194e9f6dc941b92779827a155e5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Prefab/Particle/Spark Effect.prefab
+  uploadId: 710666

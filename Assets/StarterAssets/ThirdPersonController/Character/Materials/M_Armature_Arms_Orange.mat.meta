@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7369e7b36845f3f428a36cd57a76739d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Arms_Orange.mat
+  uploadId: 710666

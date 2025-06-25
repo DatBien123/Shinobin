@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 95ce7e58430ac744bb52b93409fcadd4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Materials/Projectile/Arrow.mat
+  uploadId: 710666

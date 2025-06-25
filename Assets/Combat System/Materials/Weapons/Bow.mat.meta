@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 851c9172116b7f8408045b4554b34524
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Materials/Weapons/Bow.mat
+  uploadId: 710666

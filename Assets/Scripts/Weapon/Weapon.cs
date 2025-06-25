@@ -63,11 +63,9 @@ namespace Training
         public UnityEvent onAttackEvent;
         public UnityEvent offAttackEvent;
 
-        public UnityEvent onDefenseEvent;
-        public UnityEvent offDefenseEvent;
+        public UnityEvent onFinisherEvent;
+        public UnityEvent offFinisherEvent;
 
-        public UnityEvent onParryEvent;
-        public UnityEvent offParryEvent;
 
         public void SetWeaponOwner(Character owner)
         {

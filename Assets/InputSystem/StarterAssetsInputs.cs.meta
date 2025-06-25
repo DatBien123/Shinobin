@@ -11,9 +11,8 @@ MonoImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 196526
-  packageName: Starter Assets - ThirdPerson | Updates in new CharacterController
-    package
-  packageVersion: 1.1.5
-  assetPath: Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs
-  uploadId: 691128
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/InputSystem/StarterAssetsInputs.cs
+  uploadId: 710666

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 99387831f55932f48830f41c8702f2ae
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Materials/Weapons/Light Saber_Handler.mat
+  uploadId: 710666

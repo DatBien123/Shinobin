@@ -38,8 +38,8 @@ MonoBehaviour:
             slashFXRotationOffset: {x: 0, y: 0, z: 0}
             slashFXScaleOffset: {x: 0, y: 0, z: 0}
           slashSFX:
-            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
-            volume: 1
+            slashAudioClip: {fileID: 8300000, guid: df7c6ffa66839a343a1894c7ff8ea25d, type: 3}
+            volume: 10
             pitch: 1
         attackExtendData:
           isApplyHeightWithOwner: 0
@@ -120,10 +120,10 @@ MonoBehaviour:
               pitch: 0
           HitData:
             hitFX:
-              hitParticleSystem: {fileID: 0}
-              hitFXPositionOffset: {x: 0, y: 0, z: 0}
-              hitFXRotationOffset: {x: 0, y: 0, z: 0}
-              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+              hitParticleSystem: {fileID: 5551069974205351179, guid: 16054f0360f989045a08153da0f4b5cd, type: 3}
+              hitFXPositionOffset: {x: 0, y: 1, z: 0}
+              hitFXRotationOffset: {x: 0, y: 0, z: 120}
+              hitFXScaleOffset: {x: 0.5, y: 0.5, z: 0.5}
             hitSFX:
               hitAudioClip: {fileID: 8300000, guid: ba9dab163b3ed7b44bb8fc8bc6f4889e, type: 3}
               volume: 1
@@ -182,7 +182,6 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
-        finisher: {fileID: 11400000, guid: 65ad503093e6f7c41b1462ae493bed4a, type: 2}
     - Name: LA2
       hitReactionDatas:
       - Name: LA1 - 1
@@ -200,7 +199,7 @@ MonoBehaviour:
             slashFXRotationOffset: {x: 0, y: 0, z: 0}
             slashFXScaleOffset: {x: 0, y: 0, z: 0}
           slashSFX:
-            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            slashAudioClip: {fileID: 8300000, guid: 1a51c62811add1e4fade242038ceaae7, type: 3}
             volume: 1.5
             pitch: 1
         attackExtendData:
@@ -282,10 +281,10 @@ MonoBehaviour:
               pitch: 0
           HitData:
             hitFX:
-              hitParticleSystem: {fileID: 0}
-              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitParticleSystem: {fileID: 5551069974205351179, guid: 16054f0360f989045a08153da0f4b5cd, type: 3}
+              hitFXPositionOffset: {x: 0, y: 1, z: 0}
               hitFXRotationOffset: {x: 0, y: 0, z: 0}
-              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0.5, y: 0.5, z: 0.5}
             hitSFX:
               hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
               volume: 1
@@ -344,7 +343,6 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
-        finisher: {fileID: 11400000, guid: 081cc747ad9dab8428c0c42a502b75f9, type: 2}
     - Name: LA3
       hitReactionDatas:
       - Name: LA1 - 1
@@ -362,7 +360,7 @@ MonoBehaviour:
             slashFXRotationOffset: {x: 0, y: 0, z: 0}
             slashFXScaleOffset: {x: 0, y: 0, z: 0}
           slashSFX:
-            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            slashAudioClip: {fileID: 8300000, guid: db9c763ab0df1c9419758020a9b8b5ef, type: 3}
             volume: 0.7
             pitch: 1
         attackExtendData:
@@ -444,10 +442,10 @@ MonoBehaviour:
               pitch: 0
           HitData:
             hitFX:
-              hitParticleSystem: {fileID: 0}
-              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitParticleSystem: {fileID: 5551069974205351179, guid: 16054f0360f989045a08153da0f4b5cd, type: 3}
+              hitFXPositionOffset: {x: 0, y: 1, z: 0}
               hitFXRotationOffset: {x: 0, y: 0, z: 0}
-              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0.5, y: 0.5, z: 0.5}
             hitSFX:
               hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
               volume: 1
@@ -506,7 +504,6 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
-        finisher: {fileID: 11400000, guid: 65ad503093e6f7c41b1462ae493bed4a, type: 2}
       - Name: LA1 - 1
         attackDirection: 0
         hitTrace:
@@ -522,7 +519,7 @@ MonoBehaviour:
             slashFXRotationOffset: {x: 0, y: 0, z: 0}
             slashFXScaleOffset: {x: 0, y: 0, z: 0}
           slashSFX:
-            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            slashAudioClip: {fileID: 8300000, guid: db9c763ab0df1c9419758020a9b8b5ef, type: 3}
             volume: 0.7
             pitch: 1
         attackExtendData:
@@ -604,10 +601,10 @@ MonoBehaviour:
               pitch: 0
           HitData:
             hitFX:
-              hitParticleSystem: {fileID: 0}
-              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitParticleSystem: {fileID: 5551069974205351179, guid: 16054f0360f989045a08153da0f4b5cd, type: 3}
+              hitFXPositionOffset: {x: 0, y: 1, z: 0}
               hitFXRotationOffset: {x: 0, y: 0, z: 0}
-              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0.5, y: 0.5, z: 0.5}
             hitSFX:
               hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
               volume: 1
@@ -666,7 +663,6 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
-        finisher: {fileID: 11400000, guid: 081cc747ad9dab8428c0c42a502b75f9, type: 2}
     - Name: LA4
       hitReactionDatas:
       - Name: LA1 - 1
@@ -684,7 +680,7 @@ MonoBehaviour:
             slashFXRotationOffset: {x: 0, y: 0, z: 0}
             slashFXScaleOffset: {x: 0, y: 0, z: 0}
           slashSFX:
-            slashAudioClip: {fileID: 8300000, guid: 98a79b44bddc8c54b99f7957721aaed6, type: 3}
+            slashAudioClip: {fileID: 8300000, guid: db9c763ab0df1c9419758020a9b8b5ef, type: 3}
             volume: 2
             pitch: 1
         attackExtendData:
@@ -766,10 +762,10 @@ MonoBehaviour:
               pitch: 0
           HitData:
             hitFX:
-              hitParticleSystem: {fileID: 0}
-              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitParticleSystem: {fileID: 5551069974205351179, guid: 16054f0360f989045a08153da0f4b5cd, type: 3}
+              hitFXPositionOffset: {x: 0, y: 1, z: 0}
               hitFXRotationOffset: {x: 0, y: 0, z: 0}
-              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0.5, y: 0.5, z: 0.5}
             hitSFX:
               hitAudioClip: {fileID: 8300000, guid: ba9dab163b3ed7b44bb8fc8bc6f4889e, type: 3}
               volume: 1
@@ -828,4 +824,3 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
-        finisher: {fileID: 11400000, guid: 081cc747ad9dab8428c0c42a502b75f9, type: 2}

@@ -172,9 +172,6 @@ namespace Training
         {
             if (hitImpact.HitData.hitSFX.hitAudioClip != null)
             {
-                AudioSource.PlayClipAtPoint(hitImpact.HitData.hitSFX.hitAudioClip,
-                    position,
-                    hitImpact.HitData.hitSFX.volume);
                 PlaySoundUnscaled(hitImpact.HitData.hitSFX.hitAudioClip, position, hitImpact.HitData.hitSFX.volume);
             }
         }

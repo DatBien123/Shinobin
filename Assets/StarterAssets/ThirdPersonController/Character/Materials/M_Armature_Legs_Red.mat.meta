@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f7063e04a7439c4eb0e4f5db7071e1a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Legs_Red.mat
+  uploadId: 710666

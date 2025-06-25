@@ -18,6 +18,8 @@ namespace Training
         [Header("Damage Layer")]
         public LayerMask damageLayer;
 
+        public bool isFinisherTrace = false;
+
         public bool onTrace = false;
         public List<GameObject> hitObjects = new List<GameObject>(); // Lưu trữ các đối tượng bị va chạm
 
@@ -28,17 +30,28 @@ namespace Training
         }
         private void Update()
         {
-            OnTrace();
+            OnTrace(isFinisherTrace);
         }
-        public void BeginTrace()
+        public void BeginTrace(bool isFinisher)
         {
             owner.hitReactionComponent.PlaySlashFX(owner);
-            owner.currentWeapon.onAttackEvent?.Invoke();
+
+            if (isFinisher)
+            {
+                owner.currentWeapon.onFinisherEvent?.Invoke();
+                isFinisherTrace = true;
+            }
+            else
+            {
+                owner.currentWeapon.onAttackEvent?.Invoke();
+                isFinisherTrace = false;
+            }
+
             if (owner.hitReactionComponent.currentHitReactionData.hitFeedbackData.isApplyWithoutHit) 
                 owner.hitReactionComponent.PlayHitFeedback(owner.transform.position);
             onTrace = true;
         }
-        public void OnTrace()
+        public void OnTrace(bool isFinisherTrace)
         {
             if (onTrace)
             {
@@ -49,7 +62,7 @@ namespace Training
 
                     case ETraceType.MainWeapon:
                         if(owner.currentWeapon != null)
-                        MainWeaponCollide();
+                        MainWeaponCollide(isFinisherTrace);
                         break;
 
                     case ETraceType.Sphere:
@@ -63,14 +76,23 @@ namespace Training
                 }
             }
         }
-        public void OffTrace()
+        public void OffTrace(bool isFinisher)
         {
             onTrace = false;
             hitObjects.Clear();
-            owner.currentWeapon.offAttackEvent?.Invoke();
+            if (isFinisher)
+            {
+                owner.currentWeapon.offFinisherEvent?.Invoke();
+                isFinisherTrace = false;
+            }
+            else
+            {
+                owner.currentWeapon.offAttackEvent?.Invoke();
+                isFinisherTrace = false;
+            }
 
         }
-        public void MainWeaponCollide()
+        public void MainWeaponCollide(bool isFinisherTrace)
         {
             // Lấy tất cả các đối tượng bị va chạm
             Collider[] colliders = Physics.OverlapCapsule(
@@ -94,7 +116,7 @@ namespace Training
                         if (opponent != null && opponent.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
                         {
                             //if (opponent.atributeComponent.currentHP <= 0) return;
-                            HandleAttackHit(owner, opponent, collisionPoint);
+                            HandleAttackHit(owner, opponent, collisionPoint, isFinisherTrace);
                         }
                     }
                 }
@@ -113,7 +135,7 @@ namespace Training
                         if (opponent != null && opponent.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
                         {
                             //if (opponent.atributeComponent.currentHP <= 0) return;
-                            HandleAttackHit(owner, opponent, collisionPoint);
+                            HandleAttackHit(owner, opponent, collisionPoint, isFinisherTrace);
                         }
                     }
                 }
@@ -145,7 +167,7 @@ namespace Training
                             if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
                             {
                                 //if (opponent.atributeComponent.currentHP <= 0) return;
-                                HandleAttackHit(owner, opponent, collisionPoint);
+                                HandleAttackHit(owner, opponent, collisionPoint, isFinisherTrace);
 
                             }
                         }
@@ -173,7 +195,7 @@ namespace Training
                             if (opponent != null && opponent.currentCombatState != ECombatState.Untouchable)
                             {
                                 //if (opponent.atributeComponent.currentHP <= 0) return;
-                                HandleAttackHit(owner, opponent, collisionPoint);
+                                HandleAttackHit(owner, opponent, collisionPoint, isFinisherTrace);
                             }
                         }
                     }
@@ -216,7 +238,7 @@ namespace Training
         //    Debug.Log("Số lượng nhân vật tìm thấy trong Box: " + hitObjects.Count);
         //}
 
-        public void HandleAttackHit(Character causer, Character taker, Vector3 hitPoint)
+        public void HandleAttackHit(Character causer, Character taker, Vector3 hitPoint, bool isFinisherTrace)
         {
             //Damage
             //taker.atributeComponent.UpdateHealth(-300.0f);
@@ -224,8 +246,6 @@ namespace Training
             //
             //Assign HitReactionData
             taker.hitReactionComponent.currentHitReactionDataTake = causer.hitReactionComponent.currentHitReactionData;
-
-            taker.hitReactionComponent.currentComboDataTake = causer.comboComponent.currentComboData.comboData;
 
             //Apply Hit Feedback
             //taker.hitReactionComponent.PlayHitFeedback(EReactionType.Combo);

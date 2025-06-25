@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e9652ad7de35d42478c33d8bae82f892
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Legs_Orange.mat
+  uploadId: 710666

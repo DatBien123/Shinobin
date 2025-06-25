@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8df56f5659e1fc440a550c7669193203
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/TextMesh Pro/Fonts/FontLicense.txt
+  uploadId: 710666

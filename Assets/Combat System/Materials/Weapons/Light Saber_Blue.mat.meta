@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e6c69102b20f8747ad60abd9c755a0b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Materials/Weapons/Light Saber_Blue.mat
+  uploadId: 710666

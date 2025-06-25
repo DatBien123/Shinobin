@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: 8105016687592461f977c054a80ce2f2
+guid: 7f2c382dc2c22446db59030979f6e495
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Readme.asset
+  uploadId: 710666

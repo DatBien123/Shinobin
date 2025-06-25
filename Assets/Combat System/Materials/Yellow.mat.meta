@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9adc8332395f75941b06ba9469e1e36b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
+  assetPath: Assets/Combat System/Materials/Yellow.mat
+  uploadId: 710666

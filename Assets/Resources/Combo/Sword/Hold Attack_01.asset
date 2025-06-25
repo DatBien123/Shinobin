@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fe184dd665fce4e8e74c3c9b944d1e, type: 3}
+  m_Name: Hold Attack_01
+  m_EditorClassIdentifier: 
+  comboData:
+    comboName: Hold Attack_01
+    sequences:
+    - keystroke: 3
+      keyState: 0
+      triggerTime: 0
+      clip: {fileID: 7400000, guid: 85fe01495569f5a4499314975c7d5a51, type: 2}
+    movementState: 1
+    isSprint: 0
+    hitReactionDatas:
+    - hitReactionData:
+      - traceInfo:
+          armedType: 1
+          traceType: 0
+          bones: 0
+          traceRadius: 2
+          traceAngle: 135
+          traceHeight: 2
+        attackType: 1
+        attackDirection: 4
+        hitAnimation:
+          hitClip: {fileID: 7400000, guid: f6848e165295ed241ad19024b03fe988, type: 2}
+          blockHitClip: {fileID: 0}
+          parryingClip: {fileID: 0}
+          parryingReactionClip: {fileID: 0}
+          transitionDuration: 0.1
+          useParryingReaction: 0
+        airHitAnimation:
+          hitClip: {fileID: 0}
+          blockHitClip: {fileID: 0}
+          parryingClip: {fileID: 0}
+          parryingReactionClip: {fileID: 0}
+          transitionDuration: 0
+          useParryingReaction: 0
+        hitReactionWarping:
+          useMotionWarping: 0
+          offsetPosition: {x: 0, y: 0, z: 0}
+          duration: 0
+        HitFeedback:
+          isHitStop: 1
+          stopScale: 0.1
+          stopTime: 0.1
+          isShake: 1
+          shakeScale: 0.5
+        HitKnockback:
+          isKnockback: 0
+          knockbackForce: 0
+          knockbackTime: 0
+          intensity: 0
+          wallHitable: 0
+        HitAirborne:
+          isAirborne: 1
+          height: 8
+          force: 0
+          airborneTime: 1
+          intensity: 8
+        HitParticleFX:
+          hitParticle: {fileID: 0}
+          blockHitParticle: {fileID: 0}
+          parryParticle: {fileID: 0}
+          scale: {x: 0, y: 0, z: 0}
+          eulerOffset: {x: 0, y: 0, z: 0}
+          isParent: 0
+        HitSoundFX:
+          hitClips: []
+          blockHitClips: []
+          parryClips: []
+          volume: 0
+        attackParticleFX:
+          attackParticle: {fileID: 0}
+          useParent: 0
+          offset: {x: 0, y: 0, z: 0}
+          eulerOffset: {x: 0, y: 0, z: 0}
+          scale: {x: 0, y: 0, z: 0}
+          destroyTime: 0
+          spawnMode: 0
+          movementState: 0
+          delaySpawnTime: 0
+        projectileData:
+          initialSpeed: 0
+          maxSpeed: 0
+          usePattern: 0
+          patternGenerator: {fileID: 0}
+          maxCount: 0
+          useParabola: 0
+          speedMultiply: 0
+          launcherAngle: 0
+        Damage: 30
+        IsBlockable: 1
+        IsParryable: 1
+        finisherData: {fileID: 0}

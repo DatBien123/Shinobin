@@ -108,9 +108,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 196526
-  packageName: Starter Assets - ThirdPerson | Updates in new CharacterController
-    package
-  packageVersion: 1.1.5
+  productId: 290488
+  packageName: Combat System Template
+  packageVersion: 1.0.3
   assetPath: Assets/StarterAssets/ThirdPersonController/Character/Textures/Armature_Body_Normal.tif
-  uploadId: 691128
+  uploadId: 710666
