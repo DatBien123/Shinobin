@@ -77,7 +77,7 @@ MonoBehaviour:
             pitch: 0
         hitImpact:
           KnockbackData:
-            isKnockback: 0
+            isKnockback: 1
             knockbackTime: 0
             knockbackDistance: 0
             reactData:
@@ -176,15 +176,15 @@ MonoBehaviour:
               pitch: 0
         hitFeedbackData:
           isApplyWithoutHit: 0
-          isShake: 0
-          shakeDirection: 0
-          shakeTime: 0
-          intensity: 0
+          isShake: 1
+          shakeDirection: 5
+          shakeTime: 0.03
+          intensity: 1
           isStop: 1
-          stopTime: 0.05
+          stopTime: 0.1
           isSlowMotion: 0
-          slowMotionFactor: 0
-          slowMotionTime: 0
+          slowMotionFactor: 0.5
+          slowMotionTime: 0.5
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
             pitch: 0
         hitImpact:
           KnockbackData:
-            isKnockback: 0
+            isKnockback: 1
             knockbackTime: 0
             knockbackDistance: 0
             reactData:
@@ -269,14 +269,14 @@ MonoBehaviour:
               pitch: 0
           HitData:
             hitFX:
-              hitParticleSystem: {fileID: 0}
-              hitFXPositionOffset: {x: 0, y: 0, z: 0}
+              hitParticleSystem: {fileID: 5551069974205351179, guid: 16054f0360f989045a08153da0f4b5cd, type: 3}
+              hitFXPositionOffset: {x: 0, y: 1, z: 0}
               hitFXRotationOffset: {x: 0, y: 0, z: 0}
-              hitFXScaleOffset: {x: 0, y: 0, z: 0}
+              hitFXScaleOffset: {x: 0.5, y: 0.5, z: 0.5}
             hitSFX:
-              hitAudioClip: {fileID: 0}
-              volume: 0
-              pitch: 0
+              hitAudioClip: {fileID: 8300000, guid: db3dcdf98ea7add44b3d21f989fc9d03, type: 3}
+              volume: 1
+              pitch: 1
           BlockData:
             isBlockable: 0
             knockbackTime: 0
@@ -319,15 +319,15 @@ MonoBehaviour:
               pitch: 0
         hitFeedbackData:
           isApplyWithoutHit: 0
-          isShake: 0
-          shakeDirection: 0
-          shakeTime: 0
-          intensity: 0
+          isShake: 1
+          shakeDirection: 5
+          shakeTime: 0.05
+          intensity: 1
           isStop: 1
-          stopTime: 0.1
-          isSlowMotion: 0
-          slowMotionFactor: 0
-          slowMotionTime: 0
+          stopTime: 0.2
+          isSlowMotion: 1
+          slowMotionFactor: 0.7
+          slowMotionTime: 0.5
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0

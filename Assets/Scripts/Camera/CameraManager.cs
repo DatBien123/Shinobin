@@ -29,8 +29,6 @@ public class CameraManager : MonoBehaviour
     [Header("Camera Effect")]
     public CinemachineImpulseSource impulseSource;
 
-    public CinemachineVirtualCamera currentCamera;
-
     private void Awake()
     {
         // Optional: chỉ cần nếu không gán impulseSource trong Editor

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Xml.Linq;
 using UnityEngine;
@@ -540,6 +541,7 @@ namespace Training
                     break;
 
             }
+            Debug.Log("Shaked");
             cameraManager.Shake(shakeDirectionResult, hitFeedbackData.intensity);
         }
         public void PlayStopTime(HitFeedbackData hitFeedbackData)
@@ -567,6 +569,16 @@ namespace Training
         }
         IEnumerator SlowMotion(HitFeedbackData hitFeedbackData)
         {
+            // Bắt đầu slow motion
+            DOTween.To(() => Time.timeScale, x => Time.timeScale = x, hitFeedbackData.slowMotionFactor, 0.2f)
+                .SetUpdate(true) // Bắt buộc chạy ngay cả khi Time.timeScale = 0
+                .OnComplete(() =>
+                {
+                    // Sau thời gian 'duration', trả lại bình thường
+                    DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1f, 0.5f)
+                        .SetDelay(hitFeedbackData.slowMotionTime)
+                        .SetUpdate(true);
+                });
             yield return null;
         }
         #endregion

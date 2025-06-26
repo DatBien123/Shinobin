@@ -202,7 +202,7 @@ public class InputManager : MonoBehaviour
     {
         if(player.isBlock != desiredBlockTarget)
         {
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.01f);
         }
         player.isBlock = desiredBlockTarget;
         player.animator.SetBool(AnimationParams.Block_Param, player.isBlock);

@@ -601,7 +601,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.41734692
+      - time: 0.419439
         functionName: Anim_OnFinisherAttack
         data: 
         objectReferenceParameter: {instanceID: 0}

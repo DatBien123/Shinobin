@@ -48,7 +48,6 @@ namespace Training
             if (closestEnemy != null)
             {
                 target = closestEnemy;
-                Debug.Log("Đã tìm thấy mục tiêu: " + target.name);
             }
             else
             {
