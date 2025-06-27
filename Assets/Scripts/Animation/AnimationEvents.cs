@@ -134,6 +134,5 @@ public class AnimationEvents : MonoBehaviour
     }
     public void Anim_OnFinisherEnd()
     {
-
     }
 }

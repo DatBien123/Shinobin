@@ -181,7 +181,7 @@ MonoBehaviour:
           shakeTime: 0.05
           intensity: 0.2
           isStop: 1
-          stopTime: 0.2
+          stopTime: 0.1
           isSlowMotion: 0
           slowMotionFactor: 0
           slowMotionTime: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
           isShake: 1
           shakeDirection: 6
           shakeTime: 0.1
-          intensity: 2
+          intensity: 1
           isStop: 1
           stopTime: 0.1
           isSlowMotion: 1
@@ -474,3 +474,7 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+    cameraData:
+      positionOffset: {x: 0, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0}
+      fieldOfView: 0

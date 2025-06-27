@@ -23,6 +23,9 @@ public class InputManager : MonoBehaviour
     public CharacterPlayer player;
 
     public float blockTime = 0.0f;
+
+    //Camera
+    public CameraManager cameraManager;
     void Awake()
     {
         playerControls = new PlayerControls();
@@ -154,6 +157,7 @@ public class InputManager : MonoBehaviour
                 if (player.targetingComponent.target.gameObject.GetComponent<Character>().isOnStagger)
                 {
                     player.finisherComponent.StartPlayFinisher(player.targetingComponent.target.gameObject.GetComponent<Character>());
+
                     return;
                 }
 

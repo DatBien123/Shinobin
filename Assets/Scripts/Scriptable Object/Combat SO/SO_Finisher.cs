@@ -55,6 +55,14 @@ namespace Training
         public CauserData causerData;
         public TakerData takerData;
         public ListHitReactionData ListHitReactionData;
+        public CameraData cameraData;
+    }
+    [System.Serializable]
+    public struct CameraData
+    {
+        public Vector3 positionOffset;
+        public Vector3 rotationOffset;
+        public float fieldOfView;
     }
     [CreateAssetMenu(menuName = "Combat System/Combat/Finisher Data", fileName = "Finisher Data")]
     public class SO_Finisher : ScriptableObject

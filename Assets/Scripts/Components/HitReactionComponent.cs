@@ -261,7 +261,7 @@ namespace Training
         #endregion
 
         #region [AdditiveFuncs]
-        void PlaySoundUnscaled(AudioClip clip, Vector3 position, float volume = 1f)
+        public void PlaySoundUnscaled(AudioClip clip, Vector3 position, float volume = 1f, float pitch = 1)
         {
             if (clip == null) return;
 
@@ -271,6 +271,7 @@ namespace Training
             AudioSource audioSource = audioObj.AddComponent<AudioSource>();
             audioSource.clip = clip;
             audioSource.volume = volume;
+            audioSource.pitch = pitch;
             audioSource.spatialBlend = 1f; // 3D sound
             audioSource.playOnAwake = false;
 

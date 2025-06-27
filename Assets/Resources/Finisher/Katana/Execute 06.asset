@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Execute 06
   m_EditorClassIdentifier: 
   data:
-    finisherType: 1
+    finisherType: 0
     causerData:
       executionClip: {fileID: 7400002, guid: 0e7ca71089ea79849b7d99abfcb5d187, type: 3}
       causerPositionOffset: {x: 0, y: 0, z: 0}
@@ -176,15 +176,15 @@ MonoBehaviour:
               pitch: 0
         hitFeedbackData:
           isApplyWithoutHit: 0
-          isShake: 0
-          shakeDirection: 0
-          shakeTime: 0
-          intensity: 0
+          isShake: 1
+          shakeDirection: 5
+          shakeTime: 0.05
+          intensity: 0.5
           isStop: 1
-          stopTime: 0.05
-          isSlowMotion: 0
-          slowMotionFactor: 0
-          slowMotionTime: 0
+          stopTime: 0.1
+          isSlowMotion: 1
+          slowMotionFactor: 0.7
+          slowMotionTime: 0.5
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
@@ -319,15 +319,19 @@ MonoBehaviour:
               pitch: 0
         hitFeedbackData:
           isApplyWithoutHit: 0
-          isShake: 0
-          shakeDirection: 0
-          shakeTime: 0
-          intensity: 0
+          isShake: 1
+          shakeDirection: 3
+          shakeTime: 0.1
+          intensity: 0.6
           isStop: 1
-          stopTime: 0.1
-          isSlowMotion: 0
-          slowMotionFactor: 0
-          slowMotionTime: 0
+          stopTime: 0.2
+          isSlowMotion: 1
+          slowMotionFactor: 0.8
+          slowMotionTime: 0.4
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+    cameraData:
+      positionOffset: {x: 0, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0}
+      fieldOfView: 0

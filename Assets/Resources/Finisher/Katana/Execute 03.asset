@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Execute 03
   m_EditorClassIdentifier: 
   data:
-    finisherType: 1
+    finisherType: 0
     causerData:
       executionClip: {fileID: 7400002, guid: 3e0a1d5dae6723c4480c3db5e814a41b, type: 3}
       causerPositionOffset: {x: 0, y: 0, z: 0}
@@ -322,7 +322,7 @@ MonoBehaviour:
           isShake: 1
           shakeDirection: 5
           shakeTime: 0.1
-          intensity: 1
+          intensity: 0.5
           isStop: 1
           stopTime: 0.15
           isSlowMotion: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
           isShake: 1
           shakeDirection: 6
           shakeTime: 0.1
-          intensity: 2
+          intensity: 1
           isStop: 1
           stopTime: 0.3
           isSlowMotion: 0
@@ -474,3 +474,7 @@ MonoBehaviour:
           isSightToHitPoint: 0
           stayTime: 0
           duration: 0
+    cameraData:
+      positionOffset: {x: 0, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0}
+      fieldOfView: 0

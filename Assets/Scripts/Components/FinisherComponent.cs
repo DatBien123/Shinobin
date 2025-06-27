@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Training;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class FinisherComponent : MonoBehaviour
 {
@@ -13,8 +15,10 @@ public class FinisherComponent : MonoBehaviour
 
     [Header("Loaded Finisher")]
     public List<SO_Finisher> loadedFinisher;
-
     Coroutine C_Finsher;
+    public AudioClip deathBlowSound;
+
+
     private void Awake()
     {
         owner = GetComponent<Character>();
@@ -64,11 +68,8 @@ public class FinisherComponent : MonoBehaviour
     public void StartPlayFinisher(Character taker)
     {
         currentFinisherData = FilterFinisher();
-
         if (currentFinisherData == null) return;
-
-        if (C_Finsher != null) StopCoroutine(C_Finsher);
-        C_Finsher = StartCoroutine(PlayFinisher(taker));
+        if(C_Finsher == null)C_Finsher = StartCoroutine(PlayFinisher(taker));
     }
 
     IEnumerator PlayFinisher(Character taker)
@@ -78,8 +79,10 @@ public class FinisherComponent : MonoBehaviour
         (owner as CharacterPlayer)._input.playerControls.Disable();
         (taker as CharacterAI).behavDecesion.StopExecuteBehaviors();
 
-
-
+        //SFX
+        owner.hitReactionComponent.PlaySoundUnscaled(deathBlowSound, transform.position, 1, 1.5f);
+        //camera
+        owner.hitReactionComponent.cameraManager.SwitchCamera(ECameraType.FinisherCamera);
         Vector3 takerTargetPos = owner.transform.position
                                 + owner.transform.forward * currentFinisherData.data.takerData.takerPositionOffset.z
                                 + owner.transform.right * currentFinisherData.data.takerData.takerPositionOffset.x
@@ -97,8 +100,14 @@ public class FinisherComponent : MonoBehaviour
             });
 
         yield return new WaitForSeconds(currentFinisherData.data.causerData.executionClip.length + .5f);
+
+        owner.hitReactionComponent.cameraManager.SwitchCamera(ECameraType.FollowCamera);
+
         (owner as CharacterPlayer)._input.playerControls.Enable();
         (taker as CharacterAI).behavDecesion.StartExecuteBehaviors();
+
+        yield return new WaitForSeconds(1.0f);
+        C_Finsher = null;
     }
     #endregion
 
