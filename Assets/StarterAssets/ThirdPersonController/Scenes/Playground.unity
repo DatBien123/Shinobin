@@ -8631,7 +8631,7 @@ MonoBehaviour:
     DissipationMode: 2
     DissipationDistance: 100
     PropagationSpeed: 343
-  DefaultVelocity: {x: 0, y: 0.2, z: 0}
+  DefaultVelocity: {x: 0, y: 0, z: -1}
 --- !u!1 &2676579849462765556
 GameObject:
   m_ObjectHideFlags: 0
@@ -9054,18 +9054,6 @@ MonoBehaviour:
         value: 4
     delayTimeAfterFinish: 0
     currentCooldown: 0
-  - name: 
-    action: {fileID: 11400000, guid: bef1836ba14058046917dc4cc92453dc, type: 2}
-    priority: 0
-    condition:
-      boolValue: []
-      intValue: []
-      floatValue:
-      - variableType: 1
-        compareType: 3
-        value: 7
-    delayTimeAfterFinish: 0
-    currentCooldown: 0
   skirmishActionDatas:
   - name: 
     skirmishAction: {fileID: 11400000, guid: 5a382bfada010994b81da81cb4e09957, type: 2}
@@ -9130,6 +9118,21 @@ MonoBehaviour:
   - name: 
     skirmishAction: {fileID: 11400000, guid: 78117d6fd87493147bb6e8c506d28e72, type: 2}
     priority: 2
+    condition:
+      boolValue:
+      - variableType: 4
+        compareType: 5
+        value: 1
+      intValue: []
+      floatValue:
+      - variableType: 1
+        compareType: 3
+        value: 6
+    delayTimeAfterFinish: 0
+    currentCooldown: 0
+  - name: 
+    skirmishAction: {fileID: 11400000, guid: d2fb5369336eba848bb40ff44ac064dc, type: 2}
+    priority: 3
     condition:
       boolValue:
       - variableType: 4
@@ -11666,6 +11669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   stoppingDistance: 1
+  height: 5
+  lookSpeed: 10
 --- !u!1 &3901999769422956663
 GameObject:
   m_ObjectHideFlags: 0
@@ -12174,7 +12179,7 @@ Transform:
   m_GameObject: {fileID: 1155945219406922455}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.171, y: 0.49148002, z: -7116.926}
+  m_LocalPosition: {x: 9.171, y: 0.49148002, z: -7438.926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25027,6 +25032,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   stoppingDistance: 1.5
+  height: 5
+  lookSpeed: 10
 --- !u!114 &9128622246734134741
 MonoBehaviour:
   m_ObjectHideFlags: 0

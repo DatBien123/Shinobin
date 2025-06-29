@@ -16,6 +16,8 @@ namespace Training
 
         Coroutine C_LOL;
 
+        public float height = 5.0f;
+
         private void Awake()
         {
             owner = GetComponent<Character>();
@@ -106,6 +108,75 @@ namespace Training
                       {
                           Debug.Log("Hoàn thành di chuyển đường cong ra sau kẻ địch.");
                       });
+        }
+
+        //public void MoveAlongParabola(float duration)
+        //{
+        //    Vector3 startPos = transform.position;
+        //    Vector3 endPos = owner.targetingComponent.target.transform.position;
+
+        //    DOTween.To(() => 0f, t =>
+        //    {
+        //        // Di chuyển tuyến tính trên X và Z
+        //        Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
+
+        //        // Parabol trên Y
+        //        float parabolaY = -4 * height * (t - 0.5f) * (t - 0.5f) + height;
+
+        //        currentPos.y += parabolaY;
+
+        //        transform.position = currentPos;
+
+        //    }, 1f, duration)
+        //    .SetEase(Ease.Linear)
+        //    .OnComplete(() => Debug.Log("Di chuyển hoàn tất!"));
+        //}
+
+
+        public float lookSpeed = 10f;
+        private Tween moveTween;
+
+        public void MoveAlongParabola(float duration)
+        {
+            if (moveTween != null && moveTween.IsActive())
+                moveTween.Kill();
+
+            Vector3 startPos = transform.position;
+
+            moveTween = DOTween.To(() => 0f, t =>
+            {
+                // Lấy vị trí target realtime
+                Vector3 currentTargetPos = owner.targetingComponent.target.transform.position;
+
+                // Di chuyển tuyến tính từ start đến target hiện tại
+                Vector3 linearPos = Vector3.Lerp(startPos, currentTargetPos, t);
+
+                // Thêm đường cong parabol vào trục Y
+                float parabolaY = -4 * height * (t - 0.5f) * (t - 0.5f) + height;
+                linearPos.y += parabolaY;
+
+                transform.position = linearPos;
+
+                // Quay mặt về target liên tục
+                Vector3 dir = (currentTargetPos - transform.position).normalized;
+                if (dir != Vector3.zero)
+                {
+                    Quaternion lookRot = Quaternion.LookRotation(dir);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * lookSpeed);
+                }
+
+            }, 1f, duration)
+            .SetEase(Ease.Linear)
+            .OnComplete(() =>
+            {
+                Debug.Log("Di chuyển hoàn tất!");
+            });
+        }
+
+        public void StopMove()
+        {
+            if (moveTween != null && moveTween.IsActive())
+                moveTween.Kill();
         }
 
     }
