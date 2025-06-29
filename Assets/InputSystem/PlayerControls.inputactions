@@ -270,6 +270,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Lock On",
+                    "type": "Button",
+                    "id": "8c11b845-81df-42a7-b5b3-fdbeb47e88ab",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -292,6 +301,17 @@
                     "processors": "InvertVector2(invertX=false),StickDeadzone,ScaleVector2(x=300,y=300)",
                     "groups": "Gamepad",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4d8f02a7-580d-4401-94f6-5a80740383a3",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lock On",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

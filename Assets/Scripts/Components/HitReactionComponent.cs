@@ -91,7 +91,19 @@ namespace Training
 
             if (currentHitReactionDataTake.hitImpact.BlockData.isBlockable && owner.isBlock)
             {
-                PlayHitBlock(causer , taker,  hitPoint);
+                if(taker.characterType == ECharacterType.Boss)
+                {
+                    if(taker.currentCombatState == ECombatState.Attacking)
+                    {
+                        PlayHitKnockBack(causer, taker, hitPoint);
+                    }
+                    else
+                    {
+                        PlayHitBlock(causer, taker, hitPoint);
+
+                    }
+                }
+                else PlayHitBlock(causer, taker, hitPoint);
                 return;
             }
 
@@ -341,7 +353,14 @@ namespace Training
             }
             AnimationClip clip = GetValidAnimationClip(GetValidHitReaction(direction));
             if (clip != null) {
-                taker.animator.CrossFadeInFixedTime(clip.name, .1f);
+                if (taker.characterType == ECharacterType.Player) taker.animator.CrossFadeInFixedTime(clip.name, .1f);
+
+                else
+                {
+                    if (taker.currentCombatState != ECombatState.Attacking) taker.animator.CrossFadeInFixedTime(clip.name, .1f);
+
+                }
+
             }
             PlayHitFX(hitPoint);
 
@@ -436,15 +455,40 @@ namespace Training
             switch (GetValidBlockReactType(causer, taker, hitImpact))
             {
                 case EBlockReactType.Defence:
-                    if (hitImpact.BlockData.defenceReactClip != null) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
+                    if (hitImpact.BlockData.defenceReactClip != null)
+                    {
+                        if(taker.characterType == ECharacterType.Player)taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
+                        else
+                        {
+                            if(taker.currentCombatState != ECombatState.Attacking) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.defenceReactClip.name, .1f);
+                        }
+                    }
                     PlayBlockReactFX(hitPoint, hitImpact, EBlockReactType.Defence);
                     break;
                 case EBlockReactType.Parry:
-                    if (hitImpact.BlockData.parryReactClip != null) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.parryReactClip.name, .1f);
+                    if (hitImpact.BlockData.parryReactClip != null)
+                    {
+                        if (taker.characterType == ECharacterType.Player) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.parryReactClip.name, .1f);
+
+                        else
+                        {
+                            if (taker.currentCombatState != ECombatState.Attacking) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.parryReactClip.name, .1f);
+
+                        }
+                    }
                     PlayBlockReactFX(hitPoint, hitImpact, EBlockReactType.Parry);
                     break;
                 case EBlockReactType.Broken:
-                    if (hitImpact.BlockData.brokenReactClip != null) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.brokenReactClip.name, .1f);
+                    if (hitImpact.BlockData.brokenReactClip != null)
+                    {
+                        if (taker.characterType == ECharacterType.Player) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.brokenReactClip.name, .1f);
+
+                        else
+                        {
+                            if (taker.currentCombatState != ECombatState.Attacking) taker.animator.CrossFadeInFixedTime(hitImpact.BlockData.brokenReactClip.name, .1f);
+
+                        }
+                    }
                     PlayBlockReactFX(hitPoint, hitImpact, EBlockReactType.Broken);
                     break;
                 //case EBlockReactType.Rebound:

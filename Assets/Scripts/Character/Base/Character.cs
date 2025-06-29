@@ -20,6 +20,11 @@ public enum EStateType
     Grounded,
     InAir
 }
+public enum ECharacterType
+{
+    Player,
+    Boss
+}
 public class Character : MonoBehaviour
 {
     [Header("Components")]
@@ -27,6 +32,7 @@ public class Character : MonoBehaviour
     public CharacterController characterController;
     public AtributeComponent atributeComponent;
     public ComboComponent comboComponent;
+    public BlockComponent blockComponent;
     public TargetingComponent targetingComponent;
     public FreeflowComponent freeflowComponent;
     public HitReactionComponent hitReactionComponent;
@@ -37,9 +43,14 @@ public class Character : MonoBehaviour
     public FinisherComponent finisherComponent;
     public AnimationEvents animationEvent;
 
+    public ECharacterType characterType;
+
     [Header("Current Props")]
     [Header("Weapon")]
     public Weapon currentWeapon;
+
+    public Weapon firstWeapon;
+    public Weapon secondWeapon;
     public SO_LocomotionData temporaryLocomotion;
 
     [Header("Combat State")]
@@ -47,6 +58,7 @@ public class Character : MonoBehaviour
     public bool isApplyAnimationMove = false;
     public bool isApplyDodgeMove = false;
     public bool isApplyingKnockBack = false;
+    public bool isApplyingLock = false;
     public bool isOnStagger = false;
     public ECombatState currentCombatState;
 
@@ -133,6 +145,7 @@ public class Character : MonoBehaviour
         animationEvent = GetComponent<AnimationEvents>();
         teleportComponent = GetComponent<TeleportComponent>();
         finisherComponent = GetComponent<FinisherComponent>();
+        blockComponent = GetComponent<BlockComponent>();
     }
     protected virtual void Start(){
         animator.SetFloat(AnimationParams.BlockSide_Param, 1.0f);
@@ -188,6 +201,16 @@ public class Character : MonoBehaviour
             // Áp dụng chuyển động theo CharacterController
             characterController.Move(motion * Time.deltaTime + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
         }
+
+        //if (isApplyingLock)
+        //{
+        //    if(this as CharacterPlayer)
+        //    {
+        //        CharacterPlayer player = this as CharacterPlayer;
+        //        player.transform.LookAt(player.targetingComponent.target);
+        //    }
+        //}
+
     }
     protected virtual void GroundedCheck()
     {

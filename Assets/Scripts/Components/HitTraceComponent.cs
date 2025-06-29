@@ -256,9 +256,17 @@ namespace Training
 
 
 
-                CharacterEnemy takerConvertToEnemy = taker as CharacterEnemy;
-                if(takerConvertToEnemy != null && takerConvertToEnemy.TYPE != "Boss")taker.comboComponent.ResetCombo();
-                else if(takerConvertToEnemy == null) taker.comboComponent.ResetCombo();
+            if (taker.characterType == ECharacterType.Boss)
+            {
+                if(taker.currentCombatState != ECombatState.Attacking)
+                {
+                    taker.comboComponent.ResetCombo();
+                }
+            }
+            else if (taker.characterType == ECharacterType.Player)
+            {
+                taker.comboComponent.ResetCombo();
+            }
 
 
                 //if (takerConvertToEnemy != null && takerConvertToEnemy.TYPE != "Boss") taker.skillComponent.ResetSkill();

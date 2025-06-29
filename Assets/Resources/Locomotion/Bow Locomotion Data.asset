@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bc2c86d36e4964c88a85aa66ec4187, type: 3}
+  m_Name: Bow Locomotion Data
+  m_EditorClassIdentifier: 
+  data:
+    followCameraData:
+      followMovementData:
+        walkRotateType: 0
+        sprintRotateType: 0
+        dodgeRotateType: 0
+      followAnimationData:
+        animationParamHandleType: 0
+    lockOnCameraData:
+      lockOnMovementData:
+        walkRotateType: 0
+        sprintRotateType: 0
+        dodgeRotateType: 0
+      lockOnAnimationData:
+        animationParamHandleType: 0

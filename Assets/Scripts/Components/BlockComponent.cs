@@ -17,7 +17,6 @@ public class BlockComponent : MonoBehaviour
     public EBlockState currentBlockState = EBlockState.None;
 
 
-    public bool isBlocking = false;
 
     Coroutine C_BlockAI;
 
@@ -25,9 +24,16 @@ public class BlockComponent : MonoBehaviour
     {
         owner = GetComponent<Character>();
     }
-    public void StartBlock()
+    public void StartBlock(float blockTime)
     {
+        if (C_BlockAI != null)StopCoroutine(C_BlockAI);
+        C_BlockAI = StartCoroutine(BlockAI(blockTime));
 
+    }
+    IEnumerator BlockAI(float blockTime)
+    {
+        owner.isBlock = true;
+        yield return new WaitForSeconds(blockTime);
     }
     ////Player Block
     //public void StartBlock()

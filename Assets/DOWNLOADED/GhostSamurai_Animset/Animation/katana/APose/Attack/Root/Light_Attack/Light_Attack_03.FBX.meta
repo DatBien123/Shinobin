@@ -648,6 +648,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 2
         messageOptions: 0
+      - time: 0.070878245
+        functionName: Anim_OnFreeflow
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.11094622
         functionName: Anim_OnAttack
         data: 
@@ -678,13 +685,6 @@ ModelImporter:
         messageOptions: 0
       - time: 0.2777827
         functionName: Anim_OnComboEnd
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.070878245
-        functionName: Anim_OnFreeflow
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

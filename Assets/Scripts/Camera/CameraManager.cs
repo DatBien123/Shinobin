@@ -36,6 +36,7 @@ public class CameraManager : MonoBehaviour
     public CharacterPlayer player;
 
     public CinemachineCamera currentCineCam;
+    public ECameraType currentCameraType = ECameraType.FollowCamera;
 
     [Header("Follow Camera")]
     public CinemachineCamera followCineCam;
@@ -58,32 +59,54 @@ public class CameraManager : MonoBehaviour
 
     public void SwitchCamera(ECameraType type)
     {
-        //Reset All priority
-        followCineCam.Priority = 0;
-        finisherCineCam.Priority = 0;
-        finisherTargetGroup.Targets.Clear();
 
+        ResetCameraState();
         switch (type)
         {
             case ECameraType.FollowCamera:
                 currentCineCam = followCineCam;
+                currentCameraType = ECameraType.FollowCamera;
                 followCineCam.Priority = 1;
 
                 break;
             case ECameraType.FinisherCamera:
                 currentCineCam = finisherCineCam;
+                currentCameraType = ECameraType.FinisherCamera;
                 finisherCineCam.Priority= 1;
 
                 finisherTargetGroup.AddMember(player.characterRigComponent.cameraFinisherSocket, targetGroupData.radiusPlayer, targetGroupData.weightPlayer);
                 finisherTargetGroup.AddMember(player.targetingComponent.target.gameObject.GetComponent<Character>().characterRigComponent.cameraFinisherSocket, targetGroupData.radiusEnemy, targetGroupData.weightEnemy);
                 break;
+            case ECameraType.LockOnCamera:
+                currentCineCam = lockOnCineCam;
+                currentCameraType = ECameraType.LockOnCamera;
+                lockOnCineCam.Priority = 1;
+
+                lockOnCineCam.Follow = player.characterRigComponent.cameraLookAtSocket;
+                lockOnCineCam.LookAt = player.targetingComponent.target.gameObject.GetComponent<Character>().characterRigComponent.cameraLookAtSocket;
+
+                //player.isApplyingLock = true;
+                break;
+
         }
+    }
+
+    public void ResetCameraState()
+    {
+        //Reset All priority
+        followCineCam.Priority = 0;
+
+        finisherCineCam.Priority = 0;
+        finisherTargetGroup.Targets.Clear();
+
+        lockOnCineCam.Priority = 0;
+        //player.isApplyingLock = false;
     }
 
 
 
 
-    #region Camera Effect
+    #region [Camera Effect]
     public void Shake(Vector3 direction, float intensity = 1.0f)
     {
         if (currentCineCam.GetComponent<CinemachineImpulseSource>() != null)

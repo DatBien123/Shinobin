@@ -79,6 +79,8 @@ public class FinisherComponent : MonoBehaviour
         (owner as CharacterPlayer)._input.playerControls.Disable();
         (taker as CharacterAI).behavDecesion.StopExecuteBehaviors();
 
+        owner.comboComponent.ResetCombo();
+        taker.comboComponent.ResetCombo();
         //SFX
         owner.hitReactionComponent.PlaySoundUnscaled(deathBlowSound, transform.position, 1, 1.5f);
         //camera
@@ -99,9 +101,12 @@ public class FinisherComponent : MonoBehaviour
                 taker.animator.CrossFadeInFixedTime(currentFinisherData.data.takerData.executedClip.name, 0.2f);
             });
 
-        yield return new WaitForSeconds(currentFinisherData.data.causerData.executionClip.length + .5f);
+        yield return new WaitForSeconds(currentFinisherData.data.causerData.executionClip.length - .5f);
 
         owner.hitReactionComponent.cameraManager.SwitchCamera(ECameraType.FollowCamera);
+
+        yield return new WaitForSeconds(.5f);
+
 
         (owner as CharacterPlayer)._input.playerControls.Enable();
         (taker as CharacterAI).behavDecesion.StartExecuteBehaviors();

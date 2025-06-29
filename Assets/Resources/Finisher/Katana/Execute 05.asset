@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Execute 05
   m_EditorClassIdentifier: 
   data:
-    finisherType: 0
+    finisherType: 1
     causerData:
       executionClip: {fileID: 7400002, guid: f7a8a40c73563014cab8ce96a36e42a2, type: 3}
       causerPositionOffset: {x: 0, y: 0, z: 0}

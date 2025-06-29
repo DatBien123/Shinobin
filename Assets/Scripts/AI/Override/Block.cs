@@ -11,7 +11,7 @@ namespace Training
         public float Duration;
         public override void Execute(CharacterAI agent)
         {
-            //agent.blockComponent.StartBlockAI(Duration);
+            agent.blockComponent.StartBlock(Duration);
         }
         public override void Finished(CharacterAI agent)
         {

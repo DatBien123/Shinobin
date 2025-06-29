@@ -46,6 +46,7 @@ public class CharacterPlayer : Character
         {
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         }
+
     }
     protected override void Start()
     {
@@ -155,24 +156,49 @@ public class CharacterPlayer : Character
         {
             _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
                               _mainCamera.transform.eulerAngles.y;
+            if (_input.cameraManager.currentCameraType == ECameraType.LockOnCamera)
+            {
+                Vector3 dirToTarget = (targetingComponent.target.position - transform.position).normalized;
+                dirToTarget.y = 0; // Loại bỏ độ cao
+
+                if (dirToTarget != Vector3.zero)
+                {
+                    _targetRotation = Quaternion.LookRotation(dirToTarget).eulerAngles.y;
+                }
+            }
             float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
                 RotationSmoothTime);
 
             // rotate to face input direction relative to camera position
             if (!isApplyingKnockBack
-    && comboComponent.currentComboState != EComboState.Playing
-    && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
-    && dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
+                && comboComponent.currentComboState != EComboState.Playing
+                && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
+                && dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
+            {
+
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+
+            }
         }
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
         if (!isApplyingKnockBack
-    && comboComponent.currentComboState != EComboState.Playing
-    && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
-    && dodgeComponent.currentDodgeState != EDodgeState.OnDodge) 
+            && comboComponent.currentComboState != EComboState.Playing
+            && hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
+            && dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
+        {
             targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-        else targetDirection = Vector3.zero;
 
+            if (_input.cameraManager.currentCameraType == ECameraType.LockOnCamera)
+            {
+                targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * new Vector3(_input.move.x, 0, _input.move.y);
+            }
+
+
+        }
+        else
+        {
+            targetDirection = Vector3.zero;
+        }
 
         // move the player
         characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
@@ -181,6 +207,12 @@ public class CharacterPlayer : Character
         // update animator if using character
 
         _inputVerticalParam = Mathf.Lerp(_inputVerticalParam, _input.move.magnitude, SpeedChangeRate * Time.deltaTime);
+
+        if(_input.cameraManager.currentCameraType == ECameraType.LockOnCamera)
+        {
+            _inputHorizontalParam = _input.move.x;
+            _inputVerticalParam = _input.move.y;
+        }
 
         animator.SetFloat(AnimationParams.Input_Horizontal_Param, _inputHorizontalParam);
         animator.SetFloat(AnimationParams.Input_Vertical_Param, _inputVerticalParam);

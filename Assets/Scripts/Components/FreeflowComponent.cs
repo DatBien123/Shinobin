@@ -84,5 +84,29 @@ namespace Training
                   });
         }
 
+        public void StartDashToTarget(float duration)
+        {
+                Transform player = owner.transform;
+                Transform enemy = owner.targetingComponent.target.transform;
+
+                // Vị trí bắt đầu
+                Vector3 startPos = player.position;
+
+                // Vị trí phía sau enemy
+                Vector3 behindPos = enemy.position + enemy.forward * 1.0f; // 2 đơn vị phía sau
+
+                // Tính điểm giữa lệch sang bên phải enemy
+                Vector3 midPos = (startPos + behindPos) / 2f + enemy.right * 1.5f;
+
+                Vector3[] path = new Vector3[] { startPos, midPos, behindPos };
+
+                player.DOPath(path, duration, PathType.CatmullRom)
+                      .SetEase(Ease.InOutSine)
+                      .OnComplete(() =>
+                      {
+                          Debug.Log("Hoàn thành di chuyển đường cong ra sau kẻ địch.");
+                      });
+        }
+
     }
 }

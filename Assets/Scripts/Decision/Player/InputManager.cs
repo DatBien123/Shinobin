@@ -56,6 +56,8 @@ public class InputManager : MonoBehaviour
         playerControls.Camera.Look.performed += Look;
         playerControls.Camera.Look.canceled += Look;
 
+        playerControls.Camera.LockOn.performed += LockOn;
+
         //Player Movement
         playerControls.Movement.Move.performed += Move;
         playerControls.Movement.Move.canceled += Move;
@@ -78,9 +80,36 @@ public class InputManager : MonoBehaviour
 
 
     }
-    #region InputBinding
 
-    #region Movement
+    #region [Camera]
+    public void Look(InputAction.CallbackContext context)
+    {
+        if (cursorInputForLook)
+        {
+            if (context.performed)
+            {
+                look = context.ReadValue<Vector2>();
+                //player.animator.SetBool(AnimationParams.HasInputMove_Param, true);
+            }
+            else if (context.canceled)
+            {
+                look = Vector2.zero;
+                //player.animator.SetBool(AnimationParams.HasInputMove_Param, false);
+            }
+        }
+    }
+    public void LockOn(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            //Active camera Lock On
+            if(cameraManager.currentCameraType != ECameraType.LockOnCamera)cameraManager.SwitchCamera(ECameraType.LockOnCamera);
+            //Deactive camera Lock On - Switch to Follow camera
+            else cameraManager.SwitchCamera(ECameraType.FollowCamera);
+        }
+    }
+    #endregion
+    #region [Movement]
     public void Move(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -92,22 +121,6 @@ public class InputManager : MonoBehaviour
         {
             move = Vector2.zero;
             player.animator.SetBool(AnimationParams.HasInputMove_Param, false);
-        }
-    }
-    public void Look(InputAction.CallbackContext context)
-    {
-        if (cursorInputForLook)
-        {
-            if (context.performed)
-            {
-                look = context.ReadValue<Vector2>();
-                //player.animator.SetBool(AnimationParams.HasInputMove_Param, true);
-            }
-            else if (context.canceled)
-            { 
-                look = Vector2.zero;
-                //player.animator.SetBool(AnimationParams.HasInputMove_Param, false);
-            }
         }
     }
     public void Sprint(InputAction.CallbackContext context)
@@ -136,15 +149,15 @@ public class InputManager : MonoBehaviour
         if (context.performed 
             && player.comboComponent.currentComboState != EComboState.Playing
             && player.hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit
-            && player.dodgeComponent.currentDodgeState != EDodgeState.OnDodge)
+            && player.dodgeComponent.currentDodgeState != EDodgeState.OnDodge
+            && player.dodgeComponent.canDodge)
         {
             player.dodgeComponent.StartDodge(player.transform.forward);
         }
 
     }
     #endregion
-
-    #region Combat
+    #region [Combat]
     #region Attack
     public void LightAttack(InputAction.CallbackContext context)
     {
@@ -226,8 +239,7 @@ public class InputManager : MonoBehaviour
     #endregion
 
     #endregion
-
-    #region SwitchWeapon
+    #region [SwitchWeapon]
     public void SwitchWeapon1(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -262,7 +274,8 @@ public class InputManager : MonoBehaviour
     }
     #endregion
 
-    #endregion
+
+
     private void OnApplicationFocus(bool hasFocus)
     {
         SetCursorState(cursorLocked);

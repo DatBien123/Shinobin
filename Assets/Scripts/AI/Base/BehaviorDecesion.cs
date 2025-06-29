@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 
 namespace Training
@@ -86,6 +86,10 @@ namespace Training
         public float comboPriorityDelay = 2.5f;
         public float timeInput = 0.0f;
 
+        [Header("Attack Delay Time")]
+        public float currentAttackDelayTime = 2.0f;
+        public float attackDelayTime = 2.0f;
+
         public Coroutine C_ExecuteBehavior;
         public Coroutine C_ExecuteComboPriority;
 
@@ -93,6 +97,13 @@ namespace Training
         private void Awake()
         {
             ownerAI = GetComponent<CharacterAI>();
+        }
+        private void Update()
+        {
+            if(currentAttackDelayTime >= 0)
+            {
+                currentAttackDelayTime -= Time.deltaTime;
+            }
         }
         public void ResetAllActionsState()
         {
@@ -248,22 +259,22 @@ namespace Training
                 || ownerAI.isDoingCombo) return;
 
             ////Multiple Action
-            //if (comboPriorityDatas.listComboPriority.Count > 0)
-            //{
-            //    if (Time.time > timeInput + comboPriorityDelay && currentComboPriorityState != EComboPriorityState.Executing)
-            //    {
-            //        timeInput = Time.time;
-            //        if (isExecuteComboPriority())
-            //        {
-            //            StartExecuteComboPriority();
-            //            return;
-            //        }
-            //    }
-            //}
+            if (comboPriorityDatas.listComboPriority.Count > 0)
+            {
+                if (Time.time > timeInput + comboPriorityDelay && currentComboPriorityState != EComboPriorityState.Executing)
+                {
+                    timeInput = Time.time;
+                    if (isExecuteComboPriority())
+                    {
+                        StartExecuteComboPriority();
+                        return;
+                    }
+                }
+            }
 
 
-                //Single Action
-                 List <ActionData> suffleActions = new List<ActionData>();
+            //Single Action
+            List <ActionData> suffleActions = new List<ActionData>();
                 List<SkirmishActionData> suffleSkirmishActions = new List<SkirmishActionData>();
 
                 //Check and Get All Actions - Skill Actions - Skirmush Actions has valid conditions and 0s Cooldown
@@ -322,10 +333,14 @@ namespace Training
 
                     currentSkirmishActionData = actionOutput;
 
-                    StartCoroutine(StartCooldown(currentSkirmishActionData));
 
+                if(currentAttackDelayTime <= 0.0f)
+                {
+                    StartCoroutine(StartCooldown(currentSkirmishActionData));
                     currentSkirmishActionData.skirmishAction.Execute(ownerAI);
-                    return;
+                    currentAttackDelayTime = attackDelayTime;
+                }
+                return;
                 }
                 if (suffleActions.Count > 0)
                 {
@@ -504,7 +519,7 @@ namespace Training
                 case EBoolType.Attackable:
                     {
                         return (ownerAI.comboComponent.currentComboState != EComboState.Playing 
-                            && ownerAI.currentCombatState != ECombatState.BeingBeaten);
+                            && ownerAI.hitReactionComponent.currentHitReactionState != EHitReactionState.OnHit);
                     }
                 case EBoolType.Jumpable:
                     {
@@ -514,20 +529,20 @@ namespace Training
                     }
                 case EBoolType.Dodgeable:
                     {
-                        return false;
-                        //Character target = ownerAI.targetingComponent.target;
-                        //return (target != null
-                        //    && (target.currentCombatState == ECombatState.Attacking || ownerAI.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit));
-                            /*&& enemyOwner.currentCombatState != ECombatState.Attacking*/
-                            //|| (ownerAI.currentCombatState == ECombatState.BeingBeaten 
-                            //&& ownerAI.skillComponent.currentSkillState == ESkillState.Finished);
+                      
+                        Character target = ownerAI.targetingComponent.target.gameObject.GetComponent<Character>();
+                        return (target != null
+                            && (target.currentCombatState == ECombatState.Attacking
+                            || ownerAI.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit
+                            )
+                            );
                     }
                 case EBoolType.Blockable:
                     {
-                        return false;
-                        //Character target = ownerAI.targetingComponent.target;
-                        //return (target != null
-                        //    && target.currentCombatState == ECombatState.Attacking);
+                        Character target = ownerAI.targetingComponent.target.gameObject.GetComponent<Character>();
+                        return (target != null
+                            && (target.currentCombatState == ECombatState.Attacking || ownerAI.hitReactionComponent.currentHitReactionState == EHitReactionState.OnHit)
+                            );
                     }
                 case EBoolType.Shootable:
                     {

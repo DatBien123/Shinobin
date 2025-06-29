@@ -327,6 +327,7 @@ namespace Training
     public struct ListHitReactionData
     {
         public string Name;
+        public bool isDOTMove;
         public List<HitReactionData> hitReactionDatas;
     }
     [System.Serializable]

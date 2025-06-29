@@ -9,16 +9,28 @@ public class AnimationEvents : MonoBehaviour
     {
         owner = GetComponent<Character>();
     }
+    #region [Weapon]
+    public void Anim_OnEquipWeapon()
+    {
+
+    }
+    public void Anim_OnUnEquipWeapon()
+    {
+
+    }
+    #endregion
     #region Dodge
     public void Anim_OnDodge()
     {
         owner.dodgeComponent.currentDodgeState = EDodgeState.OnDodge;
+        //if(owner.characterType == ECharacterType.Player)
         owner.isApplyDodgeMove = true;
     }
     public void Anim_OffDodge()
     {
         owner.dodgeComponent.currentDodgeState = EDodgeState.OffDodge;
-        owner.isApplyDodgeMove = false;
+        //if (owner.characterType == ECharacterType.Player)
+            owner.isApplyDodgeMove = false;
 
     }
     #endregion
@@ -34,6 +46,7 @@ public class AnimationEvents : MonoBehaviour
     }
     public void Anim_OnHit(int staggerSign)
     {
+        owner.SetWeightLayer(EAnimationLayer.UpperBodyLayer, 1);
         owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OnHit;
 
         if(staggerSign == 1)
@@ -48,6 +61,7 @@ public class AnimationEvents : MonoBehaviour
     }
     public void Anim_OffHit()
     {
+        owner.SetWeightLayer(EAnimationLayer.UpperBodyLayer, 0);
         owner.hitReactionComponent.currentHitReactionState = EHitReactionState.OffHit;
         owner.isOnStagger = false;
         //owner.hitReactionComponent.ResetHitReaction();
@@ -65,7 +79,8 @@ public class AnimationEvents : MonoBehaviour
         owner.comboComponent.currentComboState = EComboState.Playing;
         owner.currentCombatState = ECombatState.Attacking;
         //owner.animator.applyRootMotion = true;
-        owner.isApplyAnimationMove = true;
+        if(!owner.hitReactionComponent.currentListHitReactionData.isDOTMove)owner.isApplyAnimationMove = true;
+        //else owner.characterController.enabled = false;
         owner.freeflowComponent.StartLOL();
     }
     public void Anim_OnComboEnd(int end)
@@ -105,7 +120,7 @@ public class AnimationEvents : MonoBehaviour
 
     public void Anim_OnFreeflow(int freeflowIndex)
     {
-        //owner.freeflowComponent.StartLOL();
+        owner.freeflowComponent.StartLOL();
     }
     #endregion
 
