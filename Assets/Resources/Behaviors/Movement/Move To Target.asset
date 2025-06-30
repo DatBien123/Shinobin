@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2676c36eb57699e4aa2e5c56cd8c60e9, type: 3}
   m_Name: Move To Target
   m_EditorClassIdentifier: 
-  Cooldown: 2
+  Cooldown: 5
   EBehaviorCooldown: 1
   currentClone: {fileID: 0}
   Duration: 3
   MoveType: 1
+  isSprint: 0
