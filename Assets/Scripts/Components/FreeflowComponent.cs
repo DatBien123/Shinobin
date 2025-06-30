@@ -146,7 +146,8 @@ namespace Training
             moveTween = DOTween.To(() => 0f, t =>
             {
                 // Lấy vị trí target realtime
-                Vector3 currentTargetPos = owner.targetingComponent.target.transform.position;
+                Vector3 currentTargetPos = owner.targetingComponent.target.transform.position - owner.transform.forward * 1.0f;
+                currentTargetPos.y = 0;
 
                 // Di chuyển tuyến tính từ start đến target hiện tại
                 Vector3 linearPos = Vector3.Lerp(startPos, currentTargetPos, t);

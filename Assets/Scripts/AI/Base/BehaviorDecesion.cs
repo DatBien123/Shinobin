@@ -141,7 +141,7 @@ namespace Training
             StartExecuteBehaviors();
 
         }
-        #region ComboPriority
+        #region [ComboPriority]
         public void StartExecuteComboPriority()
         {
             if (C_ExecuteComboPriority != null)
@@ -229,6 +229,11 @@ namespace Training
             priorityCombos.Clear();
         }
         #endregion
+
+
+
+
+        #region [Common]
         public void StartExecuteBehaviors()
         {
             if(C_ExecuteBehavior != null)
@@ -373,6 +378,7 @@ namespace Training
                 }
             
         }
+        #endregion
         #region ActionCooldown
         public IEnumerator StartCooldown(TraceActionData traceActionData)
         {

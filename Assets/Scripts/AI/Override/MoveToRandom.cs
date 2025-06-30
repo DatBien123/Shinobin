@@ -8,9 +8,8 @@ namespace Training
     public enum EMoveType
     {
         None = 0,
-        Walk,
-        Sprint,
-        Fast
+        NormalMove,
+        StrafeMove
     }
     [CreateAssetMenu(fileName = "Behavior Data", menuName = "Combat System/Behavior/Move To Random Action")]
     public class MoveToRandom : Action

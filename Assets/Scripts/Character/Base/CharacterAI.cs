@@ -56,18 +56,18 @@ public class CharacterAI : Character
         float speedBlendFactor = 0.0f;
         switch (moveType)
         {
-            case EMoveType.Walk:
-                speedBlendFactor = 1.0f;
-                //speed = 5.0f;
-                break;
-            case EMoveType.Sprint:
-                speedBlendFactor = 2.0f;
-                //speed = 9.0f;
-                break;
-            case EMoveType.Fast:
-                speedBlendFactor = 3.0f;
-                //speed = 7.0f;
-                break;
+            //case EMoveType.Walk:
+            //    speedBlendFactor = 1.0f;
+            //    //speed = 5.0f;
+            //    break;
+            //case EMoveType.Sprint:
+            //    speedBlendFactor = 2.0f;
+            //    //speed = 9.0f;
+            //    break;
+            //case EMoveType.Fast:
+            //    speedBlendFactor = 3.0f;
+            //    //speed = 7.0f;
+            //    break;
         }
         //Start Move
 
@@ -349,6 +349,8 @@ public class CharacterAI : Character
     }
 
     #endregion
+
+
     public AIDecision aIDecision;
 
     protected override void Awake()
@@ -428,15 +430,24 @@ public class CharacterAI : Character
         if (aIDecision.desiredMoveDirection != Vector3.zero)
         {
             _targetRotation = Mathf.Atan2(aIDecision.desiredMoveDirection.x, aIDecision.desiredMoveDirection.z) * Mathf.Rad2Deg;
+            if (aIDecision.currentMoveType == EMoveType.StrafeMove)
+            {
+                Vector3 directionToTarget = targetingComponent.target.transform.position - transform.position;
+                _targetRotation = Mathf.Atan2(directionToTarget.x, directionToTarget.z) * Mathf.Rad2Deg;
+            }
             float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
             // rotate to face input direction relative to camera position
             transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
 
         Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-
+        if (aIDecision.currentMoveType == EMoveType.StrafeMove)
+        {
+            targetDirection = transform.right * aIDecision.move.x;
+            targetDirection.Normalize();
+        }
         // move the player
-            characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
+        characterController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                          new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
         // update animator if using character

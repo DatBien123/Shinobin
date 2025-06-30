@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e989dd12771e3e7418f57c1e78643c33, type: 3}
-  m_Name: Light Attack Action
+  m_Name: Strong Attack
   m_EditorClassIdentifier: 
   Cooldown: 15
   EBehaviorCooldown: 1
   currentClone: {fileID: 0}
-  combo: {fileID: 11400000, guid: 10ddafb6af5dacc44bd417f562dfdf7e, type: 2}
+  combo: {fileID: 11400000, guid: cb5e0cea991c58b4e93e9f873928df67, type: 2}

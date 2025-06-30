@@ -16,4 +16,5 @@ MonoBehaviour:
   EBehaviorCooldown: 1
   currentClone: {fileID: 0}
   Duration: 3
-  MoveType: 2
+  MoveType: 1
+  isSprint: 0

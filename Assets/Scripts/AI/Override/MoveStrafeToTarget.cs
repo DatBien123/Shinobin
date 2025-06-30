@@ -16,8 +16,8 @@ namespace Training
     [CreateAssetMenu(fileName = "Behavior Data", menuName = "Combat System/Behavior/Move Strafe To Target Action")]
     public class MoveStrafeToTarget : Action
     {
-        public EMoveStrafeType MoveStrafeType;
-
+        public EMoveType MoveStrafeType;
+        public bool isSprint;
         public float Duration;
         public override void Execute(CharacterAI agent)
         {
@@ -25,7 +25,7 @@ namespace Training
             //{
                 agent.currentBehaviorState = EBehaviorState.Executing;
                 //agent.navMeshAgent.SetDestination(agent.targetingComponent.target.transform.position);
-                agent.StartMoveStrafeToTarget(Duration);
+                agent.aIDecision.StartMoveStrafeToTarget(MoveStrafeType, isSprint, Duration);
 
             //}
         }

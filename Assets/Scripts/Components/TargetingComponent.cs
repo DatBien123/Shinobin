@@ -48,6 +48,7 @@ namespace Training
             if (closestEnemy != null)
             {
                 target = closestEnemy;
+                Debug.Log("Distance between two target is: " + Vector3.Distance(target.position, transform.position));
             }
             else
             {

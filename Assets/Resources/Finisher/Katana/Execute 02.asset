@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Execute 02
   m_EditorClassIdentifier: 
   data:
-    finisherType: 0
+    finisherType: 1
     causerData:
       executionClip: {fileID: 7400002, guid: b6e616308f6a9664d8e038fc0b3299e8, type: 3}
       causerPositionOffset: {x: 0, y: 0, z: 0}
@@ -44,6 +44,7 @@ MonoBehaviour:
           pitch: 0
     ListHitReactionData:
       Name: 
+      isDOTMove: 0
       hitReactionDatas:
       - Name: Execute 1 - 1
         attackDirection: 0

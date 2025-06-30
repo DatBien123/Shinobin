@@ -12,6 +12,7 @@ namespace Training
         public float Duration = 3.0f;
         
         public EMoveType MoveType;
+        public bool isSprint;
 
         public override void Execute(CharacterAI agent)
         {
@@ -19,7 +20,7 @@ namespace Training
             //{
                 agent.currentBehaviorState = EBehaviorState.Executing;
                 //agent.navMeshAgent.SetDestination(agent.targetingComponent.target.transform.position);
-                agent.aIDecision.StartMoveToTarget(MoveType);
+                agent.aIDecision.StartMoveToTarget(MoveType, isSprint);
 
             //}
         }
